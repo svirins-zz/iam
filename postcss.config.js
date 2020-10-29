@@ -2,10 +2,17 @@ module.exports = {
   plugins: [
     require("tailwindcss")("./tailwind.config.js"),
     require("postcss-flexbugs-fixes"),
-    require("postcss-import"),
+    require("postcss-import")({
+      plugins: [
+          require('stylelint')
+      ]
+  }),
     require("postcss-preset-env")({
       autoprefixer: {
-        flexbox: "no-2009",
+        flexbox: { grid: true },
+      },
+      features: {
+        'nesting-rules': true
       },
       stage: 3,
       features: {

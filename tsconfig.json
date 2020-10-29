@@ -1,24 +1,27 @@
 {
+  "compileOnSave": false,
+  "ecmaVersion": 2018,
+  "sourceType": "module",
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
+    "module": "commonjs",
+    "target": "esnext",
     "jsx": "react",
-    "lib": ["dom", "esnext", "es2015", "es2016", "es2017"],
-    "moduleResolution": "node",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "preserveConstEnums": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "plugins": [
-      {
-        "name": "typescript-styled-plugin"
-      }
+    "lib": [
+      "dom",
+      "esnext",
     ],
-    "target": "ESNext"
+    "sourceMap": true,
+    "baseUrl": "./src",
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules/*", "public/*"]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "public", ".cache"]
 }

@@ -1,7 +1,7 @@
 {
-  "name": "@pauloelias/gatsby-tailwind-emotion-starter",
-  "version": "2.3.1",
-  "description": "A Tailwind CSS + Emotion starter for Gatsby",
+  "name": "1am",
+  "version": "0.0.1",
+  "description": "will be done later",
   "keywords": [
     "gatsby",
     "tailwind",
@@ -11,17 +11,16 @@
     "css-in-js"
   ],
   "author": {
-    "email": "paulo@pauloelias.com",
-    "name": "Paulo Elias",
-    "url": "https://www.pauloelias.com/",
-    "twitter": "@pauloelias"
+    "email": "svirins@gmail.com",
+    "name": "Dzmitry Sviryn",
+    "twitter": "@svirins"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pauloelias/gatsby-tailwind-emotion-starter"
+    "url": "https://github.com/svirins/iam"
   },
   "bugs": {
-    "url": "https://github.com/pauloelias/gatsby-tailwind-emotion-starter/issues"
+    "url": "https://github.com/svirins/iam/issues"
   },
   "license": "MIT",
   "private": false,
@@ -34,13 +33,12 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "lint": "eslint . --ext ts --ext tsx'",
-    "test": "npm run type-check && npm run lint",
-    "type-check": "tsc --pretty --noEmit"
+    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx"
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
+    "@tailwindcss/typography": "^0.2.0",
     "gatsby": "^2.24.91",
     "gatsby-plugin-emotion": "^4.3.14",
     "gatsby-plugin-google-analytics": "^2.3.19",
@@ -64,20 +62,19 @@
     "@types/node": "^14.14.6",
     "@types/react": "^16.9.55",
     "@types/react-dom": "^16.9.9",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
     "babel-preset-gatsby": "^0.5.14",
     "eslint": "^7.12.1",
-    "eslint-config-airbnb": "18.2.0",
     "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "4.2.0",
     "postcss": "^8.1.4",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-import": "^13.0.0",
     "postcss-preset-env": "^6.7.0",
     "rimraf": "^3.0.2",
+    "stylelint": "^13.7.2",
     "stylelint-config-recommended": "^3.0.0",
     "tailwindcss": "^1.9.6"
   }
