@@ -38,7 +38,19 @@ module.exports = {
         short_name: "I AM",
         start_url: "/",
         display: "browser",
-        icon: "src/images/iam.webp",
+        icon: "src/assets/images/iam.webp",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Montserrat`,
+            subsets: [`cyrillic-ext`],
+            variants: [`300`, `400`, `800`],
+          },
+        ],
       },
     },
   ],
