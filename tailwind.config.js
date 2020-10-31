@@ -3,15 +3,12 @@ const { colors } = require("tailwindcss/defaultTheme");
 module.exports = {
   corePlugins: {
     borderCollapse: false,
-    container: false,
     clear: false,
-    flex: false,
     flexDirection: false,
     flexGrow: false,
     flexShrink: false,
     flexWrap: false,
     float: false,
-    height: false,
     inset: false,
     margin: false,
     maxHeight: false,
@@ -25,7 +22,6 @@ module.exports = {
     position: false,
     space: false,
     tableLayout: false,
-    width: false,
   },
   display: ["responsive", "hover", "focus", "grid", "hidden"],
   future: {
@@ -34,7 +30,6 @@ module.exports = {
   },
   purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    // set default values for container
     screens: {
       mobile: "640px",
       tablet: "768px",
@@ -50,9 +45,13 @@ module.exports = {
       gray: colors.gray,
     },
     fontFamily: {
-      montserrat: ["Montserrat", "sans-serif"],
+      sans: ["Montserrat", "sans-serif"],
+      serif: ["Montserrat", "sans-serif"],
+      mono: ["Montserrat", "sans-serif"],
     },
-    extend: {},
+    extend: {
+
+    },
   },
   variants: {},
   // add prose classes. see https://tailwindcss-typography.netlify.app/

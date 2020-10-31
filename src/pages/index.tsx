@@ -4,86 +4,121 @@ import React from "react";
 import SEO from "components/seo";
 import Layout from "components/layout";
 
-import github from "images/github.svg";
-
-const logos = [
+const images = [
   {
-    name: "gatsby",
-    logo: require("../images/gatsby.svg"),
+    name: "logo",
+    src: require("assets/images/logo.webp"),
   },
   {
-    name: "tailwind",
-    logo: require("../images/tailwind.svg"),
+    name: "dezign",
+    src: require("assets/images/dezign.webp"),
   },
   {
-    name: "emotion",
-    logo: require("../images/emotion.png"),
+    name: "brand",
+    src: require("assets/images/brand.webp"),
+  },
+  {
+    name: "bauhaus",
+    src: require("assets/images/bauhaus.webp"),
+  },
+  {
+    name: "thing",
+    src: require("assets/images/thing.webp"),
+  },
+  {
+    name: "brand",
+    src: require("assets/images/brand.webp"),
   },
 ];
 
-const Wrapper = tw.div`
-  flex items-center justify-center flex-col h-screen
-`;
+const TWImage = tw.img`object-contain w-full`;
 
-const Main = tw.div`
-  p-6 bg-gray-100 rounded-lg shadow-2xl
-`;
+const Container = tw.div`grid gap-1 grid-cols-5 grid-rows-6 transition-all duration-100`;
 
-const Heading = tw.h1`
-  text-2xl text-gray-500 uppercase
-`;
+const Logo = tw.header`row-span-1 col-span-1 items-center`;
 
-const Text = tw.p`
-  text-xl text-gray-700
-`;
+const Dezign = tw.header`row-span-1 col-span-2 items-center`;
 
-const Logos = tw.div`
-  flex items-center justify-around mb-6 px-16
-`;
+const Brand = tw.section`row-span-3 col-span-3 items-center`;
 
-const Icon = tw.img`
-  h-10
-`;
+const Bauhaus = tw.section`row-span-1 col-span-2 items-center`;
 
-const Footer = tw.footer`
-  mt-6 text-center
-`;
+const Thing = tw.section`row-span-1 col-span-1 items-center`;
 
-const SmallIcon = tw.img`
-  inline-block h-6
-`;
+const Footer = tw.footer`col-span-3 items-center`;
 
-export default function Index() {
+const FooterText = tw.section`prose items-center`;
+
+// const Left = tw.aside`col-start-auto row-span-3`;
+
+// const Right = tw.aside`col-end-auto row-span-3`;
+const Left = tw.aside`row-span-6 col-start-auto`;
+
+const Right = tw.aside`row-span-6 col-end-auto`;
+
+const Index = (): JSX.Element => {
   return (
     <Layout>
-      <Wrapper>
-        <SEO title="Welcome" />
-        <Main>
-          <Logos>
-            {logos &&
-              logos.map(({ name, logo }, index) => (
-                <Icon src={logo} alt={`${name} Logo`} key={index} />
-              ))}
-          </Logos>
-          <Heading>Hello, world!</Heading>
-          <Text>
-            Welcome to the Tailwind CSS{" "}
-            <span role="img" aria-label="and">
-              ➕
-            </span>{" "}
-            Emotion Starter for Gatsby.
-          </Text>
-          <Footer>
-            <a
-              href="https://github.com/pauloelias/gatsby-tailwind-emotion-starter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SmallIcon src={github} alt="Github Icon" />
-            </a>
-          </Footer>
-        </Main>
-      </Wrapper>
+      <SEO title="I AM" />
+      <Container>
+        <Left />
+        <Logo>
+          <TWImage src={images[0].src} />
+          {/* <picture>
+            <source
+              srcSet={images[0].src}
+              //sizes="100vw"
+              type="image/webp"
+            />
+          </picture> */}
+        </Logo>
+        <Dezign>
+          <TWImage src={images[1].src} />
+          {/* <picture>
+            <source
+              srcSet={images[1].src}
+              //sizes="100vw"
+              type="image/webp"
+            />
+          </picture> */}
+        </Dezign>
+        <Right />
+        <Brand>
+          <TWImage src={images[2].src} />
+          {/* <picture>
+            <source
+              srcSet={images[2].src}
+              //sizes="100vw"
+              type="image/webp"
+            />
+          </picture> */}
+        </Brand>
+        <Bauhaus>
+          <TWImage src={images[3].src} />
+          {/* <picture>
+            <source
+              srcSet={images[3].src}
+              //sizes="100vw"
+              type="image/webp"
+            />
+          </picture> */}
+        </Bauhaus>
+        <Thing>
+          <TWImage src={images[4].src} />
+          {/* <picture>
+            <source
+              srcSet={images[4].src}
+              //sizes="100vw"
+              type="image/webp"
+            />
+          </picture> */}
+        </Thing>
+        <Footer>
+          <FooterText>This is footer</FooterText>
+        </Footer>
+      </Container>
     </Layout>
   );
-}
+};
+
+export default Index;
