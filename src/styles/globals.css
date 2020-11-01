@@ -6,3 +6,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* try to implement @apply here
+.left-grid-track
+.right-grid-track
+*/
+@layer base {
+.left-grid-track {
+  @apply row-span-6;
+  grid-col-start: auto;
+}
+
+.right-grid-track {
+  @apply row-span-6; 
+  grid-col-end: auto;
+  
+}
+
+.grid-animate {
+  transition: all 1s;
+}
+}

@@ -7,7 +7,7 @@ module.exports = {
     }),
     require("postcss-preset-env")({
       autoprefixer: {
-        flexbox: { grid: true },
+        grid: false,
       },
       features: {
         "nesting-rules": true,
