@@ -1,5 +1,3 @@
-const { colors } = require("tailwindcss/defaultTheme");
-
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -7,32 +5,26 @@ module.exports = {
   },
   purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    container: {
-      center: true,
-    },
     display: ["responsive", "hover", "focus", "grid", "hidden"],
-    screens: {
-      mobile: "640px",
-      tablet: "768px",
-      laptop: "1024px",
-      desktop: "1280px",
-    },
-    colors: {
-      white: colors.white,
-      black: colors.black,
-      blue: colors.blue,
-      red: colors.red,
-      yellow: colors.yellow,
-      gray: colors.gray,
-    },
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],
       serif: ["Montserrat", "sans-serif"],
       mono: ["Montserrat", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        // mobileColumns
+        "5auto": "auto repeat(3, minmax(0, 1fr)) auto",
+      },
+      gridTemplateRows: {
+        // mobileRows
+        "6auto": "auto repeat(3, minmax(0, 1fr)) auto",
+      },
+    },
   },
-  variants: {},
+  variants: {
+    gridTemplateColumns: ["responsive", "hover", "focus"],
+  },
   // add prose classes. see https://tailwindcss-typography.netlify.app/
   plugins: [
     require("@tailwindcss/typography"),

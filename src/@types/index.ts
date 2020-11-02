@@ -6,3 +6,8 @@ export interface SeoProps {
   meta?: MetaHTMLAttributes<HTMLMetaElement>[];
   title: string;
 }
+
+export interface ImageProps {
+  alt: string;
+  url: string;
+}

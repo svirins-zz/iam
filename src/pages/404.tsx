@@ -1,8 +1,8 @@
 import tw from "twin.macro";
 import React from "react";
 
-import SEO from "components/seo";
-import Layout from "components/layout";
+import SEO from "components/layout/seo";
+import Layout from "components/layout/layout";
 
 const Wrapper = tw.div`
   flex items-center justify-center

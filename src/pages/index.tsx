@@ -1,67 +1,66 @@
-import tw from "twin.macro";
 import React from "react";
+import tw from "twin.macro";
+import styled from "@emotion/styled";
+import { Link } from "gatsby";
+import { ImageProps } from "@types";
 
-import SEO from "components/seo";
-import Layout from "components/layout";
-const images = [
+import { Layout, SEO } from "components/layout";
+import { Wrapper, Container, ImageTile, Footer } from "components/ui";
+
+const images: ImageProps[] = [
   {
-    name: "logo",
-    src: require("assets/images/logo.webp"),
+    alt: "logo",
+    url: require("assets/images/logo.webp"),
   },
   {
-    name: "dezign",
-    src: require("assets/images/dezign.webp"),
+    alt: "dezign",
+    url: require("assets/images/dezign.webp"),
   },
   {
-    name: "brand",
-    src: require("assets/images/brand.webp"),
+    alt: "brand",
+    url: require("assets/images/brand.webp"),
   },
   {
-    name: "bauhaus",
-    src: require("assets/images/bauhaus.webp"),
+    alt: "bauhaus",
+    url: require("assets/images/bauhaus.webp"),
   },
   {
-    name: "thing",
-    src: require("assets/images/thing.webp"),
+    alt: "thing",
+    url: require("assets/images/thing.webp"),
   },
   {
-    name: "brand",
-    src: require("assets/images/brand.webp"),
+    alt: "brand",
+    url: require("assets/images/brand.webp"),
   },
 ];
 
+const Left = styled.aside`
+  grid-area: 1 / 1 / 7 / 2;
+`;
 
-// Hero patternn
+const Logo = styled.header`
+  grid-area: 1 / 2 / 2 / 3;
+`;
 
-// background-color: #170138;
-// background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236193d6' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+const Dezign = styled.header`
+  grid-area: 1 / 3 / 2 / 5;
+`;
 
-const TWImage = tw.img`object-contain w-full`;
-// TODO: Add responsive grid layout
-const Container = tw.div`grid gap-1 grid-cols-5 grid-rows-6 transition-all duration-100`;
-// transition-all duration-100
-const Wrapper = tw.main`min-h-screen flex items-center`;
+const Brand = styled.section`
+  grid-area: 2 / 2 / 5 / 5;
+`;
 
-const Logo = tw.header`row-span-1 col-span-1 items-center`;
+const Bauhaus = styled.section`
+  grid-area: 5 / 2 / 6 / 4;
+`;
 
-const Dezign = tw.header`row-span-1 col-span-2 items-center`;
+const Thing = styled.section`
+  grid-area: 5 / 4 / 6 / 5;
+`;
 
-const Brand = tw.section`row-span-3 col-span-3 items-center`;
-
-const Bauhaus = tw.section`row-span-1 col-span-2 items-center`;
-
-const Thing = tw.section`row-span-1 col-span-1 items-center`;
-
-const Footer = tw.footer`col-span-3 items-center`;
-
-const FooterText = tw.section`prose items-center`;
-
-// const Left = tw.aside`col-start-auto row-span-3`;
-
-// const Right = tw.aside`col-end-auto row-span-3`;
-const Left = tw.aside`row-span-6 col-start-auto`;
-
-const Right = tw.aside`row-span-6 col-end-auto`;
+const Right = styled.aside`
+  grid-area: 1 / 5 / 7 / 6;
+`;
 
 const Index = (): JSX.Element => {
   return (
@@ -71,59 +70,30 @@ const Index = (): JSX.Element => {
         <Container>
           <Left />
           <Logo>
-            <TWImage src={images[0].src} />
-            {/* <picture>
-              <source
-                srcSet={images[0].src}
-                //sizes="100vw"
-                type="image/webp"
-              />
-            </picture> */}
+            <Link to="logo">
+              <ImageTile {...images[0]} />;
+            </Link>
           </Logo>
           <Dezign>
-            <TWImage src={images[1].src} />
-            {/* <picture>
-              <source
-                srcSet={images[1].src}
-                //sizes="100vw"
-                type="image/webp"
-              />
-            </picture> */}
+            <Link to="design">
+              <ImageTile {...images[1]} />;
+            </Link>
           </Dezign>
           <Right />
           <Brand>
-            <TWImage src={images[2].src} />
-            {/* <picture>
-              <source
-                srcSet={images[2].src}
-                //sizes="100vw"
-                type="image/webp"
-              />
-            </picture> */}
+            <Link to="brand">
+              <ImageTile {...images[2]} />;
+            </Link>
           </Brand>
           <Bauhaus>
-            <TWImage src={images[3].src} />
-            {/* <picture>
-              <source
-                srcSet={images[3].src}
-                //sizes="100vw"
-                type="image/webp"
-              />
-            </picture> */}
+            <ImageTile {...images[3]} />;
           </Bauhaus>
           <Thing>
-            <TWImage src={images[4].src} />
-            {/* <picture>
-              <source
-                srcSet={images[4].src}
-                //sizes="100vw"
-                type="image/webp"
-              />
-            </picture> */}
+            <Link to="thing">
+              <ImageTile {...images[4]} />;
+            </Link>
           </Thing>
-          <Footer>
-            <FooterText>This is footer</FooterText>
-          </Footer>
+          <Footer />
         </Container>
       </Wrapper>
     </Layout>
