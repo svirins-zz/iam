@@ -2,37 +2,9 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
-import { ImageProps } from "@types";
-
+import { IMAGES } from "../const";
 import { Layout, SEO } from "components/layout";
 import { Wrapper, MainPageContainer, ImageTile, Footer } from "components/ui";
-
-const images: ImageProps[] = [
-  {
-    alt: "logo",
-    url: require("assets/images/logo.webp"),
-  },
-  {
-    alt: "dezign",
-    url: require("assets/images/dezign.webp"),
-  },
-  {
-    alt: "brand",
-    url: require("assets/images/brand.webp"),
-  },
-  {
-    alt: "bauhaus",
-    url: require("assets/images/bauhaus.webp"),
-  },
-  {
-    alt: "thing",
-    url: require("assets/images/thing.webp"),
-  },
-  {
-    alt: "brand",
-    url: require("assets/images/brand.webp"),
-  },
-];
 
 const Left = styled.aside`
   grid-area: 1 / 1 / 7 / 2;
@@ -76,26 +48,26 @@ const IndexPage = (): JSX.Element => {
           <Left />
           <Logo>
             <Link to="logo">
-              <ImageTile {...images[0]} />
+              <ImageTile {...IMAGES[0]} />
             </Link>
           </Logo>
           <Dezign>
             <Link to="design">
-              <ImageTile {...images[1]} />
+              <ImageTile {...IMAGES[1]} />
             </Link>
           </Dezign>
           <Right />
           <Brand>
             <Link to="brand">
-              <ImageTile {...images[2]} />
+              <ImageTile {...IMAGES[2]} />
             </Link>
           </Brand>
           <Bauhaus>
-            <ImageTile {...images[3]} />
+            <ImageTile {...IMAGES[3]} />
           </Bauhaus>
           <Thing>
             <Link to="thing">
-              <ImageTile {...images[4]} />
+              <ImageTile {...IMAGES[4]} />
             </Link>
           </Thing>
           <Footer />
