@@ -1,11 +1,11 @@
+import { PageLayout, SEO } from "components/layout";
+import { Footer, ImageTile, InnerPageContainer } from "components/ui";
+import { Link } from "gatsby";
 import React from "react";
 import tw from "twin.macro";
-import styled from "@emotion/styled";
-import { Link } from "gatsby";
-import { ImageProps } from "@types";
 
-import { Layout, SEO } from "components/layout";
-import { Wrapper, InnerPageContainer, ImageTile, Footer } from "components/ui";
+import styled from "@emotion/styled";
+import { ImageProps } from "@types";
 
 const images: ImageProps[] = [
   {
@@ -64,39 +64,37 @@ const Right = styled.aside`
 
 const LogoPage = (): JSX.Element => {
   return (
-    <Layout>
+    <PageLayout>
       <SEO title="I AM" />
-      <Wrapper>
-        <InnerPageContainer>
-          <Left />
-          <Logo>
-            <Link to="logo">
-              <ImageTile {...images[0]} />;
-            </Link>
-          </Logo>
-          <Dezign>
-            <Link to="design">
-              <ImageTile {...images[1]} />;
-            </Link>
-          </Dezign>
-          <Right />
-          <Brand>
-            <Link to="brand">
-              <ImageTile {...images[2]} />;
-            </Link>
-          </Brand>
-          <Bauhaus>
-            <ImageTile {...images[3]} />;
-          </Bauhaus>
-          <Thing>
-            <Link to="thing">
-              <ImageTile {...images[4]} />;
-            </Link>
-          </Thing>
-          <Footer />
-        </InnerPageContainer>
-      </Wrapper>
-    </Layout>
+      <InnerPageContainer>
+        <Left />
+        <Logo>
+          <Link to="logo">
+            <ImageTile {...images[0]} />;
+          </Link>
+        </Logo>
+        <Dezign>
+          <Link to="design">
+            <ImageTile {...images[1]} />;
+          </Link>
+        </Dezign>
+        <Right />
+        <Brand>
+          <Link to="brand">
+            <ImageTile {...images[2]} />;
+          </Link>
+        </Brand>
+        <Bauhaus>
+          <ImageTile {...images[3]} />;
+        </Bauhaus>
+        <Thing>
+          <Link to="thing">
+            <ImageTile {...images[4]} />;
+          </Link>
+        </Thing>
+        <Footer />
+      </InnerPageContainer>
+    </PageLayout>
   );
 };
 

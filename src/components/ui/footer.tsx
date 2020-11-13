@@ -2,17 +2,26 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "@emotion/styled";
 
-const li = "t is a long established fact that a reader will be distracted by t";
-const Paragraph = tw.p`font-sans text-base text-gray-100 text-center`;
+const LeftSpan = tw.span`text-left flex-auto font-sans text-sm`;
+const RightSpan = tw.span`text-right flex-auto text-right font-sans text-sm`;
+
 const Element = styled.footer`
-  ${tw`p-4 bg-gray-500 border-2 border-transparent`}
+  ${tw`flex items-center p-8 bg-gray-500 border-2 border-transparent`}
   grid-area: 6 / 2 / 7 / 5
 `;
 
 const Footer = (): JSX.Element => {
   return (
     <Element>
-      <Paragraph>{li}</Paragraph>
+      <LeftSpan>&copy;&nbsp;Copyright 2020 IAM.</LeftSpan>
+      <RightSpan>
+        {" "}
+        Made with{" "}
+        <span role="img" aria-labelledby="love">
+          ❤️
+        </span>{" "}
+        by <a href="https://twitter.com/svirins">@svirins</a>
+      </RightSpan>
     </Element>
   );
 };

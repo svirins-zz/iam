@@ -6,7 +6,6 @@ import {
   InnerPageContainer,
   PriceBar,
 } from "components/ui";
-import { Link } from "gatsby";
 import React from "react";
 import tw from "twin.macro";
 
@@ -27,7 +26,7 @@ const Right = styled.aside`
   grid-area: 1 / 5 / 7 / 6;
 `;
 
-const BrandPage = (): JSX.Element => {
+const ProPage = (): JSX.Element => {
   return (
     <PageLayout>
       <SEO title="I AM" />
@@ -45,4 +44,4 @@ const BrandPage = (): JSX.Element => {
   );
 };
 
-export default BrandPage;
+export default ProPage;

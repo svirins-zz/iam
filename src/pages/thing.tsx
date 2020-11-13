@@ -1,8 +1,8 @@
-import tw from "twin.macro";
-import React from "react";
+import Form from "components/layout/modal";
+import Layout from "components/layout/pageLayout";
 import SEO from "components/layout/seo";
-import Layout from "components/layout/layout";
-import Form from "components/ui/form";
+import React from "react";
+import tw from "twin.macro";
 
 const Thing = (): JSX.Element => {
   const a = 1;

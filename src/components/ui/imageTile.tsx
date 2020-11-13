@@ -1,7 +1,7 @@
 import React from "react";
 import tw from "twin.macro";
-import styled from "@emotion/styled";
 
+import styled from "@emotion/styled";
 import { ImageProps } from "@types";
 
 const Element = styled.img`

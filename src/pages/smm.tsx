@@ -27,7 +27,7 @@ const Right = styled.aside`
   grid-area: 1 / 5 / 7 / 6;
 `;
 
-const BrandPage = (): JSX.Element => {
+const SmmPage = (): JSX.Element => {
   return (
     <PageLayout>
       <SEO title="I AM" />
@@ -45,4 +45,4 @@ const BrandPage = (): JSX.Element => {
   );
 };
 
-export default BrandPage;
+export default SmmPage;

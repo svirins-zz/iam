@@ -7,6 +7,7 @@ module.exports = {
     title: "Gatsby IAM",
     description: "An example config of Gatsby + TypeScript + Tailwind CSS",
     author: "@svirins",
+    siteURL: "https://deezign.cf",
   },
   plugins: [
     "gatsby-plugin-emotion",
@@ -28,7 +29,12 @@ module.exports = {
       options: {
         name: "images",
         path: `${__dirname}/src/assets`,
-        siteURL: "https://deezign.cf",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-catch-links`,
+      options: {
+        excludePattern: /(excluded-link|external)/,
       },
     },
     {

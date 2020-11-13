@@ -1,8 +1,7 @@
-import tw from "twin.macro";
-import React from "react";
-
+import PageLayout from "components/layout/pageLayout";
 import SEO from "components/layout/seo";
-import Layout from "components/layout/layout";
+import React from "react";
+import tw from "twin.macro";
 
 const Wrapper = tw.div`
   flex items-center justify-center
@@ -22,7 +21,7 @@ const Text = tw.p`
 
 const Custom404 = (): JSX.Element => {
   return (
-    <Layout>
+    <PageLayout>
       <Wrapper>
         <SEO title="Page Not Found" />
         <Main>
@@ -30,7 +29,7 @@ const Custom404 = (): JSX.Element => {
           <Text>We can`&lsquo;`t find the page that you are looking for.</Text>
         </Main>
       </Wrapper>
-    </Layout>
+    </PageLayout>
   );
 };
 
