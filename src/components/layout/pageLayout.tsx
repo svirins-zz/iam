@@ -2,9 +2,14 @@ import React from "react";
 import tw from "twin.macro";
 import { GlobalStyles } from "twin.macro";
 
+import styled from "@emotion/styled";
+
 import Menu from "./menu";
 
-const GlobalWrapper = tw.div`flex items-center min-h-screen bg-blue-900`;
+const GlobalWrapper = styled.div`
+  ${tw`flex items-center min-h-screen`}
+  background-color: #101010;
+`;
 
 const PageLayout = ({
   children,

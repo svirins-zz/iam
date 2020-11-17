@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 import { ImageProps } from "@types";
 
 const Element = styled.img`
-  ${tw`hover:border-yellow-300 z-40 object-fill border-2 border-transparent`}
+  ${tw`z-40 object-fill`}
   height: 100%;
   width: 100%;
 `;

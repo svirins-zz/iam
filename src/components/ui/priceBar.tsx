@@ -6,14 +6,30 @@ import styled from "@emotion/styled";
 
 import Modal from "../layout/modal";
 
-const Title = tw.h2`font-sans text-3xl text-gray-100 flex-auto`;
-const Price = tw.p`font-sans text-base text-gray-100 flex-auto text-right px-4`;
+const Title = styled.h2`
+  ${tw`flex-auto font-sans text-3xl`}
+  color: #fcf8c9;
+`;
+const Price = styled.p`
+  ${tw`flex-auto px-4 font-sans text-base text-right`}
+  color:  #fcf8c9;
+`;
 const Spantop = tw.span`text-base`;
 const SpanBottom = tw.span`text-xl font-semibold`;
-const Button = tw.button`bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded flex-1`;
+
+const Button = styled.button`
+  ${tw`flex-1 px-4 py-2 font-bold rounded`}
+  color: #101010;
+  background-color: #fdec0a;
+  &:hover {
+    background-color: #c4bb3e;
+  }
+`;
+
 const Bar = styled.section`
-  ${tw`flex items-center p-8 bg-gray-900`};
+  ${tw`flex items-center p-8`};
   grid-area: 4 / 2 / 5 / 5;
+  background-color: #878787;
 `;
 
 const PriceBar = (title: string, price: number): JSX.Element => {

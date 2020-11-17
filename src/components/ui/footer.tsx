@@ -1,13 +1,16 @@
 import React from "react";
 import tw from "twin.macro";
+
 import styled from "@emotion/styled";
 
 const LeftSpan = tw.span`text-left flex-auto font-sans text-sm`;
 const RightSpan = tw.span`text-right flex-auto text-right font-sans text-sm`;
 
 const Element = styled.footer`
-  ${tw`flex items-center p-8 bg-gray-500 border-2 border-transparent`}
-  grid-area: 6 / 2 / 7 / 5
+  ${tw`flex items-center p-8 bg-gray-500 border-4 border-transparent`}
+  grid-area: 6 / 2 / 7 / 5;
+  background-color: #3d3d3c;
+  color: #9c9c9b;
 `;
 
 const Footer = (): JSX.Element => {

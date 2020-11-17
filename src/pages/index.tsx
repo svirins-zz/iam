@@ -14,27 +14,27 @@ const Left = styled.aside`
 `;
 
 const Menu = styled.header`
-  ${tw`hover:border-yellow-300 border-2 border-transparent`}
+  ${tw`hover:border-yellow-300 border-4 border-transparent`}
   grid-area: 1 / 2 / 2 / 3;
 `;
 
 const Blank = styled.header`
-  ${tw`hover:border-yellow-300 border-2 border-transparent`}
+  ${tw`border-4 border-transparent`}
   grid-area: 1 / 3 / 2 / 5;
 `;
 
 const Brand = styled.section`
-  ${tw`hover:border-yellow-300 border-2 border-transparent`}
+  ${tw`hover:border-yellow-300 border-4 border-transparent`}
   grid-area: 2 / 2 / 5 / 5;
 `;
 
 const Bauhaus = styled.section`
-  ${tw`hover:border-yellow-300 border-2 border-transparent`}
+  ${tw`border-4 border-transparent`}
   grid-area: 5 / 2 / 6 / 4;
 `;
 
 const Thing = styled.section`
-  ${tw`hover:border-yellow-300 border-2 border-transparent`}
+  ${tw`hover:border-yellow-300 border-4 border-transparent`}
   grid-area: 5 / 4 / 6 / 5;
 `;
 

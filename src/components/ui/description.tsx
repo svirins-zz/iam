@@ -1,13 +1,21 @@
 import React from "react";
 import tw from "twin.macro";
+
 import styled from "@emotion/styled";
 
 const Container = styled.article`
-  ${tw`p-8 bg-gray-900`};
+  ${tw`p-8`};
   grid-area: 5 / 2 / 6 / 5;
+  background-color: #3d3d3c;
 `;
-const Title = tw.h2`font-sans text-3xl text-gray-100`;
-const Paragraph = tw.p`font-sans text-base text-gray-100 py-4`;
+const Title = styled.h2`
+  ${tw`font-sans text-3xl`}
+  color:  #c7c6c6;
+`;
+const Paragraph = styled.p`
+  ${tw`py-4 font-sans text-base`}
+  color: #9c9c9b;
+`;
 
 const Description = (title: string, description: string): JSX.Element => {
   return (
