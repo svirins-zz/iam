@@ -29,7 +29,7 @@ const Button = styled.button`
 const Bar = styled.section`
   ${tw`flex items-center p-8`};
   grid-area: 4 / 2 / 5 / 5;
-  background-color: #878787;
+  background-color: #101010;
 `;
 
 const PriceBar = (title: string, price: number): JSX.Element => {

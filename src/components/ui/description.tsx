@@ -6,11 +6,11 @@ import styled from "@emotion/styled";
 const Container = styled.article`
   ${tw`p-8`};
   grid-area: 5 / 2 / 6 / 5;
-  background-color: #3d3d3c;
+  background-color: #292827;
 `;
 const Title = styled.h2`
   ${tw`font-sans text-3xl`}
-  color:  #c7c6c6;
+  color:  #f4e2bd;
 `;
 const Paragraph = styled.p`
   ${tw`py-4 font-sans text-base`}
