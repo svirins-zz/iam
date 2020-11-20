@@ -5,7 +5,7 @@ import tw from "twin.macro";
 
 import styled from "@emotion/styled";
 
-const Menu = (): JSX.Element => {
+const MainMenu = (): JSX.Element => {
   const CloseIconWrapper = tw.div`cursor-pointer z-50`;
   const SVGclose = tw.svg`fill-current text-black`;
 
@@ -17,7 +17,7 @@ const Menu = (): JSX.Element => {
     opacity: 0.95;
   `;
   const MenuItem = styled.li`
-    ${tw`hover:text-3xl hover:text-yellow-500 text-2xl font-semibold leading-10 text-center text-white uppercase`};
+    ${tw`hover:text-6xl hover:text-yellow-500 hover:tracking-widest hover:underline text-6xl text-center text-white`};
     letter-spacing: 0.15rem;
   `;
   const svgPath = (
@@ -40,12 +40,12 @@ const Menu = (): JSX.Element => {
               </SVGclose>
             </CloseIconWrapper>
 
-            <nav id="menu">
+            <nav id="menu" role="fullscreen-menu">
               <div className="inner">
                 <ul className="links">
                   <MenuItem>
                     <Link onClick={context.handleSelect} to="/">
-                      I AM
+                      Index
                     </Link>
                   </MenuItem>
                   <MenuItem>
@@ -54,18 +54,19 @@ const Menu = (): JSX.Element => {
                     </Link>
                   </MenuItem>
                   <MenuItem>
-                    <Link onClick={context.handleSelect} to="/logo">
-                      Logo
-                    </Link>
-                  </MenuItem>
-                  <MenuItem>
-                    <Link onClick={context.handleSelect} to="/idea">
-                      Idea
+                    <Link onClick={context.handleSelect} to="/poster">
+                      Poster
                     </Link>
                   </MenuItem>
                   <MenuItem>
                     <Link onClick={context.handleSelect} to="/thing">
                       Thing
+                    </Link>
+                  </MenuItem>
+
+                  <MenuItem>
+                    <Link onClick={context.handleSelect} to="/logo">
+                      Logo
                     </Link>
                   </MenuItem>
                   <MenuItem>
@@ -90,4 +91,4 @@ const Menu = (): JSX.Element => {
   );
 };
 
-export default Menu;
+export default MainMenu;

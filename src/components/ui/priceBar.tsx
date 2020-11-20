@@ -1,13 +1,15 @@
+import { CONTENT } from "const";
 import { myContext } from "context";
 import React from "react";
 import tw from "twin.macro";
 
 import styled from "@emotion/styled";
+import { ContentProps } from "@types";
 
 import Modal from "../layout/modal";
 
 const Title = styled.h2`
-  ${tw`flex-auto font-sans text-3xl`}
+  ${tw`flex-auto font-sans text-3xl capitalize`}
   color: #fcf8c9;
 `;
 const Price = styled.p`
@@ -28,20 +30,26 @@ const Button = styled.button`
 
 const Bar = styled.section`
   ${tw`flex items-center p-8`};
-  grid-area: 4 / 2 / 5 / 5;
+  grid-area: 5 / 2 / 6 / 5;
   background-color: #101010;
 `;
 
-const PriceBar = (title: string, price: number): JSX.Element => {
+const PriceBar = ({
+  title,
+  price,
+}: {
+  title: string;
+  price: number;
+}): JSX.Element => {
   return (
     <myContext.Consumer>
       {(context) => (
         <Bar>
-          <Title>Brand</Title>
+          <Title>{title}</Title>
           <Price>
             <Spantop>from</Spantop>
             <br />
-            <SpanBottom>200 USD</SpanBottom>
+            <SpanBottom>{price} USD</SpanBottom>
           </Price>
           <Button onClick={context.showModal}>Order</Button>
           <Modal />

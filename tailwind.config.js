@@ -11,16 +11,6 @@ module.exports = {
       serif: ["Montserrat", "sans-serif"],
       mono: ["Montserrat", "sans-serif"],
     },
-    extend: {
-      gridTemplateColumns: {
-        // mobileColumns
-        "5auto": "auto repeat(3, minmax(0, 1fr)) auto",
-      },
-      gridTemplateRows: {
-        // mobileRows
-        "6auto": "auto repeat(3, minmax(0, 1fr)) auto",
-      },
-    },
   },
   variants: {
     gridTemplateColumns: ["responsive", "hover", "focus"],

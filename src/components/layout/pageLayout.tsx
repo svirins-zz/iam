@@ -4,7 +4,7 @@ import { GlobalStyles } from "twin.macro";
 
 import styled from "@emotion/styled";
 
-import Menu from "./menu";
+import MainMenu from "./mainMenu";
 
 const GlobalWrapper = styled.div`
   ${tw`flex items-center min-h-screen`}
@@ -17,7 +17,7 @@ const PageLayout = ({
   return (
     <>
       <GlobalStyles />
-      <Menu />
+      <MainMenu />
       <GlobalWrapper>{children}</GlobalWrapper>
     </>
   );

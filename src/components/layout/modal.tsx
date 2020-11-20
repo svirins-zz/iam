@@ -22,6 +22,7 @@ const Modal = (): JSX.Element => {
   const TitleText = tw.p`text-2xl font-bold`;
   const SubmitButton = tw.button`px-4 bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded`;
   // TODO: add validation / check submission + do we need thank you message?
+  // TODO: make submit button full-width
   return (
     <myContext.Consumer>
       {(context) =>

@@ -48,15 +48,17 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Montserrat`,
-            subsets: [`cyrillic-ext`],
-            variants: [`400`, `500`, `700`, `800`],
-          },
-        ],
+        fonts: {
+          google: [
+            {
+              family: `Montserrat`,
+              subsets: [`cyrillic-ext`],
+              variants: [`400`, `500`, `700`, `800`],
+            },
+          ],
+        },
       },
     },
   ],

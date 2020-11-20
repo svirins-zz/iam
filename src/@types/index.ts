@@ -7,6 +7,22 @@ export interface SeoProps {
   title: string;
 }
 
+export interface ContentProps {
+  alt: string;
+  url: string;
+  price: number;
+  title: string;
+  content: string;
+}
+
+export interface HeaderProps {
+  menuAlt: string;
+  menuUrl: string;
+  designAlt: string;
+  designUrl: string;
+}
+
+
 export interface ImageProps {
   alt: string;
   url: string;

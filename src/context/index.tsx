@@ -23,19 +23,16 @@ const Provider = ({ children }: AuxProps) => {
         menuVisible,
         modalVisible,
         handleSelect: (e) => {
-          console.log(e);
           // setChoice((draft) => {
           //   draft.key = key.toString();
           // });
         },
         closeMenu: () => {
-          console.log("closeMenufired");
           setMenuVisible((draft) => {
             draft.isVisible = false;
           });
         },
         showMenu: () => {
-          console.log("showMenufired");
           setMenuVisible((draft) => {
             draft.isVisible = true;
           });
@@ -56,8 +53,7 @@ const Provider = ({ children }: AuxProps) => {
     </myContext.Provider>
   );
 };
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-// eslint-disable-next-line react/display-name
+
 export default ({ element }: { element: React.ReactChildren }): JSX.Element => {
   return <Provider>{element}</Provider>;
 };

@@ -7,7 +7,7 @@ import tw from "twin.macro";
 
 import styled from "@emotion/styled";
 
-import { IMAGES } from "../const";
+import { CONTENT } from "../const";
 
 const Left = styled.aside`
   grid-area: 1 / 1 / 7 / 2;
@@ -24,7 +24,7 @@ const Menu = styled.header`
   grid-area: 1 / 2 / 2 / 3;
 `;
 
-const Blank = styled.header`
+const Dezign = styled.header`
   border: 4px solid transparent;
   border-image-slice: 1;
   border-width: 4px;
@@ -41,13 +41,10 @@ const Brand = styled.section`
   grid-area: 2 / 2 / 5 / 5;
 `;
 
-const Bauhaus = styled.section`
+const Blank = styled.section`
   border: 4px solid transparent;
   border-image-slice: 1;
   border-width: 4px;
-  &:hover {
-    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-  }
   grid-area: 5 / 2 / 6 / 4;
 `;
 
@@ -74,23 +71,23 @@ const IndexPage = (): JSX.Element => {
         <myContext.Consumer>
           {(context) => (
             <Menu onClick={context.showMenu}>
-              <ImageTile {...IMAGES.find((e) => e.alt === "menu")} />
+              <ImageTile {...CONTENT.find((e) => e.alt === "menu")} />
             </Menu>
           )}
         </myContext.Consumer>
-        <Blank />
+        <Dezign>
+          <ImageTile {...CONTENT.find((e) => e.alt === "dezign")} />
+        </Dezign>
         <Right />
         <Brand>
           <Link to="brand">
-            <ImageTile {...IMAGES.find((e) => e.alt === "brand")} />
+            <ImageTile {...CONTENT.find((e) => e.alt === "brand")} />
           </Link>
         </Brand>
-        <Bauhaus>
-          <ImageTile {...IMAGES.find((e) => e.alt === "bauhaus")} />
-        </Bauhaus>
+        <Blank />
         <Thing>
           <Link to="thing">
-            <ImageTile {...IMAGES.find((e) => e.alt === "thing")} />
+            <ImageTile {...CONTENT.find((e) => e.alt === "thing")} />
           </Link>
         </Thing>
         <Footer />
