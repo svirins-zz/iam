@@ -1,3 +1,4 @@
+import closeSvg from "assets/close.svg";
 import { myContext } from "context";
 import { Link } from "gatsby";
 import React from "react";
@@ -6,83 +7,87 @@ import tw from "twin.macro";
 import styled from "@emotion/styled";
 
 const MainMenu = (): JSX.Element => {
-  const CloseIconWrapper = tw.div`cursor-pointer z-50`;
-  const SVGclose = tw.svg`fill-current text-black`;
-
+  const PageWrapper = tw.div`absolute top-0 right-0 z-50 flex flex-col items-center mt-4 mr-4 text-sm text-white`;
   const MenuWrapper = styled.div`
-    ${tw`fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-900 pointer-events-auto`};
+    ${tw`fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-900`};
     transition: opacity 0.25s ease;
     max-width: 100%;
     max-height: 100vh;
     opacity: 0.95;
   `;
   const MenuItem = styled.li`
-    ${tw`hover:text-6xl hover:text-yellow-500 hover:tracking-widest hover:underline text-6xl text-center text-white`};
+    ${tw`hover:font-bold hover:text-yellow-500 hover:underline  text-5xl text-center text-white`};
     letter-spacing: 0.15rem;
   `;
-  const svgPath = (
-    <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
-  );
+  const Img = styled.img`
+    ${tw`hover:opacity-100 opacity-75 cursor-pointer`}
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+  `;
+  const CloseWrapper = styled.div`
+    ${tw`cursor-pointer`}
+    z-index: 800;
+  `;
+  // press button don't works
   return (
     <myContext.Consumer>
       {(context) =>
         context.menuVisible?.isVisible ? (
-          <MenuWrapper>
-            <CloseIconWrapper onClick={context.closeMenu}>
-              <SVGclose
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="white"
-                viewBox="0 0 24 24"
-              >
-                {svgPath}
-              </SVGclose>
-            </CloseIconWrapper>
+          <PageWrapper
+            onKeyPress={(event) => {
+              console.log(event.code);
+              if (event.code === "Escape") context.closeMenu;
+            }}
+          >
+            <CloseWrapper onClick={context.closeMenu}>
+              <Img src={closeSvg} alt="close button" />
+            </CloseWrapper>
+            <MenuWrapper>
+              <nav id="menu" role="fullscreen-menu">
+                <div className="inner">
+                  <ul className="links pointer-events-auto">
+                    <MenuItem>
+                      <Link onClick={context.handleSelect} to="/">
+                        Index
+                      </Link>
+                    </MenuItem>
+                    <MenuItem>
+                      <Link onClick={context.handleSelect} to="/brand">
+                        Brand
+                      </Link>
+                    </MenuItem>
+                    <MenuItem>
+                      <Link onClick={context.handleSelect} to="/poster">
+                        Poster
+                      </Link>
+                    </MenuItem>
+                    <MenuItem>
+                      <Link onClick={context.handleSelect} to="/thing">
+                        Thing
+                      </Link>
+                    </MenuItem>
 
-            <nav id="menu" role="fullscreen-menu">
-              <div className="inner">
-                <ul className="links">
-                  <MenuItem>
-                    <Link onClick={context.handleSelect} to="/">
-                      Index
-                    </Link>
-                  </MenuItem>
-                  <MenuItem>
-                    <Link onClick={context.handleSelect} to="/brand">
-                      Brand
-                    </Link>
-                  </MenuItem>
-                  <MenuItem>
-                    <Link onClick={context.handleSelect} to="/poster">
-                      Poster
-                    </Link>
-                  </MenuItem>
-                  <MenuItem>
-                    <Link onClick={context.handleSelect} to="/thing">
-                      Thing
-                    </Link>
-                  </MenuItem>
-
-                  <MenuItem>
-                    <Link onClick={context.handleSelect} to="/logo">
-                      Logo
-                    </Link>
-                  </MenuItem>
-                  <MenuItem>
-                    <Link onClick={context.handleSelect} to="/smm">
-                      SMM
-                    </Link>
-                  </MenuItem>
-                  <MenuItem>
-                    <Link onClick={context.handleSelect} to="/pro">
-                      Pro
-                    </Link>
-                  </MenuItem>
-                </ul>
-              </div>
-            </nav>
-          </MenuWrapper>
+                    <MenuItem>
+                      <Link onClick={context.handleSelect} to="/logo">
+                        Logo
+                      </Link>
+                    </MenuItem>
+                    <MenuItem>
+                      <Link onClick={context.handleSelect} to="/smm">
+                        SMM
+                      </Link>
+                    </MenuItem>
+                    <MenuItem>
+                      <Link onClick={context.handleSelect} to="/pro">
+                        Pro
+                      </Link>
+                    </MenuItem>
+                  </ul>
+                </div>
+              </nav>
+            </MenuWrapper>
+          </PageWrapper>
         ) : (
           ""
         )

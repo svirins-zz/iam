@@ -41,10 +41,13 @@ const Brand = styled.section`
   grid-area: 2 / 2 / 5 / 5;
 `;
 
-const Blank = styled.section`
+const Blog = styled.section`
   border: 4px solid transparent;
   border-image-slice: 1;
   border-width: 4px;
+  &:hover {
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  }
   grid-area: 5 / 2 / 6 / 4;
 `;
 
@@ -84,7 +87,11 @@ const IndexPage = (): JSX.Element => {
             <ImageTile {...CONTENT.find((e) => e.alt === "brand")} />
           </Link>
         </Brand>
-        <Blank />
+        <Blog>
+          <a href="https://medium.com" target="blank">
+            <ImageTile {...CONTENT.find((e) => e.alt === "blog")} />
+          </a>
+        </Blog>
         <Thing>
           <Link to="thing">
             <ImageTile {...CONTENT.find((e) => e.alt === "thing")} />

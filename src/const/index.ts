@@ -18,14 +18,8 @@ export const CONTENT: ContentProps[] = [
     alt: "brand",
     url: require("assets/images/brand.webp"),
     price: 400,
-    title: "Blah-blah-blah about brand",
-    content: `А name, term, design, symbol or any other feature that identifies one
-    seller's good or service as distinct from those of other sellers. Brands
-    are used in business, marketing, and advertising for recognition and,
-    importantly, to create and store value as brand equity for the object
-    identified, to the benefit of the brand's customers, its owners and
-    shareholders. Name brands are sometimes distinguished from generic or
-    store brands.`,
+    title: "Брендинг",
+    content: `Бренд работает не только на узнаваемость и впечатление но и позволяет клиентам знать, чего ожидать от вашей компании. Бренд отвечает на вопросы: кто вы, чем вы отличаетесь от конкурентов, что именно вы предлагаете, что делает вас лучшим выбором на рынке. Бренд это ваше лицо и ваш костюм.`,
   },
   {
     alt: "dezign",
@@ -105,5 +99,12 @@ export const CONTENT: ContentProps[] = [
     identified, to the benefit of the brand's customers, its owners and
     shareholders. Name brands are sometimes distinguished from generic or
     store brands.`,
+  },
+  {
+    alt: "blog",
+    url: require("assets/images/blog.webp"),
+    price: 0,
+    title: "",
+    content: "",
   },
 ];

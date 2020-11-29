@@ -19,8 +19,16 @@ const Modal = (): JSX.Element => {
   const svgPath = (
     <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
   );
-  const TitleText = tw.p`text-2xl font-bold`;
-  const SubmitButton = tw.button`px-4 bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded`;
+  const TitleText = tw.p`text-3xl`;
+  const SubmitButton = styled.button`
+    ${tw` w-full px-4 py-2 mt-4 font-bold rounded`}
+    color: #101010;
+    background-color: #d1c414;
+    &:hover {
+      background-color: #fff23d;
+    }
+  `;
+  tw.button`px-4 bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 mt-4 rounded w-full`;
   // TODO: add validation / check submission + do we need thank you message?
   // TODO: make submit button full-width
   return (
@@ -49,31 +57,31 @@ const Modal = (): JSX.Element => {
 
                   <form method="POST" name="iam-contact" data-netlify="true">
                     <input type="hidden" name="form-name" value="iam-contact" />
-                    <label className="block mt-2">
-                      <span className="text-gray-700">Name</span>
+                    <label className="block">
+                      <span className="text-gray-900">Name</span>
                       <input
-                        className="form-input block w-full mt-1"
+                        className="form-input focus:border-yellow-300 border-grey-300 bg-gray-50 hover:bg-gray-100 block w-full mt-1 border-2 border-opacity-50"
                         placeholder="your name here"
                       />
                     </label>
                     <label className="block mt-2">
-                      <span className="text-gray-700">Phone number</span>
+                      <span className="text-gray-900">Phone number</span>
                       <input
-                        className="form-input block w-full mt-1"
+                        className="form-input focus:border-yellow-300 border-grey-300 bg-gray-50 hover:bg-gray-100 block w-full mt-1 border-2 border-opacity-50"
                         placeholder="+123-45-67-89"
                       />
                     </label>
                     <label className="block mt-2">
-                      <span className="text-gray-700">Email</span>
+                      <span className="text-gray-900">Email</span>
                       <input
-                        className="form-input block w-full mt-1"
+                        className="form-input focus:border-yellow-300 border-grey-300 bg-gray-50 hover:bg-gray-100 block w-full mt-1 border-2 border-opacity-50"
                         placeholder="your@email.here"
                       />
                     </label>
                     <label className="block mt-2 mb-2">
-                      <span className="text-gray-700">Message</span>
+                      <span className="text-gray-900">Message</span>
                       <input
-                        className="form-input block w-full mt-1"
+                        className="form-input focus:border-yellow-300 border-grey-300 bg-gray-50 hover:bg-gray-100 block w-full mt-1 border-2 border-opacity-50"
                         placeholder="express yourself"
                       />
                     </label>

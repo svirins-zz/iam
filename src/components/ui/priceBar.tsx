@@ -20,11 +20,11 @@ const Spantop = tw.span`text-base`;
 const SpanBottom = tw.span`text-xl font-semibold`;
 
 const Button = styled.button`
-  ${tw`flex-1 px-4 py-2 font-bold rounded`}
+  ${tw` flex-1 px-4 py-2 font-bold rounded`}
   color: #101010;
-  background-color: #fdec0a;
+  background-color: #d1c414;
   &:hover {
-    background-color: #c4bb3e;
+    background-color: #fff23d;
   }
 `;
 

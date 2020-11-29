@@ -4,14 +4,9 @@ import tw from "twin.macro";
 
 import styled from "@emotion/styled";
 
-const LeftSpan = tw.span`font-sans text-sm`;
-const RightSpan = tw.span`text-right font-sans text-sm`;
-const MenuWrapper = styled.nav`
-  ${tw`flex-grow text-right`};
-`;
 
 const Element = styled.footer`
-  ${tw`flex p-8 bg-gray-500 border-4 border-transparent`}
+  ${tw`p-8 bg-gray-500 border-4 border-transparent`}
   grid-area: 8 / 2 / 9 / 5;
   background-color: #292827;
   color: #9c9c9b;
@@ -22,7 +17,21 @@ const Svirins = styled.a`
     color: #fa1ac2;
   }
 `;
+const Section = styled.section`
+  ${tw`grid`}
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+`;
+const LeftSpan = styled.span`
+  ${tw`col-span-1 font-sans text-sm`}
+`;
+const RightSpan = styled.span`
+  ${tw`col-span-1 font-sans text-sm text-right`}
+`;
 
+const MenuWrapper = styled.nav`
+  ${tw` col-span-2 text-right`};
+`;
 const Link = styled.a`
   ${tw`hover:text-yellow-500 hover:underline pl-4 text-sm text-center cursor-pointer`};
 `;
@@ -30,7 +39,7 @@ const Link = styled.a`
 const Footer = (): JSX.Element => {
   return (
     <Element>
-      <section>
+      <Section>
         <myContext.Consumer>
           {(context) => (
             <MenuWrapper role="full_horizontal_menu">
@@ -55,13 +64,9 @@ const Footer = (): JSX.Element => {
               <Link onClick={context.handleSelect} to="/pro">
                 Pro
               </Link>
-
-
             </MenuWrapper>
           )}
         </myContext.Consumer>
-      </section>
-      <section>
         <LeftSpan>&copy;&nbsp;Copyright 2020 IAM.</LeftSpan>
         <RightSpan>
           {" "}
@@ -71,7 +76,7 @@ const Footer = (): JSX.Element => {
           </span>{" "}
           by <Svirins href="https://twitter.com/svirins">@svirins</Svirins>
         </RightSpan>
-      </section>
+      </Section>
     </Element>
   );
 };
