@@ -1,10 +1,8 @@
-import { CONTENT } from "const";
 import { myContext } from "context";
 import React from "react";
 import tw from "twin.macro";
 
 import styled from "@emotion/styled";
-import { ContentProps } from "@types";
 
 import Modal from "../layout/modal";
 

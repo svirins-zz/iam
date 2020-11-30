@@ -16,3 +16,4 @@ export const getPageHeaderData = (): {
   };
   return { menuProps, designProps };
 };
+

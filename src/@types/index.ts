@@ -6,23 +6,22 @@ export interface SeoProps {
   meta?: MetaHTMLAttributes<HTMLMetaElement>[];
   title: string;
 }
-
-export interface ContentProps {
-  alt: string;
-  url: string;
+export type Frontmatter = {
   price: number;
+  slug: string;
+  tile: string;
   title: string;
-  content: string;
+};
+export interface ContentProps {
+  frontmatter: Frontmatter;
+  html: string;
 }
-
 export interface HeaderProps {
   menuAlt: string;
   menuUrl: string;
   designAlt: string;
   designUrl: string;
 }
-
-
 export interface ImageProps {
   alt: string;
   url: string;

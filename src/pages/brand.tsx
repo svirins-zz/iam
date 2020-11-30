@@ -44,7 +44,8 @@ const Right = styled.aside`
   grid-area: 1 / 5 / 7 / 6;
 `;
 const BrandPage = (): JSX.Element => {
-  const { alt, url, price, title, content } = getPageContextData();
+  const { frontmatter, html } = getPageContextData();
+  const { tile, title, price, slug } = frontmatter;
   const { menuProps, designProps } = getPageHeaderData();
   return (
     <PageLayout>
@@ -62,11 +63,11 @@ const BrandPage = (): JSX.Element => {
           <ImageTile {...designProps} />
         </HeaderRight>
         <BigSquare>
-          <ImageTile alt={alt} url={url} />
+          <ImageTile alt={slug} url={tile} />
         </BigSquare>
         <Right />
-        <PriceBar title={alt} price={price} />
-        <Description title={title} content={content} />
+        <PriceBar title={title} price={price} />
+        <Description title={title} content={html} />
         <Footer />
       </InnerPageContainer>
     </PageLayout>

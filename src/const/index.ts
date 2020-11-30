@@ -1,6 +1,6 @@
 import { ContentProps } from "@types";
 
-export const CONTENT: ContentProps[] = [
+export const CONTENT = [
   {
     alt: "poster",
     url: require("assets/images/poster.webp"),

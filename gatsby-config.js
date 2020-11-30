@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Gatsby IAM",
-    description: "An example config of Gatsby + TypeScript + Tailwind CSS",
+    description: "Gatsby + TypeScript + Tailwind CSS + Emotion = IAM",
     author: "@svirins",
     siteURL: "https://deezign.cf",
   },

@@ -1,8 +1,8 @@
 ---
-slug: "brand"
-title: "brand + smth"
-price: 300
-tile: "/assets/images/brand.webp"
+slug: "logo"
+title: "logo + smth"
+price: 250
+tile: "./assets/images/brand.webp"
 ---
 
 ![](/illustrations/joshua-earle-234740.jpg) _Photo by
@@ -14,7 +14,7 @@ That's [gatsby-remark-autolink-headers][5] hooking up all `MarkdownRemark` heade
 with anchor links for us.
 
 ## Markdown in Gatsby
-Now, with Emoji! 😉
+
 Markdown parsing in Gatsby is done with [gatsby-transformer-remark][1], which
 uses the excellent [remark][2] under the hood.\
 Alongside remark we also use [gatsby-remark-smartypants][6], which provides smart

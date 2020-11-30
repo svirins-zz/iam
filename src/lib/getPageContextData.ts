@@ -1,16 +1,30 @@
-import { CONTENT } from "const";
+import { graphql, useStaticQuery } from "gatsby";
 
 import { useLocation } from "@reach/router";
 import { ContentProps } from "@types";
 
 export const getPageContextData = (): ContentProps => {
   const { pathname } = useLocation();
-  const pageContext = CONTENT.find((e) => pathname.includes(e.alt)) ?? {
-    alt: "",
-    url: "",
-    price: 0,
-    title: "",
-    content: "",
-  };
-  return { ...pageContext };
+  const { allMarkdownRemark } = useStaticQuery(graphql`
+    query MyQuery {
+      allMarkdownRemark {
+        nodes {
+          frontmatter {
+            price
+            slug
+            tile
+            title
+          }
+          html
+        }
+      }
+    }
+  `);
+  console.log(pathname);
+  const { frontmatter, html } = allMarkdownRemark.nodes.find(
+    (node: ContentProps) => {
+      return node.frontmatter.slug === pathname.replace(/\//g, "");
+    }
+  );
+  return { frontmatter, html };
 };
