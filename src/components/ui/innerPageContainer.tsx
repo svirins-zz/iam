@@ -10,12 +10,10 @@ const Element = styled.div`
     repeat(4, minmax(auto, 1fr)) auto auto
     auto;
 `;
- // TODO: only difference is 5/4/ refactor tio 1 element
+// TODO: only difference is 5/4/ refactor tio 1 element
 
-const InnerPageContainer = ({
+export const InnerPageContainer = ({
   children,
 }: React.PropsWithChildren<Record<string, unknown>>): JSX.Element => {
   return <Element>{children}</Element>;
 };
-
-export default InnerPageContainer;

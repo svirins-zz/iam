@@ -4,7 +4,6 @@ import tw from "twin.macro";
 
 import styled from "@emotion/styled";
 
-
 const Element = styled.footer`
   ${tw`p-8 bg-gray-500 border-4 border-transparent`}
   grid-area: 8 / 2 / 9 / 5;
@@ -36,7 +35,7 @@ const Link = styled.a`
   ${tw`hover:text-yellow-500 hover:underline pl-4 text-sm text-center cursor-pointer`};
 `;
 
-const Footer = (): JSX.Element => {
+export const Footer = (): JSX.Element => {
   return (
     <Element>
       <Section>
@@ -80,5 +79,3 @@ const Footer = (): JSX.Element => {
     </Element>
   );
 };
-
-export default Footer;

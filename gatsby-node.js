@@ -1,4 +1,5 @@
-exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
+// remove actions destructuring
+exports.onCreateWebpackConfig = ({ getConfig }) => {
   // Hack due to Tailwind ^1.1.0 using `reduce-css-calc` which assumes node
   // https://github.com/bradlc/babel-plugin-tailwind-components/issues/39#issuecomment-526892633
   const config = getConfig();
@@ -6,3 +7,6 @@ exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
     fs: "empty",
   };
 };
+
+// exports.onCreateNode = require("./gatsby/on-create-node");
+// exports.createPages = require("./gatsby/create-pages");

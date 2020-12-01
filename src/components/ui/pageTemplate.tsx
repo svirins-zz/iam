@@ -7,7 +7,7 @@ import {
   PriceBar,
 } from "components/ui";
 import { myContext } from "context";
-import { getPageContextData, getPageHeaderData } from "lib";
+import { getPageHeaderData } from "lib";
 import React from "react";
 
 import styled from "@emotion/styled";
@@ -43,9 +43,9 @@ const BigSquare = styled.section`
 const Right = styled.aside`
   grid-area: 1 / 5 / 7 / 6;
 `;
-const BrandPage = (): JSX.Element => {
-  const { frontmatter, html } = getPageContextData();
-  const { tile, title, price, slug } = frontmatter;
+// eslint-disable-next-line react/display-name
+export const PageTemplate = (pageData) => {
+  console.log(pageData);
   const { menuProps, designProps } = getPageHeaderData();
   return (
     <PageLayout>
@@ -63,15 +63,22 @@ const BrandPage = (): JSX.Element => {
           <ImageTile {...designProps} />
         </HeaderRight>
         <BigSquare>
-          <ImageTile alt={slug} url={tile} />
+          <ImageTile
+            alt={pageData.frontmatter.slug}
+            url={pageData.frontmatter.url}
+          />
         </BigSquare>
         <Right />
-        <PriceBar title={title} price={price} />
-        <Description title={title} content={html} />
+        <PriceBar
+          title={pageData.frontmatter.title}
+          price={pageData.frontmatter.price}
+        />
+        <Description
+          title={pageData.frontmatter.title}
+          content={pageData.html}
+        />
         <Footer />
       </InnerPageContainer>
     </PageLayout>
   );
 };
-
-export default BrandPage;

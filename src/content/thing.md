@@ -1,8 +1,8 @@
 ---
-slug: "brand"
-title: "brand + smth"
-price: 300
-url: "/assets/images/brand.webp"
+slug: "thing"
+title: "thing + smth"
+price: 4500
+url: "/assets/images/thing.webp"
 ---
 
 Now, with Emoji! 😉

@@ -3,11 +3,10 @@ import { Footer, ImageTile, MainPageContainer } from "components/ui";
 import { myContext } from "context";
 import { Link } from "gatsby";
 import React from "react";
-import tw from "twin.macro";
 
 import styled from "@emotion/styled";
 
-import { CONTENT } from "../const";
+import { STATIC_TILES } from "../const";
 
 const Left = styled.aside`
   grid-area: 1 / 1 / 7 / 2;
@@ -74,27 +73,27 @@ const IndexPage = (): JSX.Element => {
         <myContext.Consumer>
           {(context) => (
             <Menu onClick={context.showMenu}>
-              <ImageTile {...CONTENT.find((e) => e.alt === "menu")} />
+              <ImageTile {...STATIC_TILES.find((e) => e.alt === "menu")} />
             </Menu>
           )}
         </myContext.Consumer>
         <Dezign>
-          <ImageTile {...CONTENT.find((e) => e.alt === "dezign")} />
+          <ImageTile {...STATIC_TILES.find((e) => e.alt === "design")} />
         </Dezign>
         <Right />
         <Brand>
           <Link to="brand">
-            <ImageTile {...CONTENT.find((e) => e.alt === "brand")} />
+            <ImageTile {...STATIC_TILES.find((e) => e.alt === "brand")} />
           </Link>
         </Brand>
         <Blog>
           <a href="https://medium.com" target="blank">
-            <ImageTile {...CONTENT.find((e) => e.alt === "blog")} />
+            <ImageTile {...STATIC_TILES.find((e) => e.alt === "blog")} />
           </a>
         </Blog>
         <Thing>
           <Link to="thing">
-            <ImageTile {...CONTENT.find((e) => e.alt === "thing")} />
+            <ImageTile {...STATIC_TILES.find((e) => e.alt === "thing")} />
           </Link>
         </Thing>
         <Footer />

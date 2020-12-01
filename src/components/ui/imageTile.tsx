@@ -10,8 +10,7 @@ const Element = styled.img`
   width: 100%;
 `;
 
-const ImageTile = ({ alt, url }: ImageProps): JSX.Element => {
+export const ImageTile = ({ alt, url }: ImageProps): JSX.Element => {
   return <Element src={url} alt={alt} />;
 };
 
-export default ImageTile;

@@ -32,7 +32,7 @@ const Bar = styled.section`
   background-color: #101010;
 `;
 
-const PriceBar = ({
+export const PriceBar = ({
   title,
   price,
 }: {
@@ -56,5 +56,3 @@ const PriceBar = ({
     </myContext.Consumer>
   );
 };
-
-export default PriceBar;

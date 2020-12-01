@@ -17,7 +17,7 @@ const Paragraph = styled.p`
   color: #9c9c9b;
 `;
 // TODO: ADD MDX support 4 content
-const Description = ({
+export const Description = ({
   title,
   content,
 }: {
@@ -31,5 +31,3 @@ const Description = ({
     </Container>
   );
 };
-
-export default Description;

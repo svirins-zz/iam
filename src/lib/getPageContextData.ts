@@ -5,14 +5,14 @@ import { ContentProps } from "@types";
 
 export const getPageContextData = (): ContentProps => {
   const { pathname } = useLocation();
-  const { allMarkdownRemark } = useStaticQuery(graphql`
+  const { allMarkdownRemark } = useStaticQuery<GatsbyTypes.MyQueryQuery>(graphql`
     query MyQuery {
       allMarkdownRemark {
         nodes {
           frontmatter {
             price
             slug
-            tile
+            url
             title
           }
           html
