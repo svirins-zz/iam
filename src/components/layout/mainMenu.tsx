@@ -15,8 +15,9 @@ const MainMenu = (): JSX.Element => {
     max-height: 100vh;
     opacity: 0.95;
   `;
+  // TODO: add leading
   const MenuItem = styled.li`
-    ${tw`hover:font-bold hover:text-yellow-500 hover:underline  text-5xl text-center text-white`};
+    ${tw`hover:font-bold hover:text-yellow-500 hover:underline text-5xl text-center text-white`};
     letter-spacing: 0.15rem;
   `;
   const Img = styled.img`
@@ -29,7 +30,9 @@ const MainMenu = (): JSX.Element => {
     ${tw`cursor-pointer`}
     z-index: 800;
   `;
-  // press button don't works
+  // TODO: disable scroll
+  // TODO: generate menu programmatically
+  // TODO close menu after selection
   return (
     <myContext.Consumer>
       {(context) =>

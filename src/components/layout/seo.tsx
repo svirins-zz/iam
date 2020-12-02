@@ -1,9 +1,10 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+
 import { SeoProps } from "@types";
 
-const SEO = ({
+export const SEO = ({
   description = "",
   lang = "en",
   meta = [],
@@ -70,4 +71,3 @@ const SEO = ({
   );
 };
 
-export default SEO;

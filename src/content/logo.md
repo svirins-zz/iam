@@ -2,7 +2,6 @@
 slug: "logo"
 title: "logo + smth"
 price: 250
-url: "./assets/images/logo.webp"
 ---
 
 ![](/illustrations/joshua-earle-234740.jpg) _Photo by

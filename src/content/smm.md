@@ -2,7 +2,6 @@
 slug: "smm"
 title: "smm + smth"
 price: 10
-url: "/assets/images/smm.webp"
 ---
 
 Now, with Emoji! 😉

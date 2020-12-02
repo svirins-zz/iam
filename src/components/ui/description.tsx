@@ -12,22 +12,22 @@ const Title = styled.h2`
   ${tw`font-sans text-3xl`}
   color:  #f4e2bd;
 `;
-const Paragraph = styled.p`
+const Content = styled.div`
   ${tw`py-4 font-sans text-base`}
   color: #9c9c9b;
 `;
-// TODO: ADD MDX support 4 content
+// TODO: ADD Styling for innerHTML
 export const Description = ({
   title,
-  content,
+  html,
 }: {
   title: string;
-  content: string;
+  html: string;
 }): JSX.Element => {
   return (
     <Container>
       <Title>{title}</Title>
-      <Paragraph>{content}</Paragraph>
+      <Content dangerouslySetInnerHTML={{ __html: html }} />
     </Container>
   );
 };

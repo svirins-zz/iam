@@ -11,7 +11,7 @@ const GlobalWrapper = styled.div`
   background-color: #101010;
 `;
 
-const PageLayout = ({
+export const PageLayout = ({
   children,
 }: React.PropsWithChildren<unknown>): JSX.Element => {
   return (
@@ -22,5 +22,3 @@ const PageLayout = ({
     </>
   );
 };
-
-export default PageLayout;

@@ -2,7 +2,6 @@
 slug: "poster"
 title: "poster + smth"
 price: 3500
-url: "/assets/images/poster.webp"
 ---
 
 Now, with Emoji! 😉

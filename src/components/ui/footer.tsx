@@ -1,4 +1,4 @@
-import { myContext } from "context";
+import { FooterMenu } from "components/layout";
 import React from "react";
 import tw from "twin.macro";
 
@@ -28,44 +28,11 @@ const RightSpan = styled.span`
   ${tw`col-span-1 font-sans text-sm text-right`}
 `;
 
-const MenuWrapper = styled.nav`
-  ${tw` col-span-2 text-right`};
-`;
-const Link = styled.a`
-  ${tw`hover:text-yellow-500 hover:underline pl-4 text-sm text-center cursor-pointer`};
-`;
-
 export const Footer = (): JSX.Element => {
   return (
     <Element>
       <Section>
-        <myContext.Consumer>
-          {(context) => (
-            <MenuWrapper role="full_horizontal_menu">
-              <Link onClick={context.handleSelect} to="/">
-                Index
-              </Link>
-              <Link onClick={context.handleSelect} to="/brand">
-                Brand
-              </Link>
-              <Link onClick={context.handleSelect} to="/poster">
-                Poster
-              </Link>
-              <Link onClick={context.handleSelect} to="/thing">
-                Thing
-              </Link>
-              <Link onClick={context.handleSelect} to="/logo">
-                Logo
-              </Link>
-              <Link onClick={context.handleSelect} to="/smm">
-                SMM
-              </Link>
-              <Link onClick={context.handleSelect} to="/pro">
-                Pro
-              </Link>
-            </MenuWrapper>
-          )}
-        </myContext.Consumer>
+        <FooterMenu />
         <LeftSpan>&copy;&nbsp;Copyright 2020 IAM.</LeftSpan>
         <RightSpan>
           {" "}

@@ -4,7 +4,7 @@ import tw from "twin.macro";
 
 import styled from "@emotion/styled";
 
-const Modal = (): JSX.Element => {
+export const Modal = (): JSX.Element => {
   const OuterWrapper = styled.div`
     ${tw`fixed top-0 left-0 flex items-center justify-center w-full h-full opacity-100 pointer-events-auto`};
     transition: opacity 0.25s ease;
@@ -103,4 +103,4 @@ const Modal = (): JSX.Element => {
   );
 };
 
-export default Modal;
+

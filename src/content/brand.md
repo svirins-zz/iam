@@ -2,7 +2,6 @@
 slug: "brand"
 title: "brand + smth"
 price: 300
-url: "/assets/images/brand.webp"
 ---
 
 Now, with Emoji! 😉
