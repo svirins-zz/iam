@@ -1,5 +1,4 @@
-import PageLayout from "components/layout/pageLayout";
-import SEO from "components/layout/seo";
+import { PageLayout, SEO } from "components/layout";
 import React from "react";
 import tw from "twin.macro";
 

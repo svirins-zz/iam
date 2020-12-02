@@ -1,10 +1,9 @@
+import { Modal } from "components/layout";
 import { myContext } from "context";
 import React from "react";
 import tw from "twin.macro";
 
 import styled from "@emotion/styled";
-
-import Modal from "../layout/modal";
 
 const Title = styled.h2`
   ${tw`flex-auto font-sans text-3xl capitalize`}

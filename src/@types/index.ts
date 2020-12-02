@@ -41,3 +41,8 @@ export type ContextProps = {
 export interface AuxProps {
   children: ReactChild | ReactChildren;
 }
+
+export interface MenuItem {
+  name: string;
+  link: string;
+}

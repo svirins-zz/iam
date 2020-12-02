@@ -1,7 +1,8 @@
 import closeSvg from "assets/close.svg";
 import { myContext } from "context";
 import { Link } from "gatsby";
-import React from "react";
+import { generateMenu } from "lib";
+import React, { useContext } from "react";
 import tw from "twin.macro";
 
 import styled from "@emotion/styled";
@@ -31,71 +32,40 @@ const MainMenu = (): JSX.Element => {
     z-index: 800;
   `;
   // TODO: disable scroll
-  // TODO: generate menu programmatically
   // TODO close menu after selection
+  const context = useContext(myContext);
+  const menuItems = generateMenu();
+  const displayMenu = menuItems.map((menuItem, index) => {
+    return (
+      <MenuItem key={index}>
+        <Link onClick={context.handleSelect} to={menuItem.link} key={index}>
+          {menuItem.name}
+        </Link>
+      </MenuItem>
+    );
+  });
   return (
-    <myContext.Consumer>
-      {(context) =>
-        context.menuVisible?.isVisible ? (
-          <PageWrapper
-            onKeyPress={(event) => {
-              console.log(event.code);
-              if (event.code === "Escape") context.closeMenu;
-            }}
-          >
-            <CloseWrapper onClick={context.closeMenu}>
-              <Img src={closeSvg} alt="close button" />
-            </CloseWrapper>
-            <MenuWrapper>
-              <nav id="menu" role="fullscreen-menu">
-                <div className="inner">
-                  <ul className="links pointer-events-auto">
-                    <MenuItem>
-                      <Link onClick={context.handleSelect} to="/">
-                        Index
-                      </Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link onClick={context.handleSelect} to="/brand">
-                        Brand
-                      </Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link onClick={context.handleSelect} to="/poster">
-                        Poster
-                      </Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link onClick={context.handleSelect} to="/thing">
-                        Thing
-                      </Link>
-                    </MenuItem>
-
-                    <MenuItem>
-                      <Link onClick={context.handleSelect} to="/logo">
-                        Logo
-                      </Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link onClick={context.handleSelect} to="/smm">
-                        SMM
-                      </Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link onClick={context.handleSelect} to="/pro">
-                        Pro
-                      </Link>
-                    </MenuItem>
-                  </ul>
-                </div>
-              </nav>
-            </MenuWrapper>
-          </PageWrapper>
-        ) : (
-          ""
-        )
-      }
-    </myContext.Consumer>
+    <>
+      {context.menuVisible?.isVisible} ? (
+      <PageWrapper
+        onKeyPress={(event) => {
+          console.log(event.code);
+          if (event.code === "Escape") context.closeMenu;
+        }}
+      >
+        <CloseWrapper onClick={context.closeMenu}>
+          <Img src={closeSvg} alt="close button" />
+        </CloseWrapper>
+        <MenuWrapper>
+          <nav id="menu" role="fullscreen-menu">
+            <div className="inner">
+              <ul className="links pointer-events-auto">{displayMenu}</ul>
+            </div>
+          </nav>
+        </MenuWrapper>
+      </PageWrapper>
+      ) : ( `` )
+    </>
   );
 };
 
