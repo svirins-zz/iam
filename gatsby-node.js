@@ -1,5 +1,5 @@
 // remove actions destructuring
-exports.onCreateWebpackConfig = ({ getConfig }) => {
+exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
   const config = getConfig();
   config.node = {
     fs: "empty",

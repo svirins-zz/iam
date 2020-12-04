@@ -34,7 +34,6 @@ const MainMenu = (): JSX.Element => {
   // TODO: disable scroll
   const context = useContext(myContext);
   const menuItems = generateMenu();
-  console.log(menuItems);
   const displayMenu = menuItems.map((menuItem, index) => {
     return (
       <MenuItem key={index}>
