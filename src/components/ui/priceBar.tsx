@@ -1,4 +1,4 @@
-import { Modal } from "components/layout";
+import { FormModal } from "components/layout";
 import { myContext } from "context";
 import React from "react";
 import tw from "twin.macro";
@@ -15,7 +15,6 @@ const Price = styled.p`
 `;
 const Spantop = tw.span`text-base`;
 const SpanBottom = tw.span`text-xl font-semibold`;
-
 const Button = styled.button`
   ${tw` flex-1 px-4 py-2 font-bold rounded`}
   color: #101010;
@@ -49,7 +48,7 @@ export const PriceBar = ({
             <SpanBottom>{price} USD</SpanBottom>
           </Price>
           <Button onClick={context.showModal}>Order</Button>
-          <Modal />
+          <FormModal />
         </Bar>
       )}
     </myContext.Consumer>

@@ -1,5 +1,6 @@
+import { myContext } from "context";
 import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
+import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 
 import { SeoProps } from "@types";
@@ -23,14 +24,18 @@ export const SEO = ({
       }
     `
   );
-
+  const context = useContext(myContext);
+  const className =
+    context.menuVisible?.isVisible || context.modalVisible?.isVisible
+      ? "scroll-off"
+      : "scroll-on";
   const metaDescription = description || site.siteMetadata.description;
-
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
+      bodyAttributes={{ class: className }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
@@ -70,4 +75,3 @@ export const SEO = ({
     />
   );
 };
-

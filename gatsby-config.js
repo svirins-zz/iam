@@ -78,7 +78,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          "gatsby-remark-unwrap-images",
+          `gatsby-remark-responsive-iframe`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -88,9 +88,7 @@ module.exports = {
           {
             resolve: "gatsby-remark-emojis",
             options: {
-              // Deactivate the plugin globally (default: true)
               active: true,
-              // Add a custom css class
               class: "emoji-icon",
               // In order to avoid pattern mismatch you can specify
               // an escape character which will be prepended to the
@@ -106,6 +104,35 @@ module.exports = {
                 position: "relative",
                 top: "5px",
                 width: "25px",
+              },
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              linkImagesToOriginal: false,
+              maxWidth: 768,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images-medium-zoom`, // Important!
+            options: {
+              scrollOffset: 40,
+            }
+          },
+          {
+            resolve: `gatsby-remark-classes`,
+            options: {
+              classMap: {
+                "heading[depth=1]": "text-2xl",
+                "heading[depth=2]": "text-xl",
+                "paragraph": "text-base",
+                "emphasis": "italic",
+                "strong": "font-bold",
+                "link": "hover:text-yellow-500 text-yellow-700",
               },
             },
           },

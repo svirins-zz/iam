@@ -2568,6 +2568,13 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___styles___position = 'pluginCreator.pluginOptions.styles.position',
   pluginCreator___pluginOptions___styles___top = 'pluginCreator.pluginOptions.styles.top',
   pluginCreator___pluginOptions___styles___width = 'pluginCreator.pluginOptions.styles.width',
+  pluginCreator___pluginOptions___scrollOffset = 'pluginCreator.pluginOptions.scrollOffset',
+  pluginCreator___pluginOptions___classMap___heading_depth_1_ = 'pluginCreator.pluginOptions.classMap.heading_depth_1_',
+  pluginCreator___pluginOptions___classMap___heading_depth_2_ = 'pluginCreator.pluginOptions.classMap.heading_depth_2_',
+  pluginCreator___pluginOptions___classMap___paragraph = 'pluginCreator.pluginOptions.classMap.paragraph',
+  pluginCreator___pluginOptions___classMap___emphasis = 'pluginCreator.pluginOptions.classMap.emphasis',
+  pluginCreator___pluginOptions___classMap___strong = 'pluginCreator.pluginOptions.classMap.strong',
+  pluginCreator___pluginOptions___classMap___link = 'pluginCreator.pluginOptions.classMap.link',
   pluginCreator___pluginOptions___pathCheck = 'pluginCreator.pluginOptions.pathCheck',
   pluginCreator___nodeAPIs = 'pluginCreator.nodeAPIs',
   pluginCreator___browserAPIs = 'pluginCreator.browserAPIs',
@@ -2777,6 +2784,7 @@ enum SitePluginFieldsEnum {
   pluginOptions___plugins___pluginOptions___class = 'pluginOptions.plugins.pluginOptions.class',
   pluginOptions___plugins___pluginOptions___escapeCharacter = 'pluginOptions.plugins.pluginOptions.escapeCharacter',
   pluginOptions___plugins___pluginOptions___size = 'pluginOptions.plugins.pluginOptions.size',
+  pluginOptions___plugins___pluginOptions___scrollOffset = 'pluginOptions.plugins.pluginOptions.scrollOffset',
   pluginOptions___plugins___nodeAPIs = 'pluginOptions.plugins.nodeAPIs',
   pluginOptions___plugins___browserAPIs = 'pluginOptions.plugins.browserAPIs',
   pluginOptions___plugins___pluginFilepath = 'pluginOptions.plugins.pluginFilepath',
@@ -2836,6 +2844,13 @@ enum SitePluginFieldsEnum {
   pluginOptions___styles___position = 'pluginOptions.styles.position',
   pluginOptions___styles___top = 'pluginOptions.styles.top',
   pluginOptions___styles___width = 'pluginOptions.styles.width',
+  pluginOptions___scrollOffset = 'pluginOptions.scrollOffset',
+  pluginOptions___classMap___heading_depth_1_ = 'pluginOptions.classMap.heading_depth_1_',
+  pluginOptions___classMap___heading_depth_2_ = 'pluginOptions.classMap.heading_depth_2_',
+  pluginOptions___classMap___paragraph = 'pluginOptions.classMap.paragraph',
+  pluginOptions___classMap___emphasis = 'pluginOptions.classMap.emphasis',
+  pluginOptions___classMap___strong = 'pluginOptions.classMap.strong',
+  pluginOptions___classMap___link = 'pluginOptions.classMap.link',
   pluginOptions___pathCheck = 'pluginOptions.pathCheck',
   nodeAPIs = 'nodeAPIs',
   browserAPIs = 'browserAPIs',
@@ -2999,7 +3014,27 @@ type SitePluginPluginOptions = {
   readonly escapeCharacter: Maybe<Scalars['String']>;
   readonly size: Maybe<Scalars['Int']>;
   readonly styles: Maybe<SitePluginPluginOptionsStyles>;
+  readonly scrollOffset: Maybe<Scalars['Int']>;
+  readonly classMap: Maybe<SitePluginPluginOptionsClassMap>;
   readonly pathCheck: Maybe<Scalars['Boolean']>;
+};
+
+type SitePluginPluginOptionsClassMap = {
+  readonly heading_depth_1_: Maybe<Scalars['String']>;
+  readonly heading_depth_2_: Maybe<Scalars['String']>;
+  readonly paragraph: Maybe<Scalars['String']>;
+  readonly emphasis: Maybe<Scalars['String']>;
+  readonly strong: Maybe<Scalars['String']>;
+  readonly link: Maybe<Scalars['String']>;
+};
+
+type SitePluginPluginOptionsClassMapFilterInput = {
+  readonly heading_depth_1_: Maybe<StringQueryOperatorInput>;
+  readonly heading_depth_2_: Maybe<StringQueryOperatorInput>;
+  readonly paragraph: Maybe<StringQueryOperatorInput>;
+  readonly emphasis: Maybe<StringQueryOperatorInput>;
+  readonly strong: Maybe<StringQueryOperatorInput>;
+  readonly link: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginPluginOptionsFilterInput = {
@@ -3052,6 +3087,8 @@ type SitePluginPluginOptionsFilterInput = {
   readonly escapeCharacter: Maybe<StringQueryOperatorInput>;
   readonly size: Maybe<IntQueryOperatorInput>;
   readonly styles: Maybe<SitePluginPluginOptionsStylesFilterInput>;
+  readonly scrollOffset: Maybe<IntQueryOperatorInput>;
+  readonly classMap: Maybe<SitePluginPluginOptionsClassMapFilterInput>;
   readonly pathCheck: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -3123,6 +3160,26 @@ type SitePluginPluginOptionsPluginsPluginOptions = {
   readonly escapeCharacter: Maybe<Scalars['String']>;
   readonly size: Maybe<Scalars['Int']>;
   readonly styles: Maybe<SitePluginPluginOptionsPluginsPluginOptionsStyles>;
+  readonly scrollOffset: Maybe<Scalars['Int']>;
+  readonly classMap: Maybe<SitePluginPluginOptionsPluginsPluginOptionsClassMap>;
+};
+
+type SitePluginPluginOptionsPluginsPluginOptionsClassMap = {
+  readonly heading_depth_1_: Maybe<Scalars['String']>;
+  readonly heading_depth_2_: Maybe<Scalars['String']>;
+  readonly paragraph: Maybe<Scalars['String']>;
+  readonly emphasis: Maybe<Scalars['String']>;
+  readonly strong: Maybe<Scalars['String']>;
+  readonly link: Maybe<Scalars['String']>;
+};
+
+type SitePluginPluginOptionsPluginsPluginOptionsClassMapFilterInput = {
+  readonly heading_depth_1_: Maybe<StringQueryOperatorInput>;
+  readonly heading_depth_2_: Maybe<StringQueryOperatorInput>;
+  readonly paragraph: Maybe<StringQueryOperatorInput>;
+  readonly emphasis: Maybe<StringQueryOperatorInput>;
+  readonly strong: Maybe<StringQueryOperatorInput>;
+  readonly link: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
@@ -3143,6 +3200,8 @@ type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   readonly escapeCharacter: Maybe<StringQueryOperatorInput>;
   readonly size: Maybe<IntQueryOperatorInput>;
   readonly styles: Maybe<SitePluginPluginOptionsPluginsPluginOptionsStylesFilterInput>;
+  readonly scrollOffset: Maybe<IntQueryOperatorInput>;
+  readonly classMap: Maybe<SitePluginPluginOptionsPluginsPluginOptionsClassMapFilterInput>;
 };
 
 type SitePluginPluginOptionsPluginsPluginOptionsStyles = {
@@ -3246,5 +3305,15 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
+type homezvrzdeviamsrccomponentslayoutseoTsx63159454QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type homezvrzdeviamsrccomponentslayoutseoTsx63159454Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
+
+type MenuQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type MenuQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'slug'>> } }> } };
 
 }

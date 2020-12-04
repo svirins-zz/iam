@@ -6,9 +6,6 @@ import { AuxProps, ContextProps } from "../@types";
 export const myContext = React.createContext<Partial<ContextProps>>({});
 
 const Provider = ({ children }: AuxProps) => {
-  const [choice, setChoice] = useImmer({
-    key: "",
-  });
   const [menuVisible, setMenuVisible] = useImmer({
     isVisible: false,
   });
@@ -19,13 +16,12 @@ const Provider = ({ children }: AuxProps) => {
   return (
     <myContext.Provider
       value={{
-        choice,
         menuVisible,
         modalVisible,
-        handleSelect: (e) => {
-          // setChoice((draft) => {
-          //   draft.key = key.toString();
-          // });
+        handleSelect: () => {
+          setMenuVisible((draft) => {
+            draft.isVisible = false;
+          });
         },
         closeMenu: () => {
           setMenuVisible((draft) => {

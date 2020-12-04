@@ -28,10 +28,9 @@ export interface ImageProps {
 }
 
 export type ContextProps = {
-  choice: { key: string };
   menuVisible: { isVisible: boolean };
   modalVisible: { isVisible: boolean };
-  handleSelect: (e: Event) => void;
+  handleSelect: () => void;
   closeMenu: () => void;
   showMenu: () => void;
   showModal: () => void;
