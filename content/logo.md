@@ -8,7 +8,7 @@ text: |-
 
   ## Heading
 
-  *Markdown parsing*
+  *Markdown parsing*er
 
   Markdown parsing in Gatsby is done with \[gatsby-transformer-remark], which
   uses the excellent \[remark] under the hood.\
