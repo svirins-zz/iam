@@ -1,6 +1,6 @@
 ---
 title: dezign
-frontimage: /assets/uploads/illustration.webp
+frontimage: /static/assets/title.webp
 price: 432
 text: text
 ---
