@@ -9,6 +9,9 @@ module.exports = {
     author: "@svirins",
     siteURL: "https://deezign.cf",
   },
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true,
+  },
   plugins: [
     "gatsby-plugin-emotion",
     "gatsby-plugin-netlify",
