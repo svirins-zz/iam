@@ -20,7 +20,7 @@ const BigSquare = styled.section`
 
 export const PageTemplate = (data): JSX.Element => {
   const { publicURL } = data.pageData.allFile.edges[0].node;
-  const { frontmatter, html } = data.pageData.allMarkdownRemark.edges[0].node;
+  const { frontmatter } = data.pageData.allMarkdownRemark.edges[0].node;
   return (
     <PageLayout>
       <SEO title="Design" />
@@ -30,10 +30,10 @@ export const PageTemplate = (data): JSX.Element => {
         <DesignTile />
         <RightTile />
         <BigSquare>
-          <ImageTile alt={frontmatter.slug} url={publicURL} />
+          <ImageTile alt={frontmatter.slug} url={frontmatter.frontimage} />
         </BigSquare>
         <PriceBar title={frontmatter.title} price={frontmatter.price} />
-        <Description title={frontmatter.title} html={html} />
+        <Description title={frontmatter.title} html={frontmatter.text} />
         <Footer />
       </InnerPageContainer>
     </PageLayout>

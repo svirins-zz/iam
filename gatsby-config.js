@@ -21,7 +21,6 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-resolve-src",
-    "gatsby-plugin-netlify-cms",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -41,6 +40,13 @@ module.exports = {
       options: {
         name: "images",
         path: `${__dirname}/src/assets`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "uploads",
+        path: `${__dirname}/src/assets/uploads`,
       },
     },
     {
@@ -107,6 +113,12 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              staticFolderName: `${__dirname}/src/assets/uploads`,
+            },
+          },
+          {
             resolve: `gatsby-remark-images-zoom`,
             options: {
               background: "#101010",
@@ -139,5 +151,6 @@ module.exports = {
         ],
       },
     },
+    "gatsby-plugin-netlify-cms",
   ],
 };

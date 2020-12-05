@@ -12,11 +12,12 @@ export const query = graphql`
     allMarkdownRemark(filter: { frontmatter: { slug: { eq: $slug } } }) {
       edges {
         node {
-          html
           frontmatter {
             title
             slug
+            frontimage
             price
+            text
           }
         }
       }
