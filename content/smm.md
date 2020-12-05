@@ -6,7 +6,7 @@ price: 10
 text: |-
   Now, with Emoji! 😉
 
-  ## Heading
+  ## Headingwer
 
   *Markdown parsing*
 
