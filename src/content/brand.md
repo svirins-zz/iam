@@ -1,7 +1,7 @@
 ---
 slug: brand
 title: brand
-frontimage: uploads/brand.webp
+frontimage: ../uploads/brand.webp
 price: 300
 text: |-
   Now, with Emoji! 😉
