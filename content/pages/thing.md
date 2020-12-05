@@ -11,5 +11,5 @@ text: |-
   *Markdown parsing*
 
   Markdown parsing in Gatsby is done with \[gatsby-transformer-remark], which
-  uses the excellent \[remark] under the hood.\
+  uses the excellent \[remark] under the hood.\ewr
 ---
