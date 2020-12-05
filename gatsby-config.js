@@ -31,8 +31,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "content",
-        path: `${__dirname}/content`,
+        name: "pages",
+        path: `${__dirname}/content/pages`,
       },
     },
     {
@@ -115,7 +115,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-relative-images`,
             options: {
-              staticFolderName: `${__dirname}/contens/assets`,
+              staticFolderName: `${__dirname}/content/assets`,
             },
           },
           {

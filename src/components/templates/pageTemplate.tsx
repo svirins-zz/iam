@@ -30,7 +30,7 @@ export const PageTemplate = (data): JSX.Element => {
         <DesignTile />
         <RightTile />
         <BigSquare>
-          <ImageTile alt={frontmatter.slug} url={frontmatter.frontimage} />
+          <ImageTile alt={frontmatter.slug} url={publicURL} />
         </BigSquare>
         <PriceBar title={frontmatter.title} price={frontmatter.price} />
         <Description title={frontmatter.title} html={frontmatter.text} />

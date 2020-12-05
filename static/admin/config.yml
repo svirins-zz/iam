@@ -5,13 +5,13 @@ backend:
 
 
 media_folder: content/assets
-public_folder: assets
+public_folder: /assets
 
 
 collections:
   - name: "page"
     label: "Page"
-    folder: "content"
+    folder: "content/pages"
     create: true
     slug: "{{title}}" 
     fields:
