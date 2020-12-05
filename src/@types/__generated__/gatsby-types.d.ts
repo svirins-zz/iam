@@ -2538,8 +2538,6 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___stripMetadata = 'pluginCreator.pluginOptions.stripMetadata',
   pluginCreator___pluginOptions___defaultQuality = 'pluginCreator.pluginOptions.defaultQuality',
   pluginCreator___pluginOptions___failOnError = 'pluginCreator.pluginOptions.failOnError',
-  pluginCreator___pluginOptions___manualInit = 'pluginCreator.pluginOptions.manualInit',
-  pluginCreator___pluginOptions___modulePath = 'pluginCreator.pluginOptions.modulePath',
   pluginCreator___pluginOptions___trackingId = 'pluginCreator.pluginOptions.trackingId',
   pluginCreator___pluginOptions___anonymize = 'pluginCreator.pluginOptions.anonymize',
   pluginCreator___pluginOptions___head = 'pluginCreator.pluginOptions.head',
@@ -2813,8 +2811,6 @@ enum SitePluginFieldsEnum {
   pluginOptions___stripMetadata = 'pluginOptions.stripMetadata',
   pluginOptions___defaultQuality = 'pluginOptions.defaultQuality',
   pluginOptions___failOnError = 'pluginOptions.failOnError',
-  pluginOptions___manualInit = 'pluginOptions.manualInit',
-  pluginOptions___modulePath = 'pluginOptions.modulePath',
   pluginOptions___trackingId = 'pluginOptions.trackingId',
   pluginOptions___anonymize = 'pluginOptions.anonymize',
   pluginOptions___head = 'pluginOptions.head',
@@ -2993,8 +2989,6 @@ type SitePluginPluginOptions = {
   readonly stripMetadata: Maybe<Scalars['Boolean']>;
   readonly defaultQuality: Maybe<Scalars['Int']>;
   readonly failOnError: Maybe<Scalars['Boolean']>;
-  readonly manualInit: Maybe<Scalars['Boolean']>;
-  readonly modulePath: Maybe<Scalars['String']>;
   readonly trackingId: Maybe<Scalars['String']>;
   readonly anonymize: Maybe<Scalars['Boolean']>;
   readonly head: Maybe<Scalars['Boolean']>;
@@ -3068,8 +3062,6 @@ type SitePluginPluginOptionsFilterInput = {
   readonly stripMetadata: Maybe<BooleanQueryOperatorInput>;
   readonly defaultQuality: Maybe<IntQueryOperatorInput>;
   readonly failOnError: Maybe<BooleanQueryOperatorInput>;
-  readonly manualInit: Maybe<BooleanQueryOperatorInput>;
-  readonly modulePath: Maybe<StringQueryOperatorInput>;
   readonly trackingId: Maybe<StringQueryOperatorInput>;
   readonly anonymize: Maybe<BooleanQueryOperatorInput>;
   readonly head: Maybe<BooleanQueryOperatorInput>;

@@ -4,19 +4,15 @@ backend:
   branch: main
 
 
-media_folder: /src/assets/uploads
+media_folder: static/assets
 
-slug:
-  encoding: "ascii"
-  clean_accents: true
-  sanitize_replacement: "_"
 
 collections:
   - name: "page"
     label: "Page"
-    folder: "/src/content/pages"
+    folder: "static/content"
     create: true
-    slug: "{{title}}" # this will be filename
+    slug: "{{title}}" 
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "FrontImage", name: "frontimage", widget: "image"}
