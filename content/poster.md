@@ -1,7 +1,7 @@
 ---
 slug: poster
 title: poster
-frontimage: uploads/poster.webp
+frontimage: assets/poster.webp
 price: 3500
 text: |-
   Now, with Emoji! 😉

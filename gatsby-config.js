@@ -32,7 +32,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "content",
-        path: `${__dirname}/src/content`,
+        path: `${__dirname}/content`,
       },
     },
     {
@@ -46,7 +46,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "uploads",
-        path: `${__dirname}/src/assets/uploads`,
+        path: `${__dirname}/content/assets`,
       },
     },
     {
@@ -62,7 +62,7 @@ module.exports = {
         short_name: "I AM",
         start_url: "/",
         display: "browser",
-        icon: "src/assets/images/iam.webp",
+        icon: "src/assets/images/design.webp",
       },
     },
     {
@@ -115,7 +115,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-relative-images`,
             options: {
-              staticFolderName: `${__dirname}/src/assets/uploads`,
+              staticFolderName: `${__dirname}/contens/assets`,
             },
           },
           {
@@ -131,7 +131,7 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               linkImagesToOriginal: false,
-              maxWidth: 768,
+              maxWidth: 813,
               withWebp: true,
             },
           },

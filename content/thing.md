@@ -1,7 +1,7 @@
 ---
 slug: thing
 title: "thing "
-frontimage: uploads/thing.webp
+frontimage: assets/thing.webp
 price: 4500
 text: |-
   Now, with Emoji! 😉

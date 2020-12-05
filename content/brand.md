@@ -1,7 +1,7 @@
 ---
 slug: brand
 title: brand
-frontimage: /uploads/brand.webp
+frontimage: assets/brand.webp
 price: 300
 text: |-
   Now, with Emoji! 😉
@@ -15,5 +15,5 @@ text: |-
 
 
 
-  ![alt](/uploads/illustration.webp "text")
+  ![alt](../assets/illustration.webp "text")
 ---

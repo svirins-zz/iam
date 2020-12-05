@@ -1,7 +1,7 @@
 ---
 slug: idea
 title: idea
-frontimage: uploads/idea.webp
+frontimage: assets/idea.webp
 price: 3500
 text: |-
   Now, with Emoji! 😉

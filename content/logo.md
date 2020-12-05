@@ -1,7 +1,7 @@
 ---
 slug: logo
 title: logo
-frontimage: uploads/logo.webp
+frontimage: assets/logo.webp
 price: 250
 text: |-
   Now, with Emoji! 😉
