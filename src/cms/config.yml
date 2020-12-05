@@ -4,13 +4,12 @@ backend:
   branch: main
 
 
-media_folder: static/assets
-public_folder: assets
+media_folder: src/assets/uploads
 
 collections:
   - name: "page"
     label: "Page"
-    folder: "content"
+    folder: "src/content/pages"
     create: true
     slug: "{{name}}" # this will be filename
     fields:
