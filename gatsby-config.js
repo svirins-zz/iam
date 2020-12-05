@@ -18,6 +18,18 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-resolve-src",
     {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        /**
+         * One convention is to place your Netlify CMS customization code in a
+         * `src/cms` directory.
+         */
+        modulePath: `${__dirname}/src/cms/cms.js`,
+        manualInit: true,
+        includeRobots: false,
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID,
@@ -80,12 +92,6 @@ module.exports = {
         plugins: [
           `gatsby-remark-responsive-iframe`,
           {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-            },
-          },
-          {
             resolve: "gatsby-remark-emojis",
             options: {
               active: true,
@@ -108,6 +114,12 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-images-zoom`,
+            options: {
+              background: "#101010",
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               // It's important to specify the maxWidth (in pixels) of
@@ -115,13 +127,8 @@ module.exports = {
               // base for generating different widths of each image.
               linkImagesToOriginal: false,
               maxWidth: 768,
+              withWebp: true,
             },
-          },
-          {
-            resolve: `gatsby-remark-images-medium-zoom`, // Important!
-            options: {
-              scrollOffset: 40,
-            }
           },
           {
             resolve: `gatsby-remark-classes`,
@@ -132,7 +139,7 @@ module.exports = {
                 "paragraph": "text-base",
                 "emphasis": "italic",
                 "strong": "font-bold",
-                "link": "hover:text-yellow-500 text-yellow-700",
+                "link": "hover:text-yellow-500 text-red-700",
               },
             },
           },

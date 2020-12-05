@@ -1,0 +1,11 @@
+.scroll-off {
+  position: fixed;
+  height: 100vh;
+  overflow-y: hidden;
+  padding-right: 15px;
+}
+.scroll-on {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+}

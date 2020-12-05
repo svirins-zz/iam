@@ -13,4 +13,3 @@ const Element = styled.img`
 export const ImageTile = ({ alt, url }: ImageProps): JSX.Element => {
   return <Element src={url} alt={alt} />;
 };
-

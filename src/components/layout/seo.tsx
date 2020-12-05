@@ -1,3 +1,5 @@
+import "styles/body-classes.css";
+
 import { myContext } from "context";
 import { graphql, useStaticQuery } from "gatsby";
 import React, { useContext } from "react";
