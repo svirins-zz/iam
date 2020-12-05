@@ -15,5 +15,5 @@ text: |-
 
 
 
-  ![alt](uploads/illustration.webp "text")
+  ![alt](../uploads/illustration.webp "text")
 ---
