@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: svirins/iam
+
+publish_mode: editorial_workflow
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: "page"
+    label: "Page"
+    folder: "src/content/"
+    create: true
+    slug: "{{name}}" # this will be filename
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "FrontImage", name: "frontimage", widget: "image"}
+      - {label: "Price", name: "price", widget: "number"}
+      - {label: "Text", name: "text", widget: "markdown"}
+

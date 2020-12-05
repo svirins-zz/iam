@@ -11,6 +11,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-emotion",
+    "gatsby-plugin-netlify",
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-typescript",
@@ -24,7 +25,6 @@ module.exports = {
          * One convention is to place your Netlify CMS customization code in a
          * `src/cms` directory.
          */
-        modulePath: `${__dirname}/src/cms/cms.js`,
         manualInit: true,
         includeRobots: false,
       },

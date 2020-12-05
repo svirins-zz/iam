@@ -2526,7 +2526,6 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___stripMetadata = 'pluginCreator.pluginOptions.stripMetadata',
   pluginCreator___pluginOptions___defaultQuality = 'pluginCreator.pluginOptions.defaultQuality',
   pluginCreator___pluginOptions___failOnError = 'pluginCreator.pluginOptions.failOnError',
-  pluginCreator___pluginOptions___modulePath = 'pluginCreator.pluginOptions.modulePath',
   pluginCreator___pluginOptions___manualInit = 'pluginCreator.pluginOptions.manualInit',
   pluginCreator___pluginOptions___includeRobots = 'pluginCreator.pluginOptions.includeRobots',
   pluginCreator___pluginOptions___trackingId = 'pluginCreator.pluginOptions.trackingId',
@@ -2802,7 +2801,6 @@ enum SitePluginFieldsEnum {
   pluginOptions___stripMetadata = 'pluginOptions.stripMetadata',
   pluginOptions___defaultQuality = 'pluginOptions.defaultQuality',
   pluginOptions___failOnError = 'pluginOptions.failOnError',
-  pluginOptions___modulePath = 'pluginOptions.modulePath',
   pluginOptions___manualInit = 'pluginOptions.manualInit',
   pluginOptions___includeRobots = 'pluginOptions.includeRobots',
   pluginOptions___trackingId = 'pluginOptions.trackingId',
@@ -2983,7 +2981,6 @@ type SitePluginPluginOptions = {
   readonly stripMetadata: Maybe<Scalars['Boolean']>;
   readonly defaultQuality: Maybe<Scalars['Int']>;
   readonly failOnError: Maybe<Scalars['Boolean']>;
-  readonly modulePath: Maybe<Scalars['String']>;
   readonly manualInit: Maybe<Scalars['Boolean']>;
   readonly includeRobots: Maybe<Scalars['Boolean']>;
   readonly trackingId: Maybe<Scalars['String']>;
@@ -3059,7 +3056,6 @@ type SitePluginPluginOptionsFilterInput = {
   readonly stripMetadata: Maybe<BooleanQueryOperatorInput>;
   readonly defaultQuality: Maybe<IntQueryOperatorInput>;
   readonly failOnError: Maybe<BooleanQueryOperatorInput>;
-  readonly modulePath: Maybe<StringQueryOperatorInput>;
   readonly manualInit: Maybe<BooleanQueryOperatorInput>;
   readonly includeRobots: Maybe<BooleanQueryOperatorInput>;
   readonly trackingId: Maybe<StringQueryOperatorInput>;
