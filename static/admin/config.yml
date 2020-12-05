@@ -1,16 +1,16 @@
 backend:
-  name: git-gateway
-  branch: svirins/iam
+  name: github
+  repo: svirins/iam
+  branch: main
 
-publish_mode: editorial_workflow
 
 media_folder: static/assets
-public_folder: /assets
+public_folder: assets
 
 collections:
   - name: "page"
     label: "Page"
-    folder: "src/content/"
+    folder: "content"
     create: true
     slug: "{{name}}" # this will be filename
     fields:
