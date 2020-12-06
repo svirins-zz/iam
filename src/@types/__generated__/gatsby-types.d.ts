@@ -2380,12 +2380,10 @@ type SitePageConnection_groupArgs = {
 
 type SitePageContext = {
   readonly slug: Maybe<Scalars['String']>;
-  readonly html: Maybe<Scalars['String']>;
 };
 
 type SitePageContextFilterInput = {
   readonly slug: Maybe<StringQueryOperatorInput>;
-  readonly html: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePageEdge = {
@@ -2488,7 +2486,6 @@ enum SitePageFieldsEnum {
   internal___type = 'internal.type',
   isCreatedByStatefulCreatePages = 'isCreatedByStatefulCreatePages',
   context___slug = 'context.slug',
-  context___html = 'context.html',
   pluginCreator___id = 'pluginCreator.id',
   pluginCreator___parent___id = 'pluginCreator.parent.id',
   pluginCreator___parent___parent___id = 'pluginCreator.parent.parent.id',
@@ -2569,36 +2566,21 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___cacheDigest = 'pluginCreator.pluginOptions.cacheDigest',
   pluginCreator___pluginOptions___fonts___google = 'pluginCreator.pluginOptions.fonts.google',
   pluginCreator___pluginOptions___outputPath = 'pluginCreator.pluginOptions.outputPath',
-  pluginCreator___pluginOptions___active = 'pluginCreator.pluginOptions.active',
-  pluginCreator___pluginOptions___class = 'pluginCreator.pluginOptions.class',
-  pluginCreator___pluginOptions___escapeCharacter = 'pluginCreator.pluginOptions.escapeCharacter',
-  pluginCreator___pluginOptions___size = 'pluginCreator.pluginOptions.size',
-  pluginCreator___pluginOptions___styles___display = 'pluginCreator.pluginOptions.styles.display',
-  pluginCreator___pluginOptions___styles___margin = 'pluginCreator.pluginOptions.styles.margin',
-  pluginCreator___pluginOptions___styles___margin_top = 'pluginCreator.pluginOptions.styles.margin_top',
-  pluginCreator___pluginOptions___styles___position = 'pluginCreator.pluginOptions.styles.position',
-  pluginCreator___pluginOptions___styles___top = 'pluginCreator.pluginOptions.styles.top',
-  pluginCreator___pluginOptions___styles___width = 'pluginCreator.pluginOptions.styles.width',
   pluginCreator___pluginOptions___staticFolderName = 'pluginCreator.pluginOptions.staticFolderName',
-  pluginCreator___pluginOptions___background = 'pluginCreator.pluginOptions.background',
-  pluginCreator___pluginOptions___linkImagesToOriginal = 'pluginCreator.pluginOptions.linkImagesToOriginal',
+  pluginCreator___pluginOptions___cmsConfig = 'pluginCreator.pluginOptions.cmsConfig',
   pluginCreator___pluginOptions___maxWidth = 'pluginCreator.pluginOptions.maxWidth',
-  pluginCreator___pluginOptions___withWebp = 'pluginCreator.pluginOptions.withWebp',
+  pluginCreator___pluginOptions___linkImagesToOriginal = 'pluginCreator.pluginOptions.linkImagesToOriginal',
   pluginCreator___pluginOptions___showCaptions = 'pluginCreator.pluginOptions.showCaptions',
   pluginCreator___pluginOptions___markdownCaptions = 'pluginCreator.pluginOptions.markdownCaptions',
   pluginCreator___pluginOptions___sizeByPixelDensity = 'pluginCreator.pluginOptions.sizeByPixelDensity',
   pluginCreator___pluginOptions___backgroundColor = 'pluginCreator.pluginOptions.backgroundColor',
   pluginCreator___pluginOptions___quality = 'pluginCreator.pluginOptions.quality',
+  pluginCreator___pluginOptions___withWebp = 'pluginCreator.pluginOptions.withWebp',
   pluginCreator___pluginOptions___tracedSVG = 'pluginCreator.pluginOptions.tracedSVG',
   pluginCreator___pluginOptions___loading = 'pluginCreator.pluginOptions.loading',
   pluginCreator___pluginOptions___disableBgImageOnAlpha = 'pluginCreator.pluginOptions.disableBgImageOnAlpha',
   pluginCreator___pluginOptions___disableBgImage = 'pluginCreator.pluginOptions.disableBgImage',
-  pluginCreator___pluginOptions___classMap___heading_depth_1_ = 'pluginCreator.pluginOptions.classMap.heading_depth_1_',
-  pluginCreator___pluginOptions___classMap___heading_depth_2_ = 'pluginCreator.pluginOptions.classMap.heading_depth_2_',
-  pluginCreator___pluginOptions___classMap___paragraph = 'pluginCreator.pluginOptions.classMap.paragraph',
-  pluginCreator___pluginOptions___classMap___emphasis = 'pluginCreator.pluginOptions.classMap.emphasis',
-  pluginCreator___pluginOptions___classMap___strong = 'pluginCreator.pluginOptions.classMap.strong',
-  pluginCreator___pluginOptions___classMap___link = 'pluginCreator.pluginOptions.classMap.link',
+  pluginCreator___pluginOptions___background = 'pluginCreator.pluginOptions.background',
   pluginCreator___pluginOptions___pathCheck = 'pluginCreator.pluginOptions.pathCheck',
   pluginCreator___nodeAPIs = 'pluginCreator.nodeAPIs',
   pluginCreator___browserAPIs = 'pluginCreator.browserAPIs',
@@ -2792,24 +2774,21 @@ enum SitePluginFieldsEnum {
   pluginOptions___plugins___id = 'pluginOptions.plugins.id',
   pluginOptions___plugins___name = 'pluginOptions.plugins.name',
   pluginOptions___plugins___version = 'pluginOptions.plugins.version',
-  pluginOptions___plugins___pluginOptions___active = 'pluginOptions.plugins.pluginOptions.active',
-  pluginOptions___plugins___pluginOptions___class = 'pluginOptions.plugins.pluginOptions.class',
-  pluginOptions___plugins___pluginOptions___escapeCharacter = 'pluginOptions.plugins.pluginOptions.escapeCharacter',
-  pluginOptions___plugins___pluginOptions___size = 'pluginOptions.plugins.pluginOptions.size',
   pluginOptions___plugins___pluginOptions___staticFolderName = 'pluginOptions.plugins.pluginOptions.staticFolderName',
-  pluginOptions___plugins___pluginOptions___background = 'pluginOptions.plugins.pluginOptions.background',
-  pluginOptions___plugins___pluginOptions___linkImagesToOriginal = 'pluginOptions.plugins.pluginOptions.linkImagesToOriginal',
+  pluginOptions___plugins___pluginOptions___cmsConfig = 'pluginOptions.plugins.pluginOptions.cmsConfig',
   pluginOptions___plugins___pluginOptions___maxWidth = 'pluginOptions.plugins.pluginOptions.maxWidth',
-  pluginOptions___plugins___pluginOptions___withWebp = 'pluginOptions.plugins.pluginOptions.withWebp',
+  pluginOptions___plugins___pluginOptions___linkImagesToOriginal = 'pluginOptions.plugins.pluginOptions.linkImagesToOriginal',
   pluginOptions___plugins___pluginOptions___showCaptions = 'pluginOptions.plugins.pluginOptions.showCaptions',
   pluginOptions___plugins___pluginOptions___markdownCaptions = 'pluginOptions.plugins.pluginOptions.markdownCaptions',
   pluginOptions___plugins___pluginOptions___sizeByPixelDensity = 'pluginOptions.plugins.pluginOptions.sizeByPixelDensity',
   pluginOptions___plugins___pluginOptions___backgroundColor = 'pluginOptions.plugins.pluginOptions.backgroundColor',
   pluginOptions___plugins___pluginOptions___quality = 'pluginOptions.plugins.pluginOptions.quality',
+  pluginOptions___plugins___pluginOptions___withWebp = 'pluginOptions.plugins.pluginOptions.withWebp',
   pluginOptions___plugins___pluginOptions___tracedSVG = 'pluginOptions.plugins.pluginOptions.tracedSVG',
   pluginOptions___plugins___pluginOptions___loading = 'pluginOptions.plugins.pluginOptions.loading',
   pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha = 'pluginOptions.plugins.pluginOptions.disableBgImageOnAlpha',
   pluginOptions___plugins___pluginOptions___disableBgImage = 'pluginOptions.plugins.pluginOptions.disableBgImage',
+  pluginOptions___plugins___pluginOptions___background = 'pluginOptions.plugins.pluginOptions.background',
   pluginOptions___plugins___nodeAPIs = 'pluginOptions.plugins.nodeAPIs',
   pluginOptions___plugins___browserAPIs = 'pluginOptions.plugins.browserAPIs',
   pluginOptions___plugins___pluginFilepath = 'pluginOptions.plugins.pluginFilepath',
@@ -2847,36 +2826,21 @@ enum SitePluginFieldsEnum {
   pluginOptions___fonts___google___subsets = 'pluginOptions.fonts.google.subsets',
   pluginOptions___fonts___google___variants = 'pluginOptions.fonts.google.variants',
   pluginOptions___outputPath = 'pluginOptions.outputPath',
-  pluginOptions___active = 'pluginOptions.active',
-  pluginOptions___class = 'pluginOptions.class',
-  pluginOptions___escapeCharacter = 'pluginOptions.escapeCharacter',
-  pluginOptions___size = 'pluginOptions.size',
-  pluginOptions___styles___display = 'pluginOptions.styles.display',
-  pluginOptions___styles___margin = 'pluginOptions.styles.margin',
-  pluginOptions___styles___margin_top = 'pluginOptions.styles.margin_top',
-  pluginOptions___styles___position = 'pluginOptions.styles.position',
-  pluginOptions___styles___top = 'pluginOptions.styles.top',
-  pluginOptions___styles___width = 'pluginOptions.styles.width',
   pluginOptions___staticFolderName = 'pluginOptions.staticFolderName',
-  pluginOptions___background = 'pluginOptions.background',
-  pluginOptions___linkImagesToOriginal = 'pluginOptions.linkImagesToOriginal',
+  pluginOptions___cmsConfig = 'pluginOptions.cmsConfig',
   pluginOptions___maxWidth = 'pluginOptions.maxWidth',
-  pluginOptions___withWebp = 'pluginOptions.withWebp',
+  pluginOptions___linkImagesToOriginal = 'pluginOptions.linkImagesToOriginal',
   pluginOptions___showCaptions = 'pluginOptions.showCaptions',
   pluginOptions___markdownCaptions = 'pluginOptions.markdownCaptions',
   pluginOptions___sizeByPixelDensity = 'pluginOptions.sizeByPixelDensity',
   pluginOptions___backgroundColor = 'pluginOptions.backgroundColor',
   pluginOptions___quality = 'pluginOptions.quality',
+  pluginOptions___withWebp = 'pluginOptions.withWebp',
   pluginOptions___tracedSVG = 'pluginOptions.tracedSVG',
   pluginOptions___loading = 'pluginOptions.loading',
   pluginOptions___disableBgImageOnAlpha = 'pluginOptions.disableBgImageOnAlpha',
   pluginOptions___disableBgImage = 'pluginOptions.disableBgImage',
-  pluginOptions___classMap___heading_depth_1_ = 'pluginOptions.classMap.heading_depth_1_',
-  pluginOptions___classMap___heading_depth_2_ = 'pluginOptions.classMap.heading_depth_2_',
-  pluginOptions___classMap___paragraph = 'pluginOptions.classMap.paragraph',
-  pluginOptions___classMap___emphasis = 'pluginOptions.classMap.emphasis',
-  pluginOptions___classMap___strong = 'pluginOptions.classMap.strong',
-  pluginOptions___classMap___link = 'pluginOptions.classMap.link',
+  pluginOptions___background = 'pluginOptions.background',
   pluginOptions___pathCheck = 'pluginOptions.pathCheck',
   nodeAPIs = 'nodeAPIs',
   browserAPIs = 'browserAPIs',
@@ -3023,45 +2987,22 @@ type SitePluginPluginOptions = {
   readonly cacheDigest: Maybe<Scalars['String']>;
   readonly fonts: Maybe<SitePluginPluginOptionsFonts>;
   readonly outputPath: Maybe<Scalars['String']>;
-  readonly active: Maybe<Scalars['Boolean']>;
-  readonly class: Maybe<Scalars['String']>;
-  readonly escapeCharacter: Maybe<Scalars['String']>;
-  readonly size: Maybe<Scalars['Int']>;
-  readonly styles: Maybe<SitePluginPluginOptionsStyles>;
   readonly staticFolderName: Maybe<Scalars['String']>;
-  readonly background: Maybe<Scalars['String']>;
-  readonly linkImagesToOriginal: Maybe<Scalars['Boolean']>;
+  readonly cmsConfig: Maybe<Scalars['String']>;
   readonly maxWidth: Maybe<Scalars['Int']>;
-  readonly withWebp: Maybe<Scalars['Boolean']>;
+  readonly linkImagesToOriginal: Maybe<Scalars['Boolean']>;
   readonly showCaptions: Maybe<Scalars['Boolean']>;
   readonly markdownCaptions: Maybe<Scalars['Boolean']>;
   readonly sizeByPixelDensity: Maybe<Scalars['Boolean']>;
   readonly backgroundColor: Maybe<Scalars['String']>;
   readonly quality: Maybe<Scalars['Int']>;
+  readonly withWebp: Maybe<Scalars['Boolean']>;
   readonly tracedSVG: Maybe<Scalars['Boolean']>;
   readonly loading: Maybe<Scalars['String']>;
   readonly disableBgImageOnAlpha: Maybe<Scalars['Boolean']>;
   readonly disableBgImage: Maybe<Scalars['Boolean']>;
-  readonly classMap: Maybe<SitePluginPluginOptionsClassMap>;
+  readonly background: Maybe<Scalars['String']>;
   readonly pathCheck: Maybe<Scalars['Boolean']>;
-};
-
-type SitePluginPluginOptionsClassMap = {
-  readonly heading_depth_1_: Maybe<Scalars['String']>;
-  readonly heading_depth_2_: Maybe<Scalars['String']>;
-  readonly paragraph: Maybe<Scalars['String']>;
-  readonly emphasis: Maybe<Scalars['String']>;
-  readonly strong: Maybe<Scalars['String']>;
-  readonly link: Maybe<Scalars['String']>;
-};
-
-type SitePluginPluginOptionsClassMapFilterInput = {
-  readonly heading_depth_1_: Maybe<StringQueryOperatorInput>;
-  readonly heading_depth_2_: Maybe<StringQueryOperatorInput>;
-  readonly paragraph: Maybe<StringQueryOperatorInput>;
-  readonly emphasis: Maybe<StringQueryOperatorInput>;
-  readonly strong: Maybe<StringQueryOperatorInput>;
-  readonly link: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginPluginOptionsFilterInput = {
@@ -3097,26 +3038,21 @@ type SitePluginPluginOptionsFilterInput = {
   readonly cacheDigest: Maybe<StringQueryOperatorInput>;
   readonly fonts: Maybe<SitePluginPluginOptionsFontsFilterInput>;
   readonly outputPath: Maybe<StringQueryOperatorInput>;
-  readonly active: Maybe<BooleanQueryOperatorInput>;
-  readonly class: Maybe<StringQueryOperatorInput>;
-  readonly escapeCharacter: Maybe<StringQueryOperatorInput>;
-  readonly size: Maybe<IntQueryOperatorInput>;
-  readonly styles: Maybe<SitePluginPluginOptionsStylesFilterInput>;
   readonly staticFolderName: Maybe<StringQueryOperatorInput>;
-  readonly background: Maybe<StringQueryOperatorInput>;
-  readonly linkImagesToOriginal: Maybe<BooleanQueryOperatorInput>;
+  readonly cmsConfig: Maybe<StringQueryOperatorInput>;
   readonly maxWidth: Maybe<IntQueryOperatorInput>;
-  readonly withWebp: Maybe<BooleanQueryOperatorInput>;
+  readonly linkImagesToOriginal: Maybe<BooleanQueryOperatorInput>;
   readonly showCaptions: Maybe<BooleanQueryOperatorInput>;
   readonly markdownCaptions: Maybe<BooleanQueryOperatorInput>;
   readonly sizeByPixelDensity: Maybe<BooleanQueryOperatorInput>;
   readonly backgroundColor: Maybe<StringQueryOperatorInput>;
   readonly quality: Maybe<IntQueryOperatorInput>;
+  readonly withWebp: Maybe<BooleanQueryOperatorInput>;
   readonly tracedSVG: Maybe<BooleanQueryOperatorInput>;
   readonly loading: Maybe<StringQueryOperatorInput>;
   readonly disableBgImageOnAlpha: Maybe<BooleanQueryOperatorInput>;
   readonly disableBgImage: Maybe<BooleanQueryOperatorInput>;
-  readonly classMap: Maybe<SitePluginPluginOptionsClassMapFilterInput>;
+  readonly background: Maybe<StringQueryOperatorInput>;
   readonly pathCheck: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -3171,103 +3107,39 @@ type SitePluginPluginOptionsPluginsFilterListInput = {
 };
 
 type SitePluginPluginOptionsPluginsPluginOptions = {
-  readonly active: Maybe<Scalars['Boolean']>;
-  readonly class: Maybe<Scalars['String']>;
-  readonly escapeCharacter: Maybe<Scalars['String']>;
-  readonly size: Maybe<Scalars['Int']>;
-  readonly styles: Maybe<SitePluginPluginOptionsPluginsPluginOptionsStyles>;
   readonly staticFolderName: Maybe<Scalars['String']>;
-  readonly background: Maybe<Scalars['String']>;
-  readonly linkImagesToOriginal: Maybe<Scalars['Boolean']>;
+  readonly cmsConfig: Maybe<Scalars['String']>;
   readonly maxWidth: Maybe<Scalars['Int']>;
-  readonly withWebp: Maybe<Scalars['Boolean']>;
+  readonly linkImagesToOriginal: Maybe<Scalars['Boolean']>;
   readonly showCaptions: Maybe<Scalars['Boolean']>;
   readonly markdownCaptions: Maybe<Scalars['Boolean']>;
   readonly sizeByPixelDensity: Maybe<Scalars['Boolean']>;
   readonly backgroundColor: Maybe<Scalars['String']>;
   readonly quality: Maybe<Scalars['Int']>;
+  readonly withWebp: Maybe<Scalars['Boolean']>;
   readonly tracedSVG: Maybe<Scalars['Boolean']>;
   readonly loading: Maybe<Scalars['String']>;
   readonly disableBgImageOnAlpha: Maybe<Scalars['Boolean']>;
   readonly disableBgImage: Maybe<Scalars['Boolean']>;
-  readonly classMap: Maybe<SitePluginPluginOptionsPluginsPluginOptionsClassMap>;
-};
-
-type SitePluginPluginOptionsPluginsPluginOptionsClassMap = {
-  readonly heading_depth_1_: Maybe<Scalars['String']>;
-  readonly heading_depth_2_: Maybe<Scalars['String']>;
-  readonly paragraph: Maybe<Scalars['String']>;
-  readonly emphasis: Maybe<Scalars['String']>;
-  readonly strong: Maybe<Scalars['String']>;
-  readonly link: Maybe<Scalars['String']>;
-};
-
-type SitePluginPluginOptionsPluginsPluginOptionsClassMapFilterInput = {
-  readonly heading_depth_1_: Maybe<StringQueryOperatorInput>;
-  readonly heading_depth_2_: Maybe<StringQueryOperatorInput>;
-  readonly paragraph: Maybe<StringQueryOperatorInput>;
-  readonly emphasis: Maybe<StringQueryOperatorInput>;
-  readonly strong: Maybe<StringQueryOperatorInput>;
-  readonly link: Maybe<StringQueryOperatorInput>;
+  readonly background: Maybe<Scalars['String']>;
 };
 
 type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
-  readonly active: Maybe<BooleanQueryOperatorInput>;
-  readonly class: Maybe<StringQueryOperatorInput>;
-  readonly escapeCharacter: Maybe<StringQueryOperatorInput>;
-  readonly size: Maybe<IntQueryOperatorInput>;
-  readonly styles: Maybe<SitePluginPluginOptionsPluginsPluginOptionsStylesFilterInput>;
   readonly staticFolderName: Maybe<StringQueryOperatorInput>;
-  readonly background: Maybe<StringQueryOperatorInput>;
-  readonly linkImagesToOriginal: Maybe<BooleanQueryOperatorInput>;
+  readonly cmsConfig: Maybe<StringQueryOperatorInput>;
   readonly maxWidth: Maybe<IntQueryOperatorInput>;
-  readonly withWebp: Maybe<BooleanQueryOperatorInput>;
+  readonly linkImagesToOriginal: Maybe<BooleanQueryOperatorInput>;
   readonly showCaptions: Maybe<BooleanQueryOperatorInput>;
   readonly markdownCaptions: Maybe<BooleanQueryOperatorInput>;
   readonly sizeByPixelDensity: Maybe<BooleanQueryOperatorInput>;
   readonly backgroundColor: Maybe<StringQueryOperatorInput>;
   readonly quality: Maybe<IntQueryOperatorInput>;
+  readonly withWebp: Maybe<BooleanQueryOperatorInput>;
   readonly tracedSVG: Maybe<BooleanQueryOperatorInput>;
   readonly loading: Maybe<StringQueryOperatorInput>;
   readonly disableBgImageOnAlpha: Maybe<BooleanQueryOperatorInput>;
   readonly disableBgImage: Maybe<BooleanQueryOperatorInput>;
-  readonly classMap: Maybe<SitePluginPluginOptionsPluginsPluginOptionsClassMapFilterInput>;
-};
-
-type SitePluginPluginOptionsPluginsPluginOptionsStyles = {
-  readonly display: Maybe<Scalars['String']>;
-  readonly margin: Maybe<Scalars['String']>;
-  readonly margin_top: Maybe<Scalars['String']>;
-  readonly position: Maybe<Scalars['String']>;
-  readonly top: Maybe<Scalars['String']>;
-  readonly width: Maybe<Scalars['String']>;
-};
-
-type SitePluginPluginOptionsPluginsPluginOptionsStylesFilterInput = {
-  readonly display: Maybe<StringQueryOperatorInput>;
-  readonly margin: Maybe<StringQueryOperatorInput>;
-  readonly margin_top: Maybe<StringQueryOperatorInput>;
-  readonly position: Maybe<StringQueryOperatorInput>;
-  readonly top: Maybe<StringQueryOperatorInput>;
-  readonly width: Maybe<StringQueryOperatorInput>;
-};
-
-type SitePluginPluginOptionsStyles = {
-  readonly display: Maybe<Scalars['String']>;
-  readonly margin: Maybe<Scalars['String']>;
-  readonly margin_top: Maybe<Scalars['String']>;
-  readonly position: Maybe<Scalars['String']>;
-  readonly top: Maybe<Scalars['String']>;
-  readonly width: Maybe<Scalars['String']>;
-};
-
-type SitePluginPluginOptionsStylesFilterInput = {
-  readonly display: Maybe<StringQueryOperatorInput>;
-  readonly margin: Maybe<StringQueryOperatorInput>;
-  readonly margin_top: Maybe<StringQueryOperatorInput>;
-  readonly position: Maybe<StringQueryOperatorInput>;
-  readonly top: Maybe<StringQueryOperatorInput>;
-  readonly width: Maybe<StringQueryOperatorInput>;
+  readonly background: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginSortInput = {
@@ -3321,29 +3193,16 @@ type WebPOptions = {
   readonly quality: Maybe<Scalars['Int']>;
 };
 
-type homezvrzdeviamsrctemplatespageJs841647832QueryVariables = Exact<{
+type homezvrzdeviamsrctemplatespageJs3357725859QueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
 
 
-type homezvrzdeviamsrctemplatespageJs841647832Query = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<MarkdownRemark, 'html'>
-        & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'slug' | 'frontimage' | 'price' | 'text'>> }
-      ) }> }, readonly allFile: { readonly edges: ReadonlyArray<{ readonly node: Pick<File, 'publicURL'> }> } };
+type homezvrzdeviamsrctemplatespageJs3357725859Query = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'slug' | 'frontimage' | 'price' | 'text'>> } }> }, readonly allFile: { readonly edges: ReadonlyArray<{ readonly node: Pick<File, 'publicURL'> }> } };
 
 type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
-
-type homezvrzdeviamsrccomponentslayoutseoTsx63159454QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type homezvrzdeviamsrccomponentslayoutseoTsx63159454Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
-
-type MenuQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type MenuQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'slug'>> } }> } };
 
 }

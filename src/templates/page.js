@@ -19,7 +19,6 @@ export const query = graphql`
             price
             text
           }
-          html
         }
       }
     }

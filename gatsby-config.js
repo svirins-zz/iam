@@ -86,66 +86,27 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          `gatsby-remark-responsive-iframe`,
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-relative-images",
           {
-            resolve: "gatsby-remark-emojis",
+            resolve: `gatsby-plugin-netlify-cms-paths`,
             options: {
-              active: true,
-              class: "emoji-icon",
-              // In order to avoid pattern mismatch you can specify
-              // an escape character which will be prepended to the
-              // actual pattern (e.g. `#:poop:`).
-              escapeCharacter: "#", // (default: '')
-              // Select the size (available size: 16, 24, 32, 64)
-              size: 64,
-              // Add custom styles
-              styles: {
-                display: "inline",
-                margin: "0",
-                "margin-top": "1px",
-                position: "relative",
-                top: "5px",
-                width: "25px",
-              },
+              cmsConfig: `/static/admin/config.yml`,
             },
           },
           {
-            resolve: `gatsby-remark-relative-images`,
+            resolve: "gatsby-remark-images",
             options: {
-              staticFolderName: `${__dirname}/content/assets`,
+              maxWidth: 1024,
             },
           },
           {
             resolve: `gatsby-remark-images-zoom`,
             options: {
               background: "#101010",
-            },
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              linkImagesToOriginal: false,
-              maxWidth: 813,
-              withWebp: true,
-            },
-          },
-          {
-            resolve: `gatsby-remark-classes`,
-            options: {
-              classMap: {
-                "heading[depth=1]": "text-2xl",
-                "heading[depth=2]": "text-xl",
-                "paragraph": "text-base",
-                "emphasis": "italic",
-                "strong": "font-bold",
-                "link": "hover:text-yellow-500 text-red-700",
-              },
             },
           },
         ],
