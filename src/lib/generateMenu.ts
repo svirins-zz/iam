@@ -30,7 +30,7 @@ export const generateMenu = (): MenuItem[] => {
     },
     ...generatedArray,
     {
-      name: "my blog",
+      name: "blog",
       link: "https://medium.com/@romamore",
     },
   ];

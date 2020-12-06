@@ -7,6 +7,7 @@ import {
   RightTile,
 } from "components/tiles";
 import { Description, Footer, PriceBar } from "components/ui";
+import { toHTML } from "lib";
 import React from "react";
 
 import styled from "@emotion/styled";
@@ -21,6 +22,7 @@ const BigSquare = styled.section`
 export const PageTemplate = (data): JSX.Element => {
   const { publicURL } = data.pageData.allFile.edges[0].node;
   const { frontmatter } = data.pageData.allMarkdownRemark.edges[0].node;
+  const html = toHTML(frontmatter.text);
   return (
     <PageLayout>
       <SEO title="Design" />

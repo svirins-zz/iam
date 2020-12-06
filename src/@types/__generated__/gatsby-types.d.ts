@@ -2380,10 +2380,12 @@ type SitePageConnection_groupArgs = {
 
 type SitePageContext = {
   readonly slug: Maybe<Scalars['String']>;
+  readonly html: Maybe<Scalars['String']>;
 };
 
 type SitePageContextFilterInput = {
   readonly slug: Maybe<StringQueryOperatorInput>;
+  readonly html: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePageEdge = {
@@ -2486,6 +2488,7 @@ enum SitePageFieldsEnum {
   internal___type = 'internal.type',
   isCreatedByStatefulCreatePages = 'isCreatedByStatefulCreatePages',
   context___slug = 'context.slug',
+  context___html = 'context.html',
   pluginCreator___id = 'pluginCreator.id',
   pluginCreator___parent___id = 'pluginCreator.parent.id',
   pluginCreator___parent___parent___id = 'pluginCreator.parent.parent.id',
@@ -3318,12 +3321,15 @@ type WebPOptions = {
   readonly quality: Maybe<Scalars['Int']>;
 };
 
-type homezvrzdeviamsrctemplatespageJs3357725859QueryVariables = Exact<{
+type homezvrzdeviamsrctemplatespageJs841647832QueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
 
 
-type homezvrzdeviamsrctemplatespageJs3357725859Query = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'slug' | 'frontimage' | 'price' | 'text'>> } }> }, readonly allFile: { readonly edges: ReadonlyArray<{ readonly node: Pick<File, 'publicURL'> }> } };
+type homezvrzdeviamsrctemplatespageJs841647832Query = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: (
+        Pick<MarkdownRemark, 'html'>
+        & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'slug' | 'frontimage' | 'price' | 'text'>> }
+      ) }> }, readonly allFile: { readonly edges: ReadonlyArray<{ readonly node: Pick<File, 'publicURL'> }> } };
 
 type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 

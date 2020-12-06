@@ -1,4 +1,9 @@
-// remove actions destructuring
+const remark = require("remark");
+const remarkHTML = require("remark-html");
+
+const toHTML = (textField) =>
+  remark().use(remarkHTML).processSync(textField).toString();
+
 exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
   const config = getConfig();
   config.node = {
@@ -34,6 +39,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         // additional data can be passed via context
         slug: node.frontmatter.slug,
+        html: toHTML(node.frontmatter.text),
       },
     });
   });
