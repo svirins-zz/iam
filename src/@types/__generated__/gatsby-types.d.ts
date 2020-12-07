@@ -3131,16 +3131,16 @@ type WebPOptions = {
   readonly quality: Maybe<Scalars['Int']>;
 };
 
-type homezvrzdeviamsrctemplatespageJs3357725859QueryVariables = Exact<{
-  slug: Scalars['String'];
-}>;
-
-
-type homezvrzdeviamsrctemplatespageJs3357725859Query = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'slug' | 'frontimage' | 'price' | 'text'>> } }> }, readonly allFile: { readonly edges: ReadonlyArray<{ readonly node: Pick<File, 'publicURL'> }> } };
-
 type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
+type homezvrzdeviamsrctemplatespageJs3550318296QueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+type homezvrzdeviamsrctemplatespageJs3550318296Query = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'slug' | 'price' | 'text'>> } }> }, readonly allFile: { readonly edges: ReadonlyArray<{ readonly node: Pick<File, 'publicURL'> }> } };
 
 }

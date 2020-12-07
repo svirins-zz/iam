@@ -15,7 +15,6 @@ export const query = graphql`
           frontmatter {
             title
             slug
-            frontimage
             price
             text
           }

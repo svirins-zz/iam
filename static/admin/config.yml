@@ -16,7 +16,6 @@ collections:
     slug: "{{title}}" 
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "FrontImage", name: "frontimage", widget: "image"}
       - {label: "Price", name: "price", widget: "number"}
       - {label: "Text", name: "text", widget: "markdown"}
 
