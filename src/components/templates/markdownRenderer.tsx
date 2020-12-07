@@ -34,8 +34,8 @@ const options = {
   },
 };
 
-export const markdownRenderer = (markdown): JSX.Element => {
-  const rendered = unified()
+export const markdownRenderer = (markdown: string): JSX.Element => {
+  const rendered: JSX.Element = unified()
     .use(externalLinks, { target: false, rel: ["nofollow"] })
     .use(parse)
     .use(remark2react, options)

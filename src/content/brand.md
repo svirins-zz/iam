@@ -1,7 +1,6 @@
 ---
 slug: brand
 title: brand
-frontimage: assets/brand.webp
 price: 300
 text: |-
   ![alt](130344163_801759593713970_6076338312119433128_n.jpg "text")

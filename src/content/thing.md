@@ -1,15 +1,14 @@
 ---
-slug: logo
-title: logo
-frontimage: assets/logo.webp
-price: 250
+slug: thing
+title: "thing "
+price: 4500
 text: |-
   Now, with Emoji! 😉
 
   ## Heading
 
-  *Markdown parsing*er
+  *Markdown parsing*
 
   Markdown parsing in Gatsby is done with \[gatsby-transformer-remark], which
-  uses the excellent \[remark] under the hood.\
+  uses the excellent \[remark] under the hood.\ewr
 ---
