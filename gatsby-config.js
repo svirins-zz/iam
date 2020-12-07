@@ -45,7 +45,7 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "uploads",
+        name: "assets",
         path: `${__dirname}/content/assets`,
       },
     },
@@ -86,21 +86,16 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-relative-images",
+          `gatsby-remark-relative-images`,
           {
-            resolve: `gatsby-plugin-netlify-cms-paths`,
+            resolve: `gatsby-remark-images`,
             options: {
-              cmsConfig: `/static/admin/config.yml`,
-            },
-          },
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              maxWidth: 1024,
+              options: {
+                maxWidth: 1024,
+              },
             },
           },
           {
@@ -109,9 +104,15 @@ module.exports = {
               background: "#101010",
             },
           },
+          {
+            resolve: `gatsby-plugin-netlify-cms-paths`,
+            options: {
+              cmsConfig: `/static/admin/config.yml`,
+            },
+          },
         ],
       },
     },
-    "gatsby-plugin-netlify-cms",
+    `gatsby-plugin-netlify-cms`,
   ],
 };

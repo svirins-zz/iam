@@ -20,5 +20,5 @@ text: |
 
   goes
 
-  ![23](/assets/illustration.webp "23")
+  ![23](assets/illustration.webp "23")
 ---

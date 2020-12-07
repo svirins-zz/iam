@@ -35,7 +35,7 @@ export const PageTemplate = (data): JSX.Element => {
           <ImageTile alt={frontmatter.slug} url={publicURL} />
         </BigSquare>
         <PriceBar title={frontmatter.title} price={frontmatter.price} />
-        <Description title={frontmatter.title} html={frontmatter.text} />
+        <Description title={frontmatter.title} markdown={frontmatter.text} />
         <Footer />
       </InnerPageContainer>
     </PageLayout>
