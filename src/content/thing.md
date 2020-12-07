@@ -1,6 +1,7 @@
 ---
 slug: thing
 title: "thing "
+frontimage: /img/thing.webp
 price: 4500
 text: |-
   Now, with Emoji! 😉
