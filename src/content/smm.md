@@ -1,6 +1,7 @@
 ---
 slug: smm
 title: smm
+frontimage: /img/smm.webp
 price: 10
 text: |-
   Now, with Emoji! 😉
