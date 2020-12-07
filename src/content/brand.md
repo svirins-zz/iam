@@ -1,7 +1,7 @@
 ---
 slug: brand
 title: brand
-frontimage: /img/130344163_801759593713970_6076338312119433128_n.jpg
+frontimage: /img/brand.webp
 price: 300
 text: |-
   ![](/img/128437299_3648464525220525_4049705112708618197_o.jpg)
