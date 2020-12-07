@@ -19,9 +19,7 @@ text: |-
 
   goes
 
-<<<<<<< HEAD
   ![23](assets/illustration.webp "23")
-=======
   ![23](/assets/illustration.webp "23")
 
   one more image below
@@ -37,5 +35,4 @@ text: |-
 
 
   ![none](/assets/130344163_801759593713970_6076338312119433128_n.jpg "3DOGS")
->>>>>>> 617033a5674482b2ae44af4e0df6976dc9fd9251
 ---
