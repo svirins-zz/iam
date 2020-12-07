@@ -17,6 +17,9 @@ export const query = graphql`
             slug
             price
             text
+            frontimage {
+              publicURL
+            }
           }
         }
       }

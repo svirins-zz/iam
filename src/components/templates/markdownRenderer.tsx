@@ -5,7 +5,7 @@ import tw from "twin.macro";
 import unified from "unified";
 
 const H1Title = tw.h1``;
-const H2Title = tw.h2`text-4xl`;
+const H2Title = tw.h2`text-6xl`;
 const H3Title = tw.h3``;
 const Paragraph = tw.p``;
 const Link = tw.a``;

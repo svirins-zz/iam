@@ -23,6 +23,7 @@ const BigSquare = styled.section`
 export const PageTemplate = (data): JSX.Element => {
   const { publicURL } = data.pageData.allFile.edges[0].node;
   const { frontmatter } = data.pageData.allMarkdownRemark.edges[0].node;
+  console.log(frontmatter.frontimage.publicURL)
   return (
     <PageLayout>
       <SEO title="Design" />
