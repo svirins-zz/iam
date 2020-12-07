@@ -95,6 +95,9 @@ module.exports = {
             options: {
               options: {
                 maxWidth: 1024,
+                linkImagesToOriginal: false,
+                withWebp: true,
+                loading: "lazy",
               },
             },
           },

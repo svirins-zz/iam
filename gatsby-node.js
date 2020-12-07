@@ -1,14 +1,8 @@
-const { fmImagesToRelative } = require("gatsby-remark-relative-images");
-
 exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
   const config = getConfig();
   config.node = {
     fs: "empty",
   };
-};
-
-exports.onCreateNode = ({ node }) => {
-  fmImagesToRelative(node);
 };
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
