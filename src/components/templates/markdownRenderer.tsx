@@ -4,6 +4,8 @@ import remark2react from "remark-react";
 import tw from "twin.macro";
 import unified from "unified";
 
+// TODO: add styling to markdowbm
+
 const H1Title = tw.h1``;
 const H2Title = tw.h2`text-6xl`;
 const H3Title = tw.h3``;
@@ -16,7 +18,6 @@ const Em = tw.em``;
 const Strong = tw.strong``;
 const Hr = tw.hr``;
 const Bq = tw.blockquote``;
-
 const options = {
   remarkReactComponents: {
     h1: H1Title,

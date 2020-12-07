@@ -5,7 +5,7 @@ import tw from "twin.macro";
 import styled from "@emotion/styled";
 
 const Element = styled.footer`
-  ${tw`p-8 mx-1 bg-gray-500 border-4 border-transparent`}
+  ${tw`p-8 mx-3 my-3 bg-gray-500 border-4 border-transparent`}
   grid-area: 8 / 2 / 9 / 5;
   background-color: #292827;
   color: #9c9c9b;

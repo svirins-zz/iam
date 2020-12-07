@@ -3245,15 +3245,15 @@ type WebPOptions = {
   readonly quality: Maybe<Scalars['Int']>;
 };
 
-type homezvrzdeviamsrctemplatespageJs2154836636QueryVariables = Exact<{
+type homezvrzdeviamsrctemplatespageJs1610291562QueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
 
 
-type homezvrzdeviamsrctemplatespageJs2154836636Query = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<(
+type homezvrzdeviamsrctemplatespageJs1610291562Query = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<(
           Pick<MarkdownRemarkFrontmatter, 'title' | 'slug' | 'price' | 'text'>
           & { readonly frontimage: Maybe<Pick<File, 'publicURL'>> }
-        )> } }> }, readonly allFile: { readonly edges: ReadonlyArray<{ readonly node: Pick<File, 'publicURL'> }> } };
+        )> } }> } };
 
 type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 

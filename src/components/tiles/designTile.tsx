@@ -5,9 +5,9 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const HeaderRight = styled.header`
-  border: 4px solid transparent;
+  border: 0.75rem solid transparent;
   border-image-slice: 1;
-  border-width: 4px;
+  border-width: 0.75rem;
   grid-area: 1 / 3 / 2 / 5;
 `;
 

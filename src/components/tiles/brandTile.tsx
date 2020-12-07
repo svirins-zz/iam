@@ -6,11 +6,16 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const Brand = styled.section`
-  border: 4px solid transparent;
+  border: 0.75rem solid transparent;
   border-image-slice: 1;
-  border-width: 4px;
+  border-width: 0.75rem;
   &:hover {
-    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    border-image-source: linear-gradient(
+      45deg,
+      rgba(255, 0, 82, 1) 0%,
+      rgba(9, 9, 121, 1) 35%,
+      rgba(69, 199, 128, 1) 100%
+    );
   }
   grid-area: 2 / 2 / 5 / 5;
 `;
