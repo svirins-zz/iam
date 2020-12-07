@@ -1,6 +1,7 @@
 ---
 slug: pro
 title: pro
+frontimage: /img/pro.webp
 price: 3500
 text: |-
   Now, with Emoji! 😉
