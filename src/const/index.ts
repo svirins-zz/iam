@@ -1,7 +1,7 @@
 export const STATIC_TILES = [
   {
     alt: "blog",
-    url: require("assets/images/blog.webp"),
+    url: require("assets/images/blog_wide.webp"),
   },
   {
     alt: "brand",
@@ -18,5 +18,9 @@ export const STATIC_TILES = [
   {
     alt: "thing",
     url: require("assets/images/thing.webp"),
+  },
+  {
+    alt: "blog_slim",
+    url: require("assets/images/blog_slim.webp"),
   },
 ];

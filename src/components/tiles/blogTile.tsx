@@ -13,7 +13,7 @@ const Blog = styled.section`
       45deg,
       rgba(255, 0, 82, 1) 0%,
       rgba(9, 9, 121, 1) 35%,
-      rgba(69, 199, 128, 1) 100%
+      rgba(62, 169, 218, 1) 100%,
     );
   }
   grid-area: 5 / 2 / 6 / 4;
