@@ -1,26 +1,30 @@
 export const STATIC_TILES = [
   {
     alt: "blog",
-    url: require("assets/images/blog_wide.webp"),
+    url: require("assets/svg/blog.svg"),
   },
   {
     alt: "brand",
-    url: require("assets/images/brand.webp"),
+    url: require("assets/svg/brand.svg"),
   },
   {
     alt: "design",
-    url: require("assets/images/design.webp"),
+    url: require("assets/svg/design.svg"),
   },
   {
     alt: "menu",
-    url: require("assets/images/menu.webp"),
+    url: require("assets/svg/menu.svg"),
   },
   {
     alt: "thing",
-    url: require("assets/images/thing.webp"),
+    url: require("assets/svg/thing.svg"),
   },
   {
     alt: "blog_slim",
-    url: require("assets/images/blog_slim.webp"),
+    url: require("assets/svg/blog_slim.svg"),
+  },
+  {
+    alt: "zero",
+    url: require("assets/svg/zero.svg"),
   },
 ];

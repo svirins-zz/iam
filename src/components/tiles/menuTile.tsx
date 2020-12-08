@@ -11,12 +11,7 @@ const Menu = styled.header`
   border-image-slice: 1;
   border-width: 0.75rem;
   &:hover {
-    border-image-source: linear-gradient(
-      45deg,
-      rgba(255, 0, 82, 1) 0%,
-      rgba(9, 9, 121, 1) 35%,
-      rgba(62, 169, 218, 1) 100%,
-    );
+    border-image-source: linear-gradient(45deg, rgba(255,0,82,1) 0%, rgba(9,9,121,1) 35%, rgba(62,169,218,1) 100%);
   }
   grid-area: 1 / 2 / 2 / 3;
 `;

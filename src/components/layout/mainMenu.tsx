@@ -7,9 +7,8 @@ import tw from "twin.macro";
 
 import styled from "@emotion/styled";
 
-// overflow-hidden overscroll-contain
 const MainMenu = (): JSX.Element => {
-  const PageWrapper = tw.div`absolute top-0 right-0 z-50 flex flex-col items-center mt-4 mr-4 text-sm text-white  h-screen`;
+  const PageWrapper = tw.div`absolute top-0 right-0 z-50 flex flex-col items-center mt-4 mr-4 text-sm  h-screen`;
   const MenuWrapper = styled.div`
     ${tw`fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-900`};
     transition: opacity 0.25s ease;
@@ -17,9 +16,8 @@ const MainMenu = (): JSX.Element => {
     max-height: 100vh;
     opacity: 0.98;
   `;
-  // TODO: add leading
   const MenuItem = styled.li`
-    ${tw`hover:font-bold hover:text-yellow-500 hover:underline text-5xl leading-snug tracking-wide text-center text-white`};
+    ${tw`hover:font-semibold hover:text-white hover:underline text-5xl leading-snug tracking-wide text-center text-gray-400`};
   `;
   const Img = styled.img`
     ${tw`hover:opacity-100 opacity-75 cursor-pointer`}
@@ -31,7 +29,6 @@ const MainMenu = (): JSX.Element => {
     ${tw`cursor-pointer`}
     z-index: 800;
   `;
-  // TODO: disable scroll
   const context = useContext(myContext);
   const menuItems = generateMenu();
   const displayMenu = menuItems.map((menuItem, index) => {
@@ -41,7 +38,7 @@ const MainMenu = (): JSX.Element => {
           onClick={context.handleSelect}
           to={menuItem.link}
           key={index}
-          activeClassName={"text-blue-300"}
+          activeClassName={"text-yellow-300"}
         >
           {menuItem.name}
         </Link>

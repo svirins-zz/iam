@@ -11,7 +11,6 @@ module.exports = {
   variants: {
     gridTemplateColumns: ["responsive", "hover", "focus"],
   },
-  // add prose classes. see https://tailwindcss-typography.netlify.app/
   plugins: [
     require("tailwindcss"),
     require("@tailwindcss/forms"),

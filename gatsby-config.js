@@ -62,7 +62,7 @@ module.exports = {
         short_name: "I AM",
         start_url: "/",
         display: "browser",
-        icon: "src/assets/images/design.webp",
+        icon: "src/assets/svg/idea.svg",
       },
     },
     {

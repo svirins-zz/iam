@@ -24,5 +24,12 @@ export const query = graphql`
         }
       }
     }
+    allFile(filter: { name: { eq: $slug }, extension: { eq: "svg" } }) {
+      edges {
+        node {
+          publicURL
+        }
+      }
+    }
   }
 `;

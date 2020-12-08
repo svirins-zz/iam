@@ -16,23 +16,23 @@ const Svirins = styled.a`
     color: #fa1ac2;
   }
 `;
-const Section = styled.section`
-  ${tw`grid`}
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-`;
+const Section = tw.section`mt-4 flex`;
 const LeftSpan = styled.span`
-  ${tw`col-span-1 font-sans text-sm`}
+  ${tw`font-sans`}
+  font-size: 0.8rem;
+  color: #e4e4d6;
 `;
 const RightSpan = styled.span`
-  ${tw`col-span-1 font-sans text-sm text-right`}
+  ${tw`flex-grow font-sans text-sm text-right`}
+  font-size: 0.8rem;
+  color: #e4e4d6;
 `;
 
 export const Footer = (): JSX.Element => {
   return (
     <Element>
+      <FooterMenu />
       <Section>
-        <FooterMenu />
         <LeftSpan>&copy;&nbsp;Copyright 2020 IAM.</LeftSpan>
         <RightSpan>
           {" "}

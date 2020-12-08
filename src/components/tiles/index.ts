@@ -6,3 +6,5 @@ export { ThingTile } from "./thingTile";
 export { LeftTile } from "./leftTile";
 export { RightTile } from "./rightTile";
 export { BrandTile } from "./brandTile";
+export { BlogSlimTile } from "./blogSlimTile";
+export { ZeroHeightTile } from "./zeroHeightTile";

@@ -3,14 +3,17 @@ import tw from "twin.macro";
 
 import styled from "@emotion/styled";
 
+// justify-self-auto place-items-stretch 
 const Element = styled.div`
-  ${tw` justify-self-auto place-items-auto grid gap-1 py-2`}
-  grid-template-columns:  minmax(4px, auto) repeat(3, minmax(100px, 1fr)) minmax(4px, auto);
+  ${tw`grid gap-1`}
+  grid-template-columns: 
+    minmax(5rem, 0.5fr)
+    repeat(3, minmax(10rem, 1fr))
+    minmax(5rem, 0.5fr);
   grid-template-rows:
-    repeat(4, minmax(auto, 1fr)) auto auto
-    auto;
+    repeat(4, minmax(10rem, auto))
+    auto auto minmax(10rem, 0.75fr) auto;
 `;
-// TODO: only difference is 5/4/ refactor tio 1 element
 
 export const InnerPageContainer = ({
   children,

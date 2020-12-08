@@ -7,6 +7,7 @@ import {
   MenuTile,
   RightTile,
   ThingTile,
+  ZeroHeightTile,
 } from "components/tiles";
 import { Footer } from "components/ui";
 import React from "react";
@@ -23,6 +24,7 @@ const IndexPage = (): JSX.Element => {
         <BrandTile />
         <BlogTile />
         <ThingTile />
+        <ZeroHeightTile />
         <Footer />
       </MainPageContainer>
     </PageLayout>

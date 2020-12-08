@@ -1,5 +1,6 @@
 import { InnerPageContainer, PageLayout, SEO } from "components/layout";
 import {
+  BlogSlimTile,
   DesignTile,
   ImageTile,
   LeftTile,
@@ -18,11 +19,9 @@ const BigSquare = styled.section`
   grid-area: 2 / 2 / 5 / 5;
 `;
 
-// define style templates for markdown replacement
-
 export const PageTemplate = (data): JSX.Element => {
   const { frontmatter } = data.pageData.allMarkdownRemark.edges[0].node;
-  console.log(frontmatter.frontimage.publicURL);
+  console.log(data.pageData)
   return (
     <PageLayout>
       <SEO title="Design" />
@@ -34,11 +33,12 @@ export const PageTemplate = (data): JSX.Element => {
         <BigSquare>
           <ImageTile
             alt={frontmatter.slug}
-            url={frontmatter.frontimage.publicURL}
+            url={data.pageData.allFile.edges[0].node.publicURL}
           />
         </BigSquare>
         <PriceBar title={frontmatter.title} price={frontmatter.price} />
         <Description title={frontmatter.title} markdown={frontmatter.text} />
+        <BlogSlimTile tag={frontmatter.slug} />
         <Footer />
       </InnerPageContainer>
     </PageLayout>

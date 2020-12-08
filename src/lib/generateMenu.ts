@@ -3,7 +3,9 @@ import { graphql, useStaticQuery } from "gatsby";
 import { MenuItem } from "@types";
 
 export const generateMenu = (): MenuItem[] => {
-  const { allMarkdownRemark } = useStaticQuery<GatsbyTypes.MenuQueryQuery>(graphql`
+  const {
+    allMarkdownRemark,
+  } = useStaticQuery<GatsbyTypes.MenuQueryQuery>(graphql`
     query MenuQuery {
       allMarkdownRemark {
         edges {
@@ -16,13 +18,15 @@ export const generateMenu = (): MenuItem[] => {
       }
     }
   `);
-  const generatedArray: MenuItem[] = allMarkdownRemark.edges.map((node) => {
-    return {
-      name: node.node.frontmatter.slug,
-      link: `/${node.node.frontmatter.slug}`,
-    };
-  });
-  // TODO: implement sorting
+  const generatedArray: MenuItem[] = allMarkdownRemark.edges
+    .map((node) => {
+      return {
+        name: node.node.frontmatter.slug,
+        link: `/${node.node.frontmatter.slug}`,
+      };
+    })
+    .sort((a: MenuItem, b: MenuItem) => b.name.length - a.name.length);
+
   return [
     {
       name: "index",
