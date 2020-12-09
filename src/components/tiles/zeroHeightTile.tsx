@@ -5,9 +5,9 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const Zero = styled.section`
-  border: 0.75rem solid transparent;
+  border: 0rem solid transparent;
   border-image-slice: 1;
-  border-width: 0.75rem;
+  border-width: 0rem;
   grid-area: 7 / 2 / 8 / 5;
   display: none;
 `;

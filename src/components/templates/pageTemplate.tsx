@@ -13,20 +13,19 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const BigSquare = styled.section`
-  border: 0.75rem solid transparent;
+  border: 0.5rem solid transparent;
   border-image-slice: 1;
-  border-width: 0.75rem;
+  border-width: 0.5rem;
   grid-area: 2 / 2 / 5 / 5;
 `;
 
 export const PageTemplate = (data): JSX.Element => {
   const { frontmatter } = data.pageData.allMarkdownRemark.edges[0].node;
-  console.log(frontmatter.image.publicURL);
   return (
     <PageLayout>
       <SEO
-        title={frontmatter.seoTitle}
-        description={frontmatter.seoDescription}
+        seoTitle={frontmatter.seoTitle}
+        seoDescription={frontmatter.seoDescription}
       />
       <InnerPageContainer>
         <LeftTile />
@@ -34,10 +33,7 @@ export const PageTemplate = (data): JSX.Element => {
         <DesignTile />
         <RightTile />
         <BigSquare>
-          <ImageTile
-            alt={frontmatter.slug}
-            url={data.pageData.allFile.edges[0].node.publicURL}
-          />
+          <ImageTile alt={frontmatter.slug} url={frontmatter.image.publicURL} />
         </BigSquare>
         <PriceBar title={frontmatter.title} price={frontmatter.price} />
         <Description title={frontmatter.title} markdown={frontmatter.text} />

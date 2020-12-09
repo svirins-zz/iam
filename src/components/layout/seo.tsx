@@ -5,7 +5,13 @@ import { graphql, useStaticQuery } from "gatsby";
 import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 
-export const SEO = (title: string, description: string): JSX.Element => {
+export const SEO = ({
+  seoTitle,
+  seoDescription,
+}: {
+  seoTitle: string;
+  seoDescription: string;
+}): JSX.Element => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -28,10 +34,10 @@ export const SEO = (title: string, description: string): JSX.Element => {
   return (
     <Helmet
       htmlAttributes={{
-        lang: site.siteMetadata.lang,
+        lang: site.siteMetadata.lang ?? "en",
       }}
       bodyAttributes={{ class: className }}
-      title={`${site.siteMetadata.title} | ${title}`}
+      title={`${site.siteMetadata.title} | ${seoTitle}`}
       meta={[
         {
           name: `charSet`,
@@ -39,15 +45,15 @@ export const SEO = (title: string, description: string): JSX.Element => {
         },
         {
           name: `description`,
-          content: description,
+          content: seoDescription ?? site.siteMetadata.description,
         },
         {
           property: `og:title`,
-          content: title,
+          content: seoTitle ?? site.siteMetadata.title,
         },
         {
           property: `og:description`,
-          content: description,
+          content: seoDescription ?? site.siteMetadata.description,
         },
         {
           property: `og:type`,
@@ -63,11 +69,11 @@ export const SEO = (title: string, description: string): JSX.Element => {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: seoTitle ?? site.siteMetadata.title,
         },
         {
           name: `twitter:description`,
-          content: description,
+          content: seoDescription ?? site.siteMetadata.description,
         },
       ]}
     />

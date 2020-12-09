@@ -29,8 +29,8 @@ const IndexPage = (): JSX.Element => {
   return (
     <PageLayout>
       <SEO
-        title={site.siteMetadata.title}
-        description={site.siteMetadata.description}
+        seoTitle={site.siteMetadata.title}
+        seoDescription={site.siteMetadata.description}
       />
       <MainPageContainer>
         <LeftTile />
