@@ -3,16 +3,15 @@ import tw from "twin.macro";
 
 import styled from "@emotion/styled";
 
-// justify-self-auto place-items-stretch 
 const Element = styled.div`
-  ${tw`grid gap-1`}
+  ${tw`grid min-w-full gap-0`}
   grid-template-columns: 
-    minmax(5rem, 0.5fr)
+    minmax(0rem, 1.5fr)
     repeat(3, minmax(10rem, 1fr))
-    minmax(5rem, 0.5fr);
+    minmax(0rem, 1.5fr);
   grid-template-rows:
     repeat(4, minmax(10rem, auto))
-    auto auto minmax(10rem, 0.75fr) auto;
+    auto auto 0.75fr 0.75fr;
 `;
 
 export const InnerPageContainer = ({

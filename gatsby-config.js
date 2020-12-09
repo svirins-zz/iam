@@ -92,23 +92,6 @@ module.exports = {
         plugins: [
           `gatsby-remark-relative-images`,
           {
-            resolve: `gatsby-remark-images`,
-            options: {
-              options: {
-                maxWidth: 1024,
-                linkImagesToOriginal: false,
-                withWebp: true,
-                loading: "lazy",
-              },
-            },
-          },
-          {
-            resolve: `gatsby-remark-images-zoom`,
-            options: {
-              background: "#101010",
-            },
-          },
-          {
             resolve: `gatsby-plugin-netlify-cms-paths`,
             options: {
               cmsConfig: `/static/admin/config.yml`,

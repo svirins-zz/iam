@@ -10,11 +10,11 @@ const Container = styled.article`
   background-color: #292827;
 `;
 const Title = styled.h2`
-  ${tw`font-sans text-3xl`}
+  ${tw`font-sans text-3xl font-semibold text-yellow-100`}
   color:  #f4e2bd;
 `;
 const Content = styled.div`
-  ${tw`py-4 font-sans text-base`}
+  ${tw`py-4 font-sans`}
   color: #9c9c9b;
 `;
 export const Description = ({

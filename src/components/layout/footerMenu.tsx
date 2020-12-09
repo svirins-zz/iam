@@ -4,8 +4,8 @@ import { generateMenu } from "lib";
 import React, { useContext } from "react";
 import tw from "twin.macro";
 
-const MenuWrapper = tw.nav`flex flex-row`;
-const MenuItem = tw.span`mr-3 hover:text-white  hover:underline text-sm 2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-center cursor-pointer`;
+const MenuWrapper = tw.nav`flex flex-row justify-between w-full`;
+const MenuItem = tw.span`hover:text-white  hover:underline text-sm 2xl:text-2xl xl:text-xl lg:text-base md:text-sm sm:text-sm text-center cursor-pointer`;
 
 export const FooterMenu = (): JSX.Element => {
   const context = useContext(myContext);

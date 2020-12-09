@@ -4,14 +4,14 @@ import tw from "twin.macro";
 import styled from "@emotion/styled";
 
 export const Element = styled.div`
-  ${tw`grid gap-1 py-2`}
+  ${tw`grid min-w-full gap-0`}
   grid-template-columns: 
-    minmax(5rem, 0.5fr)
+    minmax(0rem, 1.5fr)
     repeat(3, minmax(10rem, 1fr))
-    minmax(5rem, 0.5fr);
+    minmax(0rem, 1.5fr);
   grid-template-rows:
     repeat(4, minmax(10rem, auto))
-    auto auto auto;
+    auto auto 0.75fr;
 `;
 
 export const MainPageContainer = ({
