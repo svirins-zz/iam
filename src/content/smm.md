@@ -1,9 +1,8 @@
 ---
+price: 10
 slug: smm
 title: smm
-seotitle: Продвижение в социальных сетях
-seodescription: Необходимо добавить краткое описание
-price: 10
+seoTitle: Продвижение в социальных сетях
 text: |-
   Now, with Emoji! 😉
 
@@ -13,4 +12,8 @@ text: |-
 
   Markdown parsing in Gatsby is done with \[gatsby-transformer-remark], which
   uses the excellent \[remark] under the hood.\
+seotitle: Продвижение в социальных сетях
+seoDescription: Необходимо добавить краткое описание
+image: /img/smm.svg
+seodescription: Необходимо добавить краткое описание
 ---
