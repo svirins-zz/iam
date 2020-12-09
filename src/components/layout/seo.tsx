@@ -5,14 +5,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 
-import { SeoProps } from "@types";
-
-export const SEO = ({
-  description = "",
-  lang = "en",
-  meta = [],
-  title,
-}: SeoProps): JSX.Element => {
+export const SEO = (title: string, description: string): JSX.Element => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,6 +14,7 @@ export const SEO = ({
             title
             description
             author
+            lang
           }
         }
       }
@@ -31,19 +25,21 @@ export const SEO = ({
     context.menuVisible?.isVisible || context.modalVisible?.isVisible
       ? "scroll-off"
       : "scroll-on";
-  const metaDescription = description || site.siteMetadata.description;
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: site.siteMetadata.lang,
       }}
       bodyAttributes={{ class: className }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={`${site.siteMetadata.title} | ${title}`}
       meta={[
         {
+          name: `charSet`,
+          content: "utf-8",
+        },
+        {
           name: `description`,
-          content: metaDescription,
+          content: description,
         },
         {
           property: `og:title`,
@@ -51,7 +47,7 @@ export const SEO = ({
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: description,
         },
         {
           property: `og:type`,
@@ -71,9 +67,9 @@ export const SEO = ({
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: description,
         },
-      ].concat(meta)}
+      ]}
     />
   );
 };

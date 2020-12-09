@@ -22,7 +22,7 @@ const Custom404 = (): JSX.Element => {
   return (
     <PageLayout>
       <Wrapper>
-        <SEO title="Page Not Found" />
+        <SEO title="Not found - 404" description="Page not found, sorry" />
         <Main>
           <Heading>Oops!</Heading>
           <Text>We can`&lsquo;`t find the page that you are looking for.</Text>

@@ -10,12 +10,28 @@ import {
   ZeroHeightTile,
 } from "components/tiles";
 import { Footer } from "components/ui";
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
 const IndexPage = (): JSX.Element => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+          }
+        }
+      }
+    `
+  );
   return (
     <PageLayout>
-      <SEO title="I AM" />
+      <SEO
+        title={site.siteMetadata.title}
+        description={site.siteMetadata.description}
+      />
       <MainPageContainer>
         <LeftTile />
         <MenuTile />

@@ -21,10 +21,12 @@ const BigSquare = styled.section`
 
 export const PageTemplate = (data): JSX.Element => {
   const { frontmatter } = data.pageData.allMarkdownRemark.edges[0].node;
-  console.log(data.pageData)
   return (
     <PageLayout>
-      <SEO title="Design" />
+      <SEO
+        title={frontmatter.seotitle}
+        description={frontmatter.seodescription}
+      />
       <InnerPageContainer>
         <LeftTile />
         <MenuTile />

@@ -1,7 +1,8 @@
 ---
 slug: smm
 title: smm
-frontimage: /img/smm.webp
+seotitle: Продвижение в социальных сетях
+seodescription: Необходимо добавить краткое описание
 price: 10
 text: |-
   Now, with Emoji! 😉

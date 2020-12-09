@@ -90,7 +90,7 @@
     "stylelint": "^13.8.0",
     "stylelint-config-recommended": "^3.0.0",
     "tailwindcss": "^2.0.1",
-    "twin.macro": "^2.0.5",
+    "twin.macro": "^2.0.6",
     "unified": "^9.2.0",
     "use-immer": "^0.4.2"
   },

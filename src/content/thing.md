@@ -1,7 +1,8 @@
 ---
 slug: thing
 title: "thing "
-frontimage: /img/thing.webp
+seotitle: Дизайн предметов
+seodescription: Необходимо добавить краткое описание
 price: 4500
 text: |-
   Now, with Emoji! 😉

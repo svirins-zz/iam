@@ -16,10 +16,9 @@ export const query = graphql`
             title
             slug
             price
+            seotitle
+            seodescription
             text
-            frontimage {
-              publicURL
-            }
           }
         }
       }

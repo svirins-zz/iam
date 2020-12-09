@@ -1,7 +1,8 @@
 ---
 slug: poster
 title: poster
-frontimage: /img/poster.webp
+seotitle: Дизайн плаката
+seodescription: Необходимо добавить краткое описание
 price: 3500
 text: |-
   Now, with Emoji! 😉

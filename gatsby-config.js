@@ -4,10 +4,11 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby IAM",
-    description: "Gatsby + TypeScript + Tailwind CSS + Emotion = IAM",
-    author: "@svirins",
+    title: "Romamore Dezign",
+    description: "Romamore personal website description",
+    author: "@romamore",
     siteURL: "https://deezign.cf",
+    lang: "ru",
   },
   flags: {
     PRESERVE_WEBPACK_CACHE: true,
@@ -62,7 +63,7 @@ module.exports = {
         short_name: "I AM",
         start_url: "/",
         display: "browser",
-        icon: "src/assets/svg/idea.svg",
+        icon: "src/assets/svg/brand.svg",
       },
     },
     {

@@ -81,7 +81,6 @@ export const FormModal = (): JSX.Element => {
   const Span = tw.span`text-gray-700`;
   const FormWrapper = tw.div`grid grid-cols-1 gap-6`;
 
-  // console.log(serverState)
 
   // TODO: add validation / check submission + do we need thank you message?
   return context.modalVisible?.isVisible ? (

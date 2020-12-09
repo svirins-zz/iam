@@ -28,3 +28,4 @@ export const STATIC_TILES = [
     url: require("assets/svg/zero.svg"),
   },
 ];
+

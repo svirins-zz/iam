@@ -1,7 +1,8 @@
 ---
 slug: logo
 title: logo
-frontimage: /img/logo.webp
+seotitle: Дизайн логотипа
+seodescription: Необходимо добавить краткое описание
 price: 250
 text: |-
   Now, with Emoji! 😉
