@@ -3,6 +3,8 @@ slug: smm
 title: smm
 frontimage: /img/smm.webp
 price: 10
+seotitle: Продвижение в социальных сетях
+seodescription: Добавить описание
 text: |-
   Now, with Emoji! 😉
 
