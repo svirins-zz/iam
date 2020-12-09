@@ -20,13 +20,13 @@ const BigSquare = styled.section`
 `;
 
 export const PageTemplate = (data): JSX.Element => {
-  const { frontmatter, image } = data.pageData.allMarkdownRemark.edges[0].node;
-  console.log(image.publicURL)
+  const { frontmatter } = data.pageData.allMarkdownRemark.edges[0].node;
+  console.log(frontmatter.image.publicURL);
   return (
     <PageLayout>
       <SEO
-        title={frontmatter.seotitle}
-        description={frontmatter.seodescription}
+        title={frontmatter.seoTitle}
+        description={frontmatter.seoDescription}
       />
       <InnerPageContainer>
         <LeftTile />

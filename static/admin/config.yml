@@ -17,8 +17,8 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Price", name: "price", widget: "number", required: true}
-      - {label: "Seo Title", name: "seotitle", widget: "string", required: true}
-      - {label: "Seo Description", name: "seodescription", widget: "string", required: true}
+      - {label: "SEO Title", name: "seoTitle", widget: "string"}
+      - {label: "SEO Description", name: "seoDescription", widget: "string"}
       - {label: "Svg image (square)", name: "image", widget: "image"}
       - {label: "Text", name: "text", widget: "markdown", required: true}
 

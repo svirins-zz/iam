@@ -16,12 +16,12 @@ export const query = graphql`
             title
             slug
             price
-            seotitle
-            seodescription
+            seoTitle
+            seoDescription
+            image {
+              publicURL
+            }
             text
-          }
-          image {
-            publicURL
           }
         }
       }
