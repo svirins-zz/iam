@@ -1,9 +1,8 @@
 ---
+price: 3500
 slug: poster
 title: poster
-seotitle: Дизайн плаката
-seodescription: Необходимо добавить краткое описание
-price: 3500
+seoTitle: Дизайн плаката
 text: |-
   Now, with Emoji! 😉
 
@@ -13,4 +12,8 @@ text: |-
 
   Markdown parsing in Gatsby is done with \[gatsby-transformer-remark], which
   uses the excellent \[remark] under the hood.\
+seotitle: Дизайн плаката
+seoDescription: Необходимо добавить краткое описание
+image: /img/poster.svg
+seodescription: Необходимо добавить краткое описание
 ---
