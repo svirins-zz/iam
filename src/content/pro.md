@@ -1,9 +1,8 @@
 ---
+price: 3500
 slug: pro
 title: pro
-seotitle: Продакшен и мастеринг
-seodescription: Необходимо добавить краткое описание
-price: 3500
+seoTitle: Продакшен и мастеринг
 text: |-
   Now, with Emoji! 😉
 
@@ -13,4 +12,8 @@ text: |-
 
   Markdown parsing in Gatsby is done with \[gatsby-transformer-remark], which
   uses the excellent \[remark] under the hood.\wer
+seotitle: Продакшен и мастеринг
+seoDescription: Необходимо добавить краткое описание
+image: /img/pro.svg
+seodescription: Необходимо добавить краткое описание
 ---
