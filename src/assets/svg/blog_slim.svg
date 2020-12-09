@@ -11,11 +11,11 @@
    id="Слой_1"
    x="0px"
    y="0px"
-   viewBox="0 0 1617.9511 210.60003"
+   viewBox="0 0 1690.0001 210.60003"
    enable-background="new 0 0 767 671.4"
    xml:space="preserve"
    sodipodi:docname="blog_slim.svg"
-   width="1617.951"
+   width="1690"
    height="210.60004"
    inkscape:version="1.0.1 (1.0.1+r74)"><metadata
    id="metadata4128"><rdf:RDF><cc:Work
@@ -35,7 +35,7 @@
    id="namedview4124"
    showgrid="false"
    inkscape:zoom="0.70501063"
-   inkscape:cx="796.41325"
+   inkscape:cx="860.30909"
    inkscape:cy="83.785308"
    inkscape:window-x="3840"
    inkscape:window-y="0"
@@ -45,17 +45,17 @@
 <rect
    x="0"
    y="0"
-   width="1617.951"
+   width="1690"
    height="210.60001"
    id="rect4105"
-   style="fill:#2f2f82;stroke-width:1.1993" />
+   style="fill:#2f2f82;stroke-width:1.2257" />
 
 
 
 
 <g
    id="g34"
-   transform="translate(424.38943,3.1640625e-5)"><g
+   transform="matrix(1.0306459,0,0,1,437.39529,3.1640625e-5)"><g
      id="g4117"
      transform="matrix(0.68352741,0,0,1,122.28305,-230.39999)">
 	<rect
@@ -73,11 +73,11 @@
    id="rect4109"
    style="fill:#fdec0a" />
 	<polygon
-   points="552.2,314.4 510.2,272.4 510.2,399 552.2,441 "
+   points="552.2,441 552.2,314.4 510.2,272.4 510.2,399 "
    id="polygon4111"
    style="fill:#141415" />
 	<polygon
-   points="383.5,272.4 341.5,230.4 341.5,357 383.5,399 "
+   points="383.5,399 383.5,272.4 341.5,230.4 341.5,357 "
    id="polygon4113"
    style="fill:#be2026" />
 	<path

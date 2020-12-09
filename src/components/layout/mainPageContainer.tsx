@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import styled from "@emotion/styled";
 
 export const Element = styled.div`
-  ${tw`grid gap-1`}
+  ${tw`grid gap-1 py-2`}
   grid-template-columns: 
     minmax(5rem, 0.5fr)
     repeat(3, minmax(10rem, 1fr))
