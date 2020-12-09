@@ -19,6 +19,7 @@ collections:
       - {label: "Price", name: "price", widget: "number", required: true}
       - {label: "Seo Title", name: "seotitle", widget: "string", required: true}
       - {label: "Seo Description", name: "seodescription", widget: "string", required: true}
+      - {label: "Svg image (square)", name: "image", widget: "image"}
       - {label: "Text", name: "text", widget: "markdown", required: true}
 
 

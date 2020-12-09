@@ -20,6 +20,9 @@ export const query = graphql`
             seodescription
             text
           }
+          image {
+            publicURL
+          }
         }
       }
     }
