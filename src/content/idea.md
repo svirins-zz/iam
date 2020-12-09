@@ -1,9 +1,8 @@
 ---
+price: 3500
 slug: idea
 title: idea
-seotitle: Разработка дизайн-концепции
-seodescription: Необходимо добавить краткое описание
-price: 3500
+seoTitle: Разработка дизайн-концепции
 text: |-
   Now, with Emoji! 😉
 
@@ -14,4 +13,8 @@ text: |-
 
   Markdown parsing in Gatsby is done with \[gatsby-transformer-remark], which
   uses the excellent \[remark] under the hood.\
+seotitle: Разработка дизайн-концепции
+seoDescription: Необходимо добавить краткое описание
+image: /img/idea.svg
+seodescription: Необходимо добавить краткое описание
 ---
