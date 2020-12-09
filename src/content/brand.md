@@ -3,6 +3,8 @@ slug: brand
 title: brand
 frontimage: /img/brand.webp
 price: 300
+seotitle: Брендинг, разработка фирменного стиля
+seodescription: Добавить описание
 text: |-
   ![](/img/128437299_3648464525220525_4049705112708618197_o.jpg)
 
