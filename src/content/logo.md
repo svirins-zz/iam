@@ -1,9 +1,8 @@
 ---
+price: 250
 slug: logo
 title: logo
-seotitle: Дизайн логотипа
-seodescription: Необходимо добавить краткое описание
-price: 250
+seoTitle: Дизайн логотипа
 text: |-
   Now, with Emoji! 😉
 
@@ -13,4 +12,8 @@ text: |-
 
   Markdown parsing in Gatsby is done with \[gatsby-transformer-remark], which
   uses the excellent \[remark] under the hood.\
+seotitle: Дизайн логотипа
+seoDescription: Необходимо добавить краткое описание
+image: /img/logo.svg
+seodescription: Необходимо добавить краткое описание
 ---
