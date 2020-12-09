@@ -1,9 +1,8 @@
 ---
+price: 4500
 slug: thing
 title: "thing "
-seotitle: Дизайн предметов
-seodescription: Необходимо добавить краткое описание
-price: 4500
+seoTitle: Дизайн предметов
 text: |-
   Now, with Emoji! 😉
 
@@ -13,4 +12,8 @@ text: |-
 
   Markdown parsing in Gatsby is done with \[gatsby-transformer-remark], which
   uses the excellent \[remark] under the hood.\ewr
+seotitle: Дизайн предметов
+seoDescription: Необходимо добавить краткое описание
+image: /img/thing.svg
+seodescription: Необходимо добавить краткое описание
 ---
