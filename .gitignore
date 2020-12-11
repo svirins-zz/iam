@@ -74,3 +74,5 @@ package-lock.json
 # Local Netlify folder
 .netlify
 .vercel
+
+.passwords

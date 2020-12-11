@@ -9,6 +9,24 @@ module.exports = {
     author: "@romamore",
     siteURL: "https://deezign.cf",
     lang: "ru",
+    social: [
+      {
+        name: `twitter`,
+        url: `https://twitter.com/svirins`,
+      },
+      {
+        name: `instagram`,
+        url: `https://instagram.com/`,
+      },
+      {
+        name: `medium`,
+        url: `https://facebook.com/@romamore`,
+      },
+      {
+        name: `facebook`,
+        url: `https://www.facebook.com/etreugly`,
+      },
+    ],
   },
   flags: {
     PRESERVE_WEBPACK_CACHE: true,

@@ -6,8 +6,6 @@ import styled from "@emotion/styled";
 
 const HeaderRight = styled.header`
   border: 0.5rem solid transparent;
-  border-image-slice: 1;
-  border-width: 0.5rem;
   grid-area: 1 / 3 / 2 / 5;
 `;
 
