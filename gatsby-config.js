@@ -12,7 +12,7 @@ module.exports = {
     social: [
       {
         name: `twitter`,
-        url: `https://twitter.com/svirins`,
+        url: `https://twitter.com/@romamore`,
       },
       {
         name: `instagram`,

@@ -17,7 +17,7 @@ const MainMenu = (): JSX.Element => {
     opacity: 0.98;
   `;
   const MenuItem = styled.li`
-    ${tw`hover:font-semibold hover:text-white hover:underline text-5xl leading-snug tracking-wide text-center text-gray-400`};
+    ${tw`hover:font-semibold hover:text-white hover:underline text-4xl leading-snug tracking-wide text-center text-gray-400`};
   `;
   const Img = styled.img`
     ${tw`hover:opacity-100 opacity-75 cursor-pointer`}

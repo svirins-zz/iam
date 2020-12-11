@@ -7,7 +7,7 @@ import styled from "@emotion/styled";
 import MainMenu from "./mainMenu";
 
 const GlobalWrapper = styled.div`
-  ${tw`flex items-center min-h-screen`}
+  ${tw`grid w-screen min-h-screen`}
   background-color: #101010;
 `;
 

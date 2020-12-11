@@ -5,21 +5,21 @@ import tw from "twin.macro";
 import styled from "@emotion/styled";
 
 const Element = styled.footer`
-  ${tw`px-8 py-6 mx-2 mt-2 mb-2 bg-gray-500 border-4 border-transparent`}
+  ${tw`p-4 mx-2 mt-2 mb-4 bg-gray-500`}
   grid-area: 8 / 2 / 9 / 5;
   background-color: #292827;
   color: #9c9c9b;
 `;
 const Svirins = tw.a`text-purple-500 hover:underline hover:text-pink-300`;
-const Section = tw.section`mt-4 flex`;
+const Section = tw.div`mt-4`;
 const LeftSpan = styled.span`
   ${tw`font-sans`}
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #6d6d6b;
 `;
-const RightSpan = styled.span`
-  ${tw`flex-grow font-sans text-sm text-right`}
-  font-size: 0.8rem;
+const RightSpan = styled.p`
+  ${tw`font-sans text-center`}
+  font-size: 0.75rem;
   color: #6d6d6b;
 `;
 
@@ -28,7 +28,7 @@ export const Footer = (): JSX.Element => {
     <Element>
       <FooterMenu />
       <Section>
-        <LeftSpan>Copyright &copy;&nbsp;2020-2021 IAM.</LeftSpan>
+        {/* <LeftSpan>&copy;&nbsp;2020-2021 IAM.</LeftSpan> */}
         <RightSpan>
           {" "}
           Made with{" "}
