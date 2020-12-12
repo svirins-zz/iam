@@ -1,10 +1,10 @@
-import { PageTemplate } from "components/templates";
+import { Template } from "components/templates";
 import { graphql } from "gatsby";
 import React from "react";
 
 // eslint-disable-next-line react/display-name
 export default ({ data }) => {
-  return <PageTemplate pageData={data} />;
+  return <Template pageData={data} />;
 };
 
 export const query = graphql`

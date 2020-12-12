@@ -1,4 +1,4 @@
-import { ImageTile } from "components/tiles";
+import { ImageTile } from "components/ui/tiles";
 import { STATIC_TILES } from "const";
 import React from "react";
 
@@ -9,12 +9,17 @@ const Blog = styled.section`
   border-image-slice: 1;
   border-width: 0.5rem;
   &:hover {
-    border-image-source: linear-gradient(45deg, rgba(255,0,82,1) 0%, rgba(9,9,121,1) 35%, rgba(62,169,218,1) 100%);
+    border-image-source: linear-gradient(
+      45deg,
+      rgba(255, 0, 82, 1) 0%,
+      rgba(9, 9, 121, 1) 35%,
+      rgba(62, 169, 218, 1) 100%
+    );
   }
-  grid-area: 7 / 2 / 8 / 5;
+  grid-area: 3 / 1 / 4 / 2;
 `;
 
-export const BlogSlimTile = (tag: string): JSX.Element => {
+export const BlogLink = (tag: string): JSX.Element => {
   const urlWithTag = `https://medium.com/@romamore/${tag}`;
   return (
     <Blog>

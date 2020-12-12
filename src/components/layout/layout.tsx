@@ -1,17 +1,16 @@
+import { MainMenu } from "components/ui/menu";
 import React from "react";
 import tw from "twin.macro";
 import { GlobalStyles } from "twin.macro";
 
 import styled from "@emotion/styled";
 
-import MainMenu from "./mainMenu";
-
 const GlobalWrapper = styled.div`
-  ${tw`grid w-screen min-h-screen`}
+  ${tw`w-screen min-h-screen`}
   background-color: #101010;
 `;
 
-export const PageLayout = ({
+export const Layout = ({
   children,
 }: React.PropsWithChildren<unknown>): JSX.Element => {
   return (

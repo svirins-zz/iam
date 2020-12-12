@@ -1,4 +1,4 @@
-import { FormModal } from "components/layout";
+import { FormModal } from "components/ui/form";
 import { myContext } from "context";
 import React from "react";
 import tw from "twin.macro";
@@ -26,7 +26,7 @@ const Button = styled.button`
 
 const Bar = styled.section`
   ${tw` flex items-center p-4 mx-2 my-2`};
-  grid-area: 5 / 2 / 6 / 5;
+  grid-area: 1 / 1 / 2 / 2;
   background-color: #101010;
 `;
 

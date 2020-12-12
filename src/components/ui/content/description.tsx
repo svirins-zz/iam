@@ -6,7 +6,7 @@ import styled from "@emotion/styled";
 
 const Container = styled.article`
   ${tw`p-4 mx-2 my-2`};
-  grid-area: 6 / 2 / 7 / 5;
+  grid-area: 2 / 1 / 3 / 2;
   background-color: #292827;
 `;
 const Title = styled.h2`

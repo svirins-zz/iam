@@ -1,14 +1,15 @@
 import axios from "axios";
-import { MessageBox } from "components/ui";
 /* eslint-disable prettier/prettier */
 import { myContext } from "context";
 import React, { useContext } from "react";
 import tw from "twin.macro";
-import {useImmer} from "use-immer";
+import { useImmer } from "use-immer";
 
 import styled from "@emotion/styled";
 
-export const FormModal = (): JSX.Element => {
+import { MessageBox } from "./messageBox";
+
+export const FormModal = (): JSX.Element | null => {
   const context = useContext(myContext);
   // handle submission 
   const [serverState, setServerState] = useImmer({
@@ -136,7 +137,7 @@ export const FormModal = (): JSX.Element => {
       </InnerWrapper>
     </OuterWrapper>
     ) : (
-      <p></p>
+      null
     )
 };
 

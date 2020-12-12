@@ -1,18 +1,8 @@
-import { MainPageContainer, PageLayout, SEO } from "components/layout";
-import {
-  BlogTile,
-  BrandTile,
-  DesignTile,
-  LeftTile,
-  MenuTile,
-  RightTile,
-  ThingTile,
-  ZeroHeightTile,
-} from "components/tiles";
-import { Footer } from "components/ui";
+import { Grid, Layout, SEO } from "components/layout";
+import { Bar, Footer, Header, Left, Right, Square } from "components/ui/grid";
+import { STATIC_TILES } from "const";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-
 const IndexPage = (): JSX.Element => {
   const { site } = useStaticQuery(
     graphql`
@@ -27,23 +17,20 @@ const IndexPage = (): JSX.Element => {
     `
   );
   return (
-    <PageLayout>
+    <Layout>
       <SEO
         seoTitle={site.siteMetadata.title}
         seoDescription={site.siteMetadata.description}
       />
-      <MainPageContainer>
-        <LeftTile />
-        <MenuTile />
-        <DesignTile />
-        <RightTile />
-        <BrandTile />
-        <BlogTile />
-        <ThingTile />
-        <ZeroHeightTile />
+      <Grid>
+        <Left />
+        <Header />
+        <Square {...STATIC_TILES.find((e) => e.alt === "blog")} />
+        <Bar />
         <Footer />
-      </MainPageContainer>
-    </PageLayout>
+        <Right />
+      </Grid>
+    </Layout>
   );
 };
 

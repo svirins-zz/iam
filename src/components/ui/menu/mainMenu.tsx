@@ -7,7 +7,7 @@ import tw from "twin.macro";
 
 import styled from "@emotion/styled";
 
-const MainMenu = (): JSX.Element => {
+export const MainMenu = (): JSX.Element | null => {
   const PageWrapper = tw.div`absolute top-0 right-0 z-50 flex flex-col items-center mt-4 mr-4 text-sm  h-screen`;
   const MenuWrapper = styled.div`
     ${tw`fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-900`};
@@ -62,9 +62,5 @@ const MainMenu = (): JSX.Element => {
         </nav>
       </MenuWrapper>
     </PageWrapper>
-  ) : (
-    <p></p>
-  );
+  ) : null;
 };
-
-export default MainMenu;

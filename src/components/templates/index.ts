@@ -1,2 +1,2 @@
-export { PageTemplate } from "./pageTemplate";
+export { Template } from "./template";
 export { markdownRenderer } from "./markdownRenderer";
