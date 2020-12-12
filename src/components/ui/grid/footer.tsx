@@ -4,11 +4,12 @@ import tw from "twin.macro";
 
 import styled from "@emotion/styled";
 
-const Element = styled.footer`
-  ${tw`p-4 mx-2 mt-2 mb-4 bg-gray-500`}
+const Container = styled.footer`
+  ${tw`px-8 py-6 mx-2 my-4 mt-2 bg-gray-500`}
   grid-area: 4 / 2 / 5 / 3;
   background-color: #292827;
   color: #9c9c9b;
+  
 `;
 const Svirins = tw.a`text-purple-500 hover:underline hover:text-pink-300`;
 const Section = tw.div`mt-4`;
@@ -20,7 +21,7 @@ const Span = styled.p`
 
 export const Footer = (): JSX.Element => {
   return (
-    <Element>
+    <Container>
       <FooterMenu />
       <Section>
         <Span>
@@ -32,6 +33,6 @@ export const Footer = (): JSX.Element => {
           by <Svirins href="https://twitter.com/svirins">@svirins</Svirins>
         </Span>
       </Section>
-    </Element>
+    </Container>
   );
 };

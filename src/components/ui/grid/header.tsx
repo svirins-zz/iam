@@ -7,10 +7,12 @@ import tw from "twin.macro";
 import styled from "@emotion/styled";
 
 const Container = styled.header`
+  ${tw`mt-2`}
   grid-area: 1 / 2 / 2 / 3;
 `;
 const SubGrid = styled.section`
-  grid-template-columns: 33.3% 66.7%;
+  ${tw`grid gap-0`}
+  grid-template-columns:  1fr 1fr 1fr;
   grid-template-rows: auto;
 `;
 

@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 import { ImageProps } from "@types";
 
 const Element = styled.img`
-  ${tw`z-40 object-fill object-center w-full h-full`}
+  ${tw`z-40 object-fill object-center w-full`}
 `;
 
 export const ImageTile = ({ alt, url }: ImageProps): JSX.Element => {

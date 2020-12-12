@@ -25,7 +25,7 @@ const IndexPage = (): JSX.Element => {
       <Grid>
         <Left />
         <Header />
-        <Square {...STATIC_TILES.find((e) => e.alt === "blog")} />
+        <Square {...STATIC_TILES.find((e) => e.alt === "brand")} />
         <Bar />
         <Footer />
         <Right />

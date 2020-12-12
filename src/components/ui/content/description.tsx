@@ -5,7 +5,7 @@ import tw from "twin.macro";
 import styled from "@emotion/styled";
 
 const Container = styled.article`
-  ${tw`p-4 mx-2 my-2`};
+  ${tw`px-8 py-6 m-2`};
   grid-area: 2 / 1 / 3 / 2;
   background-color: #292827;
 `;
@@ -14,7 +14,7 @@ const Title = styled.h2`
   color:  #f4e2bd;
 `;
 const Content = styled.div`
-  ${tw`py-4 font-sans`}
+  ${tw`font-sans`}
   color: #9c9c9b;
 `;
 export const Description = ({

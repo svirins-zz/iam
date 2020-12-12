@@ -25,7 +25,7 @@ const Button = styled.button`
 `;
 
 const Bar = styled.section`
-  ${tw` flex items-center p-4 mx-2 my-2`};
+  ${tw` flex items-center px-8 py-6 m-2`};
   grid-area: 1 / 1 / 2 / 2;
   background-color: #101010;
 `;

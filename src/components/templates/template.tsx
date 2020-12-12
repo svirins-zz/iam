@@ -11,12 +11,11 @@ import React from "react";
 
 export const Template = (data): JSX.Element => {
   const { frontmatter } = data.pageData.allMarkdownRemark.edges[0].node;
-  const imageProps = [
-    {
-      url: frontmatter.image.publicURL,
-      alt: frontmatter.title,
-    },
-  ];
+  const imageProps = {
+    url: frontmatter.image.publicURL,
+    alt: frontmatter.title,
+  };
+  console.log(imageProps);
   return (
     <Layout>
       <SEO

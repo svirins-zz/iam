@@ -23,9 +23,4 @@ export const STATIC_TILES = [
     alt: "blog_slim",
     url: require("assets/svg/blog_slim.svg"),
   },
-  {
-    alt: "zero",
-    url: require("assets/svg/zero.svg"),
-  },
 ];
-

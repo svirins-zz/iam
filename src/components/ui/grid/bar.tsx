@@ -11,7 +11,7 @@ const Container = styled.section`
 `;
 const SubGrid = styled.section`
   ${tw`grid gap-0`}
-  grid-template-columns: 66.7% 33.3%;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
 `;
 
