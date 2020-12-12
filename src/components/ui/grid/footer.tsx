@@ -9,7 +9,6 @@ const Container = styled.footer`
   grid-area: 4 / 2 / 5 / 3;
   background-color: #292827;
   color: #9c9c9b;
-  
 `;
 const Svirins = tw.a`text-purple-500 hover:underline hover:text-pink-300`;
 const Section = tw.div`mt-4`;
