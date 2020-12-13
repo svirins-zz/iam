@@ -11,13 +11,11 @@ const Container = styled.header`
   grid-area: 1 / 2 / 2 / 3;
 `;
 const SubGrid = styled.section`
-  ${tw`grid gap-0`}
-  grid-template-columns:  1fr 1fr 1fr;
-  grid-template-rows: auto;
+  ${tw`flex`}
 `;
 
 const Menu = styled.section`
-  ${tw``}
+  flex-grow: 1;
   cursor: pointer;
   border: 0.5rem solid transparent;
   border-image-slice: 1;
@@ -30,14 +28,13 @@ const Menu = styled.section`
       rgba(62, 169, 218, 1) 100%
     );
   }
-  grid-area: 1 / 1 / 2 / 2;
 `;
 
 const HeaderRight = styled.section`
+  flex-grow: 2;
   border: 0.5rem solid transparent;
   border-image-slice: 1;
   border-width: 0.5rem;
-  grid-area: 1 / 2 / 2 / 4;
 `;
 
 export const Header = (): JSX.Element => {

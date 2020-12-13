@@ -3240,14 +3240,4 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
-type homezvrzdeviamsrccomponentslayoutseoTsx1522010811QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type homezvrzdeviamsrccomponentslayoutseoTsx1522010811Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'lang'>> }> };
-
-type MenuQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type MenuQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'slug'>> } }> } };
-
 }

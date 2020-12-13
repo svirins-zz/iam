@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 
 export const Element = styled.div`
   ${tw` grid gap-0`}
-  grid-template-columns: minmax(0.5rem, auto) fit-content(1024px) minmax(0.5rem, auto);
+  grid-template-columns: minmax(0.5rem, auto) fit-content(990px) minmax(0.5rem, auto);
   grid-template-rows: auto auto auto auto;
 `;
 export const Grid = ({
@@ -14,5 +14,3 @@ export const Grid = ({
   return <Element>{children}</Element>;
 };
 
-
-// grid-auto-rows: min-content;

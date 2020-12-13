@@ -10,12 +10,11 @@ const Container = styled.section`
   grid-area: 3 / 2 / 4 / 3;
 `;
 const SubGrid = styled.section`
-  ${tw`grid gap-0`}
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
+  ${tw`flex`}
 `;
 
 const Blog = styled.section`
+  flex-grow: 2;
   border: 0.5rem solid transparent;
   border-image-slice: 1;
   border-width: 0.5rem;
@@ -27,10 +26,10 @@ const Blog = styled.section`
       rgba(62, 169, 218, 1) 100%
     );
   }
-  grid-area: 1 / 1 / 2 / 3;
 `;
 
 const Thing = styled.section`
+  flex-grow: 1;
   border: 0.5rem solid transparent;
   border-image-slice: 1;
   border-width: 0.5rem;
@@ -42,7 +41,6 @@ const Thing = styled.section`
       rgba(62, 169, 218, 1) 100%
     );
   }
-  grid-area: 1 / 3 / 2 / 4;
 `;
 
 export const Bar = (): JSX.Element => {
