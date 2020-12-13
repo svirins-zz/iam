@@ -25,7 +25,7 @@ export const FooterMenu = (): JSX.Element => {
     );
   });
   return (
-    <MenuWrapper id="footer_menu" role="full_horizontal_menu">
+    <MenuWrapper id="footer_menu" role="navigation">
       {displayMenu}
     </MenuWrapper>
   );
