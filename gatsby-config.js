@@ -42,10 +42,25 @@ module.exports = {
     "gatsby-plugin-resolve-src",
     "gatsby-plugin-offline",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID,
-        anonymize: true,
+        trackingIds: [
+          process.env.GATSBY_GOOGLE_ANALYTICS_ID,
+          // "GA-TRACKING_ID",  Google Analytics / GA
+          // "AW-CONVERSION_ID",  Google Ads / Adwords / AW
+          // "DC-FLOODIGHT_ID",  Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
+        ],
+        gtagConfig: {
+          optimize_id: "process.env.GATSBY_OPT_CONTAINER_ID",
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: false,
+          // Setting this parameter is also optional
+          respectDNT: true,
+        },
       },
     },
     {

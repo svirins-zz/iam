@@ -3,6 +3,7 @@ price: 4500
 slug: thing
 title: "thing "
 seoTitle: Дизайн предметов
+isAtFooter: true
 text: |-
   Now, with Emoji! 😉
 

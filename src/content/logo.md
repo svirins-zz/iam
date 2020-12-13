@@ -3,6 +3,8 @@ price: 250
 slug: logo
 title: logo
 seoTitle: Дизайн логотипа
+isAtFooter: true
+
 text: |-
   Now, with Emoji! 😉
 

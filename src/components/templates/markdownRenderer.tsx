@@ -4,8 +4,8 @@ import remark2react from "remark-react";
 import tw from "twin.macro";
 import unified from "unified";
 
-const H1Title = tw.h1`font-semibold	text-yellow-100 text-4xl my-5`;
-const H2Title = tw.h2`font-semibold	text-yellow-100 text-3xl my-4`;
+const H1Title = tw.h1`font-semibold	text-yellow-100 text-2xl my-5`;
+const H2Title = tw.h2`font-semibold	text-yellow-100 text-2xl my-4`;
 const H3Title = tw.h3`font-medium	text-yellow-100 text-2xl my-3`;
 const H4Title = tw.h4`font-medium	text-yellow-100 text-xl  my-2`;
 const H5Title = tw.h5`font-medium	text-yellow-100 text-lg  my-2`;

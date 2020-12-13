@@ -12,6 +12,7 @@ export const generateMenu = (): MenuItem[] => {
           node {
             frontmatter {
               slug
+              isAtFooter
             }
           }
         }
@@ -23,6 +24,7 @@ export const generateMenu = (): MenuItem[] => {
       return {
         name: node.node.frontmatter.slug,
         link: `/${node.node.frontmatter.slug}`,
+        isAtFooter: node.node.frontmatter.isAtFooter,
       };
     })
     .sort((a: MenuItem, b: MenuItem) => b.name.length - a.name.length);
@@ -31,11 +33,13 @@ export const generateMenu = (): MenuItem[] => {
     {
       name: "index",
       link: "/",
+      isAtFooter: true,
     },
     ...generatedArray,
     {
       name: "blog",
       link: "https://medium.com/@romamore",
+      isAtFooter: true,
     },
   ];
 };

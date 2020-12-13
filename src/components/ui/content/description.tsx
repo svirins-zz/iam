@@ -10,7 +10,7 @@ const Container = styled.article`
   background-color: #292827;
 `;
 const Title = styled.h2`
-  ${tw`font-sans text-3xl font-semibold text-yellow-100`}
+  ${tw`font-sans text-2xl font-semibold text-yellow-100`}
   color:  #f4e2bd;
 `;
 const Content = styled.div`

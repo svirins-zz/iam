@@ -3,6 +3,7 @@ price: 3500
 slug: pro
 title: pro
 seoTitle: Продакшен и мастеринг
+isAtFooter: false
 text: |-
   Now, with Emoji! 😉
 

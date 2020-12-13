@@ -61,7 +61,7 @@ export const FormModal = (): JSX.Element | null => {
   const MediumWrapper = tw.div`absolute w-full h-full bg-gray-900 opacity-50`;
   const InnerWrapper = tw.div`bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto`;
   const CloseIconWrapper = tw.div`cursor-pointer z-50`;
-  const ContentWrapper = tw.div`py-4 text-left px-6`;
+  const ContentWrapper = tw.div`py-4 text-left px-6 mr-4`;
   const TitleWrapper = tw.div`flex justify-between items-center pb-3`;
   const SVGclose = tw.svg`fill-current text-black`;
   const svgPath = (
