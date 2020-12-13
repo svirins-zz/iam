@@ -4,7 +4,7 @@ slug: brand
 title: brand
 seoTitle: Брендинг, разработка фирменного стиля
 text: >-
-  ## Heading
+  ## Heading tru-lala
 
 
   Now, with Emoji! 😉
@@ -54,6 +54,8 @@ text: >-
 
   <hr />
 
+7
+  ## Heading
 
   ### Croccoturbofucker
 
