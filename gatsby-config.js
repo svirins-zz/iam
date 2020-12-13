@@ -119,5 +119,20 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "Romamore Dezign",
+        short_name: "Romamore Dezign",
+        description: `Romamore personal website description`,
+        start_url: "/",
+        lang: "ru",
+        display: "standalone",
+        icon: "src/assets/svg/brand.svg",
+        background_color: "#101010",
+        theme_color: "#20263d",
+        crossOrigin: `use-credentials`,
+      },
+    },
   ],
 };

@@ -26,7 +26,7 @@ export const Footer = (): JSX.Element => {
         <Span>
           {" "}
           Made with{" "}
-          <span role="img" aria-labelledby="love">
+          <span role="img" aria-labelledby="mixed">
             💜
           </span>{" "}
           by <Svirins href="https://twitter.com/svirins">@svirins</Svirins>
