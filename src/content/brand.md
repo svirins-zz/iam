@@ -4,11 +4,11 @@ slug: brand
 title: brand
 seoTitle: Брендинг, разработка фирменного стиля
 text: >-
-  ## Heading tru-lala
+  ## Heading
 
 
   Now, with Emoji! 😉
-
+tru-lala
 
   ### Guten texten
 
