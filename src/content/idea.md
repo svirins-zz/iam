@@ -3,6 +3,8 @@ price: 3500
 slug: idea
 title: idea
 seoTitle: Разработка дизайн-концепции
+isAtFooter: true
+
 text: |-
   Now, with Emoji! 😉
 

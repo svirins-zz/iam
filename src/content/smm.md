@@ -3,6 +3,7 @@ price: 10
 slug: smm
 title: smm
 seoTitle: Продвижение в социальных сетях
+isAtFooter: false
 text: |-
   Now, with Emoji! 😉
 

@@ -3,6 +3,8 @@ price: 3500
 slug: poster
 title: poster
 seoTitle: Дизайн плаката
+isAtFooter: true
+
 text: |-
   Now, with Emoji! 😉
 

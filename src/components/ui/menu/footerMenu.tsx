@@ -11,7 +11,7 @@ export const FooterMenu = (): JSX.Element => {
   const context = useContext(myContext);
   const menuItems = generateMenu();
   const displayMenu = menuItems.map((menuItem, index) => {
-    return (
+    return menuItem.isAtFooter ? (
       <MenuItem key={index}>
         <Link
           onClick={context.handleSelect}
@@ -22,7 +22,7 @@ export const FooterMenu = (): JSX.Element => {
           {menuItem.name}
         </Link>
       </MenuItem>
-    );
+    ) : null;
   });
   return (
     <MenuWrapper id="footer_menu" role="navigation">

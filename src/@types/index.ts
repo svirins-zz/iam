@@ -34,4 +34,5 @@ export interface AuxProps {
 export interface MenuItem {
   name: string;
   link: string;
+  isAtFooter: boolean;
 }

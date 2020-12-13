@@ -6,15 +6,15 @@ import tw from "twin.macro";
 import styled from "@emotion/styled";
 
 const Title = styled.h2`
-  ${tw`flex-auto font-sans text-3xl font-semibold text-yellow-100 capitalize`}
+  ${tw`flex-auto font-sans text-2xl font-semibold text-yellow-100 capitalize`}
   color: #fcf8c9;
 `;
 const Price = styled.p`
-  ${tw`flex-auto px-4 font-sans text-base font-semibold text-right text-yellow-100`}
+  ${tw`flex-auto px-4 font-sans font-semibold text-right text-yellow-100`}
   color:  #fcf8c9;
 `;
 const Spantop = tw.span`text-base`;
-const SpanBottom = tw.span`text-xl font-semibold`;
+const SpanBottom = tw.span`text-base font-semibold`;
 const Button = styled.button`
   ${tw` flex-1 px-4 py-2 font-bold rounded`}
   color: #101010;
