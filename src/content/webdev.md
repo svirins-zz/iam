@@ -6,9 +6,9 @@ seoTitle: PWA / SPA / JAM stack applications
 seoDescription: Our mission is to provide turnkey solutions for your business
   empowered with modern development tools
 isAtFooter: true
-image: /img/webdev.png
+image: /img/webdev.webp
 text: >
-  ##Meet future of web development!
+  ## Meet future of web development!
 
 
   Are you looking to build a high-performant, well-structured, secure web application? 
