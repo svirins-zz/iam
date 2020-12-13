@@ -2575,7 +2575,6 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___stripMetadata = 'pluginCreator.pluginOptions.stripMetadata',
   pluginCreator___pluginOptions___defaultQuality = 'pluginCreator.pluginOptions.defaultQuality',
   pluginCreator___pluginOptions___failOnError = 'pluginCreator.pluginOptions.failOnError',
-  pluginCreator___pluginOptions___trackingId = 'pluginCreator.pluginOptions.trackingId',
   pluginCreator___pluginOptions___anonymize = 'pluginCreator.pluginOptions.anonymize',
   pluginCreator___pluginOptions___head = 'pluginCreator.pluginOptions.head',
   pluginCreator___pluginOptions___respectDNT = 'pluginCreator.pluginOptions.respectDNT',
@@ -2596,6 +2595,10 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___fonts___google = 'pluginCreator.pluginOptions.fonts.google',
   pluginCreator___pluginOptions___outputPath = 'pluginCreator.pluginOptions.outputPath',
   pluginCreator___pluginOptions___cmsConfig = 'pluginCreator.pluginOptions.cmsConfig',
+  pluginCreator___pluginOptions___description = 'pluginCreator.pluginOptions.description',
+  pluginCreator___pluginOptions___lang = 'pluginCreator.pluginOptions.lang',
+  pluginCreator___pluginOptions___background_color = 'pluginCreator.pluginOptions.background_color',
+  pluginCreator___pluginOptions___theme_color = 'pluginCreator.pluginOptions.theme_color',
   pluginCreator___pluginOptions___pathCheck = 'pluginCreator.pluginOptions.pathCheck',
   pluginCreator___nodeAPIs = 'pluginCreator.nodeAPIs',
   pluginCreator___browserAPIs = 'pluginCreator.browserAPIs',
@@ -2889,7 +2892,6 @@ enum SitePluginFieldsEnum {
   pluginOptions___stripMetadata = 'pluginOptions.stripMetadata',
   pluginOptions___defaultQuality = 'pluginOptions.defaultQuality',
   pluginOptions___failOnError = 'pluginOptions.failOnError',
-  pluginOptions___trackingId = 'pluginOptions.trackingId',
   pluginOptions___anonymize = 'pluginOptions.anonymize',
   pluginOptions___head = 'pluginOptions.head',
   pluginOptions___respectDNT = 'pluginOptions.respectDNT',
@@ -2913,6 +2915,10 @@ enum SitePluginFieldsEnum {
   pluginOptions___fonts___google___variants = 'pluginOptions.fonts.google.variants',
   pluginOptions___outputPath = 'pluginOptions.outputPath',
   pluginOptions___cmsConfig = 'pluginOptions.cmsConfig',
+  pluginOptions___description = 'pluginOptions.description',
+  pluginOptions___lang = 'pluginOptions.lang',
+  pluginOptions___background_color = 'pluginOptions.background_color',
+  pluginOptions___theme_color = 'pluginOptions.theme_color',
   pluginOptions___pathCheck = 'pluginOptions.pathCheck',
   nodeAPIs = 'nodeAPIs',
   browserAPIs = 'browserAPIs',
@@ -3039,7 +3045,6 @@ type SitePluginPluginOptions = {
   readonly stripMetadata: Maybe<Scalars['Boolean']>;
   readonly defaultQuality: Maybe<Scalars['Int']>;
   readonly failOnError: Maybe<Scalars['Boolean']>;
-  readonly trackingId: Maybe<Scalars['String']>;
   readonly anonymize: Maybe<Scalars['Boolean']>;
   readonly head: Maybe<Scalars['Boolean']>;
   readonly respectDNT: Maybe<Scalars['Boolean']>;
@@ -3060,6 +3065,10 @@ type SitePluginPluginOptions = {
   readonly fonts: Maybe<SitePluginPluginOptionsFonts>;
   readonly outputPath: Maybe<Scalars['String']>;
   readonly cmsConfig: Maybe<Scalars['String']>;
+  readonly description: Maybe<Scalars['String']>;
+  readonly lang: Maybe<Scalars['String']>;
+  readonly background_color: Maybe<Scalars['String']>;
+  readonly theme_color: Maybe<Scalars['String']>;
   readonly pathCheck: Maybe<Scalars['Boolean']>;
 };
 
@@ -3076,7 +3085,6 @@ type SitePluginPluginOptionsFilterInput = {
   readonly stripMetadata: Maybe<BooleanQueryOperatorInput>;
   readonly defaultQuality: Maybe<IntQueryOperatorInput>;
   readonly failOnError: Maybe<BooleanQueryOperatorInput>;
-  readonly trackingId: Maybe<StringQueryOperatorInput>;
   readonly anonymize: Maybe<BooleanQueryOperatorInput>;
   readonly head: Maybe<BooleanQueryOperatorInput>;
   readonly respectDNT: Maybe<BooleanQueryOperatorInput>;
@@ -3097,6 +3105,10 @@ type SitePluginPluginOptionsFilterInput = {
   readonly fonts: Maybe<SitePluginPluginOptionsFontsFilterInput>;
   readonly outputPath: Maybe<StringQueryOperatorInput>;
   readonly cmsConfig: Maybe<StringQueryOperatorInput>;
+  readonly description: Maybe<StringQueryOperatorInput>;
+  readonly lang: Maybe<StringQueryOperatorInput>;
+  readonly background_color: Maybe<StringQueryOperatorInput>;
+  readonly theme_color: Maybe<StringQueryOperatorInput>;
   readonly pathCheck: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -3239,5 +3251,15 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
+type homezvrzdeviamsrccomponentslayoutseoTsx1522010811QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type homezvrzdeviamsrccomponentslayoutseoTsx1522010811Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'lang'>> }> };
+
+type MenuQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type MenuQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'slug'>> } }> } };
 
 }
