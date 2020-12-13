@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: svirins/iam
+  repo: deezigncf/iam
   branch: main
 
 

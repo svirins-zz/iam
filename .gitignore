@@ -76,3 +76,5 @@ package-lock.json
 .vercel
 
 .passwords
+.env.development
+.env.production

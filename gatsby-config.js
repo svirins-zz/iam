@@ -40,6 +40,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-resolve-src",
+    "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
