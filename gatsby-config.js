@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Romamore Dezign",
-    description: "Romamore personal website description",
+    title: "Roma More Dezign",
+    description: "Roma More personal website description",
     author: "@romamore",
     siteURL: "https://deezign.cf",
     lang: "ru",
@@ -20,7 +20,7 @@ module.exports = {
       },
       {
         name: `medium`,
-        url: `https://facebook.com/@romamore`,
+        url: `https://medium.com/@romamore`,
       },
       {
         name: `facebook`,
