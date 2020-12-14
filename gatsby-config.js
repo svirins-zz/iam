@@ -45,13 +45,12 @@ module.exports = {
       resolve: "gatsby-plugin-google-gtag",
       options: {
         trackingIds: [
-          process.env.GATSBY_GOOGLE_ANALYTICS_ID,
+          GTM-N3GZKDM,
           // "GA-TRACKING_ID",  Google Analytics / GA
           // "AW-CONVERSION_ID",  Google Ads / Adwords / AW
           // "DC-FLOODIGHT_ID",  Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
         ],
         gtagConfig: {
-          optimize_id: "process.env.GATSBY_OPT_CONTAINER_ID",
           anonymize_ip: true,
           cookie_expires: 0,
         },
