@@ -42,25 +42,10 @@ module.exports = {
     "gatsby-plugin-resolve-src",
     "gatsby-plugin-offline",
     {
-      resolve: "gatsby-plugin-google-gtag",
+      resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        trackingIds: [
-          process.env.GATSBY_GOOGLE_ANALYTICS_ID,
-          // "GA-TRACKING_ID",  Google Analytics / GA
-          // "AW-CONVERSION_ID",  Google Ads / Adwords / AW
-          // "DC-FLOODIGHT_ID",  Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
-        ],
-        gtagConfig: {
-          optimize_id: "process.env.GATSBY_OPT_CONTAINER_ID",
-          anonymize_ip: true,
-          cookie_expires: 0,
-        },
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: false,
-          // Setting this parameter is also optional
-          respectDNT: true,
-        },
+        id: "GTM-N3GZKDM",
+        defaultDataLayer: { platform: "gatsby" },
       },
     },
     {
@@ -139,7 +124,7 @@ module.exports = {
       options: {
         name: "Romamore Dezign",
         short_name: "Romamore Dezign",
-        description: `Romamore personal website description`,
+        description: `Romamore personal website`,
         start_url: "/",
         lang: "ru",
         display: "standalone",
