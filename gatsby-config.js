@@ -42,6 +42,13 @@ module.exports = {
     "gatsby-plugin-resolve-src",
     "gatsby-plugin-offline",
     {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-N3GZKDM",
+        defaultDataLayer: { platform: "gatsby" },
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
