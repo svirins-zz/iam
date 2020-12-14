@@ -124,7 +124,7 @@ module.exports = {
       options: {
         name: "Romamore Dezign",
         short_name: "Romamore Dezign",
-        description: `Romamore personal website description`,
+        description: `Romamore personal website`,
         start_url: "/",
         lang: "ru",
         display: "standalone",
