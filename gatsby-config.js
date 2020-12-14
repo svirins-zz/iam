@@ -42,27 +42,6 @@ module.exports = {
     "gatsby-plugin-resolve-src",
     "gatsby-plugin-offline",
     {
-      resolve: "gatsby-plugin-google-gtag",
-      options: {
-        trackingIds: [
-          GTM-N3GZKDM,
-          // "GA-TRACKING_ID",  Google Analytics / GA
-          // "AW-CONVERSION_ID",  Google Ads / Adwords / AW
-          // "DC-FLOODIGHT_ID",  Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
-        ],
-        gtagConfig: {
-          anonymize_ip: true,
-          cookie_expires: 0,
-        },
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: false,
-          // Setting this parameter is also optional
-          respectDNT: true,
-        },
-      },
-    },
-    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
