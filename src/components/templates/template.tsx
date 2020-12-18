@@ -15,7 +15,6 @@ export const Template = (data): JSX.Element => {
     url: frontmatter.image.publicURL,
     alt: frontmatter.title,
   };
-  console.log(imageProps);
   return (
     <Layout>
       <SEO
