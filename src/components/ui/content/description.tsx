@@ -5,7 +5,7 @@ import tw from "twin.macro";
 import styled from "@emotion/styled";
 
 const Container = styled.article`
-  ${tw`px-8 py-6 m-2`};
+  ${tw`px-4 py-6 m-2`};
   grid-area: 2 / 1 / 3 / 2;
   background-color: #292827;
 `;

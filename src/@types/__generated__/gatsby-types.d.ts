@@ -2665,11 +2665,10 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___stripMetadata = 'pluginCreator.pluginOptions.stripMetadata',
   pluginCreator___pluginOptions___defaultQuality = 'pluginCreator.pluginOptions.defaultQuality',
   pluginCreator___pluginOptions___failOnError = 'pluginCreator.pluginOptions.failOnError',
-  pluginCreator___pluginOptions___gtagConfig___optimize_id = 'pluginCreator.pluginOptions.gtagConfig.optimize_id',
-  pluginCreator___pluginOptions___gtagConfig___anonymize_ip = 'pluginCreator.pluginOptions.gtagConfig.anonymize_ip',
-  pluginCreator___pluginOptions___gtagConfig___cookie_expires = 'pluginCreator.pluginOptions.gtagConfig.cookie_expires',
-  pluginCreator___pluginOptions___pluginConfig___head = 'pluginCreator.pluginOptions.pluginConfig.head',
-  pluginCreator___pluginOptions___pluginConfig___respectDNT = 'pluginCreator.pluginOptions.pluginConfig.respectDNT',
+  pluginCreator___pluginOptions___id = 'pluginCreator.pluginOptions.id',
+  pluginCreator___pluginOptions___defaultDataLayer___type = 'pluginCreator.pluginOptions.defaultDataLayer.type',
+  pluginCreator___pluginOptions___includeInDevelopment = 'pluginCreator.pluginOptions.includeInDevelopment',
+  pluginCreator___pluginOptions___routeChangeEventName = 'pluginCreator.pluginOptions.routeChangeEventName',
   pluginCreator___pluginOptions___name = 'pluginCreator.pluginOptions.name',
   pluginCreator___pluginOptions___path = 'pluginCreator.pluginOptions.path',
   pluginCreator___pluginOptions___excludePattern = 'pluginCreator.pluginOptions.excludePattern',
@@ -2897,11 +2896,11 @@ enum SitePluginFieldsEnum {
   pluginOptions___stripMetadata = 'pluginOptions.stripMetadata',
   pluginOptions___defaultQuality = 'pluginOptions.defaultQuality',
   pluginOptions___failOnError = 'pluginOptions.failOnError',
-  pluginOptions___gtagConfig___optimize_id = 'pluginOptions.gtagConfig.optimize_id',
-  pluginOptions___gtagConfig___anonymize_ip = 'pluginOptions.gtagConfig.anonymize_ip',
-  pluginOptions___gtagConfig___cookie_expires = 'pluginOptions.gtagConfig.cookie_expires',
-  pluginOptions___pluginConfig___head = 'pluginOptions.pluginConfig.head',
-  pluginOptions___pluginConfig___respectDNT = 'pluginOptions.pluginConfig.respectDNT',
+  pluginOptions___id = 'pluginOptions.id',
+  pluginOptions___defaultDataLayer___type = 'pluginOptions.defaultDataLayer.type',
+  pluginOptions___defaultDataLayer___value___platform = 'pluginOptions.defaultDataLayer.value.platform',
+  pluginOptions___includeInDevelopment = 'pluginOptions.includeInDevelopment',
+  pluginOptions___routeChangeEventName = 'pluginOptions.routeChangeEventName',
   pluginOptions___name = 'pluginOptions.name',
   pluginOptions___path = 'pluginOptions.path',
   pluginOptions___excludePattern = 'pluginOptions.excludePattern',
@@ -3051,8 +3050,10 @@ type SitePluginPluginOptions = {
   readonly stripMetadata: Maybe<Scalars['Boolean']>;
   readonly defaultQuality: Maybe<Scalars['Int']>;
   readonly failOnError: Maybe<Scalars['Boolean']>;
-  readonly gtagConfig: Maybe<SitePluginPluginOptionsGtagConfig>;
-  readonly pluginConfig: Maybe<SitePluginPluginOptionsPluginConfig>;
+  readonly id: Maybe<Scalars['String']>;
+  readonly defaultDataLayer: Maybe<SitePluginPluginOptionsDefaultDataLayer>;
+  readonly includeInDevelopment: Maybe<Scalars['Boolean']>;
+  readonly routeChangeEventName: Maybe<Scalars['String']>;
   readonly name: Maybe<Scalars['String']>;
   readonly path: Maybe<Scalars['String']>;
   readonly excludePattern: Maybe<Scalars['String']>;
@@ -3076,6 +3077,24 @@ type SitePluginPluginOptions = {
   readonly pathCheck: Maybe<Scalars['Boolean']>;
 };
 
+type SitePluginPluginOptionsDefaultDataLayer = {
+  readonly type: Maybe<Scalars['String']>;
+  readonly value: Maybe<SitePluginPluginOptionsDefaultDataLayerValue>;
+};
+
+type SitePluginPluginOptionsDefaultDataLayerFilterInput = {
+  readonly type: Maybe<StringQueryOperatorInput>;
+  readonly value: Maybe<SitePluginPluginOptionsDefaultDataLayerValueFilterInput>;
+};
+
+type SitePluginPluginOptionsDefaultDataLayerValue = {
+  readonly platform: Maybe<Scalars['String']>;
+};
+
+type SitePluginPluginOptionsDefaultDataLayerValueFilterInput = {
+  readonly platform: Maybe<StringQueryOperatorInput>;
+};
+
 type SitePluginPluginOptionsFilterInput = {
   readonly plugins: Maybe<SitePluginPluginOptionsPluginsFilterListInput>;
   readonly sourceMap: Maybe<BooleanQueryOperatorInput>;
@@ -3089,8 +3108,10 @@ type SitePluginPluginOptionsFilterInput = {
   readonly stripMetadata: Maybe<BooleanQueryOperatorInput>;
   readonly defaultQuality: Maybe<IntQueryOperatorInput>;
   readonly failOnError: Maybe<BooleanQueryOperatorInput>;
-  readonly gtagConfig: Maybe<SitePluginPluginOptionsGtagConfigFilterInput>;
-  readonly pluginConfig: Maybe<SitePluginPluginOptionsPluginConfigFilterInput>;
+  readonly id: Maybe<StringQueryOperatorInput>;
+  readonly defaultDataLayer: Maybe<SitePluginPluginOptionsDefaultDataLayerFilterInput>;
+  readonly includeInDevelopment: Maybe<BooleanQueryOperatorInput>;
+  readonly routeChangeEventName: Maybe<StringQueryOperatorInput>;
   readonly name: Maybe<StringQueryOperatorInput>;
   readonly path: Maybe<StringQueryOperatorInput>;
   readonly excludePattern: Maybe<StringQueryOperatorInput>;
@@ -3136,28 +3157,6 @@ type SitePluginPluginOptionsFontsGoogleFilterInput = {
 
 type SitePluginPluginOptionsFontsGoogleFilterListInput = {
   readonly elemMatch: Maybe<SitePluginPluginOptionsFontsGoogleFilterInput>;
-};
-
-type SitePluginPluginOptionsGtagConfig = {
-  readonly optimize_id: Maybe<Scalars['String']>;
-  readonly anonymize_ip: Maybe<Scalars['Boolean']>;
-  readonly cookie_expires: Maybe<Scalars['Int']>;
-};
-
-type SitePluginPluginOptionsGtagConfigFilterInput = {
-  readonly optimize_id: Maybe<StringQueryOperatorInput>;
-  readonly anonymize_ip: Maybe<BooleanQueryOperatorInput>;
-  readonly cookie_expires: Maybe<IntQueryOperatorInput>;
-};
-
-type SitePluginPluginOptionsPluginConfig = {
-  readonly head: Maybe<Scalars['Boolean']>;
-  readonly respectDNT: Maybe<Scalars['Boolean']>;
-};
-
-type SitePluginPluginOptionsPluginConfigFilterInput = {
-  readonly head: Maybe<BooleanQueryOperatorInput>;
-  readonly respectDNT: Maybe<BooleanQueryOperatorInput>;
 };
 
 type SitePluginPluginOptionsPlugins = {
@@ -3276,19 +3275,64 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
-type homezvrzdeviamsrcpagesindexTsx3000541721QueryVariables = Exact<{ [key: string]: never; }>;
+type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type homezvrzdeviamsrcpagesindexTsx3000541721Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
-
-type homezvrzdeviamsrccomponentslayoutseoTsx1522010811QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type homezvrzdeviamsrccomponentslayoutseoTsx1522010811Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'lang'>> }> };
+type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'lang'>> }> };
 
 type MenuQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type MenuQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'slug' | 'isAtFooter'>> } }> } };
+
+type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
+
+type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
+
+type GatsbyImageSharpFixed_withWebpFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+
+type GatsbyImageSharpFixed_withWebp_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+
+type GatsbyImageSharpFixed_noBase64Fragment = Pick<ImageSharpFixed, 'width' | 'height' | 'src' | 'srcSet'>;
+
+type GatsbyImageSharpFixed_withWebp_noBase64Fragment = Pick<ImageSharpFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+
+type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
+type GatsbyImageSharpFluidLimitPresentationSizeFragment = { maxHeight: ImageSharpFluid['presentationHeight'], maxWidth: ImageSharpFluid['presentationWidth'] };
+
+type GatsbyImageSharpFluid_tracedSVGFragment = Pick<ImageSharpFluid, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
+type GatsbyImageSharpFluid_withWebpFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
+type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type GatsbyImageSharpResolutionsFragment = Pick<ImageSharpResolutions, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
+
+type GatsbyImageSharpResolutions_tracedSVGFragment = Pick<ImageSharpResolutions, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
+
+type GatsbyImageSharpResolutions_withWebpFragment = Pick<ImageSharpResolutions, 'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+
+type GatsbyImageSharpResolutions_withWebp_tracedSVGFragment = Pick<ImageSharpResolutions, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+
+type GatsbyImageSharpResolutions_noBase64Fragment = Pick<ImageSharpResolutions, 'width' | 'height' | 'src' | 'srcSet'>;
+
+type GatsbyImageSharpResolutions_withWebp_noBase64Fragment = Pick<ImageSharpResolutions, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+
+type GatsbyImageSharpSizesFragment = Pick<ImageSharpSizes, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
+type GatsbyImageSharpSizes_tracedSVGFragment = Pick<ImageSharpSizes, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
+type GatsbyImageSharpSizes_withWebpFragment = Pick<ImageSharpSizes, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type GatsbyImageSharpSizes_withWebp_tracedSVGFragment = Pick<ImageSharpSizes, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
+type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 }
