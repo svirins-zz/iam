@@ -8,17 +8,19 @@ import tw from "twin.macro";
 import styled from "@emotion/styled";
 
 export const MainMenu = (): JSX.Element | null => {
-  const PageWrapper = tw.div`absolute top-0 right-0 z-50 flex flex-col items-center mt-4 mr-4 text-sm  h-screen`;
+  const PageWrapper = tw.div`absolute top-0 right-0 z-50  mt-4 mr-4 text-2xl min-h-screen w-screen	`;
   const MenuWrapper = styled.div`
-    ${tw`fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-900`};
+    ${tw` fixed top-0 left-0 flex flex-col items-center justify-center w-full h-full bg-gray-900`};
     transition: opacity 0.25s ease;
     max-width: 100%;
-    max-height: 100vh;
+    min-height: 600px;
     opacity: 0.98;
   `;
   const MenuItem = styled.li`
-    ${tw`hover:font-semibold hover:text-white hover:underline text-4xl leading-snug tracking-wide text-center text-gray-400`};
+    ${tw`hover:font-semibold hover:text-white hover:underline hover:-translate-y-1 hover:scale-125 flex-grow text-3xl leading-snug tracking-wide text-center text-gray-400 transition duration-500 ease-in-out transform`};
   `;
+
+
   const Img = styled.img`
     ${tw`hover:opacity-100 opacity-75 cursor-pointer`}
     width: 2rem;
