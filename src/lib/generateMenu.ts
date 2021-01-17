@@ -7,7 +7,9 @@ export const generateMenu = (): MenuItem[] => {
     allMarkdownRemark,
   } = useStaticQuery<GatsbyTypes.MenuQueryQuery>(graphql`
     query MenuQuery {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        filter: { frontmatter: { isPublished: { eq: true } } }
+      ) {
         edges {
           node {
             frontmatter {
@@ -22,9 +24,9 @@ export const generateMenu = (): MenuItem[] => {
   const generatedArray: MenuItem[] = allMarkdownRemark.edges
     .map((node) => {
       return {
-        name: node.node.frontmatter.slug,
-        link: `/${node.node.frontmatter.slug}`,
-        isAtFooter: node.node.frontmatter.isAtFooter,
+        name: node?.node?.frontmatter?.slug,
+        link: `/${node?.node?.frontmatter?.slug}`,
+        isAtFooter: node?.node?.frontmatter?.isAtFooter,
       };
     })
     .sort((a: MenuItem, b: MenuItem) => b.name.length - a.name.length);

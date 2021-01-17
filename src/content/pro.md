@@ -1,6 +1,7 @@
 ---
 price: 3500
 slug: pro
+isPublished: false
 title: pro
 seoTitle: Продакшен и мастеринг
 isAtFooter: false

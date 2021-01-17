@@ -1,7 +1,8 @@
 ---
 price: 4500
 slug: thing
-title: "thing "
+isPublished: true
+title: thing
 seoTitle: Дизайн предметов
 isAtFooter: true
 text: |-

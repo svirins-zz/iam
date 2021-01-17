@@ -13,8 +13,8 @@ export interface HeaderProps {
   designUrl: string;
 }
 export interface ImageProps {
-  alt: string;
-  url: string;
+  alt?: string;
+  url?: string;
 }
 
 export type ContextProps = {

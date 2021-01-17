@@ -1,6 +1,7 @@
 ---
 price: 250
 slug: logo
+isPublished: true
 title: logo
 seoTitle: Дизайн логотипа
 isAtFooter: true

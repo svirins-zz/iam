@@ -1,6 +1,7 @@
 ---
 price: 300
 slug: brand
+isPublished: true
 title: brand
 seoTitle: Брендинг, разработка фирменного стиля
 isAtFooter: true

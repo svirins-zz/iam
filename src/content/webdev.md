@@ -1,6 +1,7 @@
 ---
 title: WebDev
 price: 1000
+isPublished: true
 slug: webdev
 seoTitle: PWA / SPA / JAM stack applications
 seoDescription: Our mission is to provide turnkey solutions for your business

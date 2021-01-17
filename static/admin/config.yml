@@ -15,6 +15,7 @@ collections:
     slug: "{{title}}" 
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "IsPublished", name: "isPublished", widget: "boolean", required: true, default: true}
       - {label: "Price", name: "price", widget: "number", required: true}
       - {label: "SEO Title", name: "seoTitle", widget: "string"}
       - {label: "SEO Description", name: "seoDescription", widget: "string"}

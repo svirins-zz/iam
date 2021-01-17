@@ -1,6 +1,7 @@
 ---
 price: 10
 slug: smm
+isPublished: false
 title: smm
 seoTitle: Продвижение в социальных сетях
 isAtFooter: false

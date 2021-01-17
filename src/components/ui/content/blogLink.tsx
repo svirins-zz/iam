@@ -19,8 +19,9 @@ const Blog = styled.section`
   grid-area: 3 / 1 / 4 / 2;
 `;
 
-export const BlogLink = (tag: string): JSX.Element => {
-  const urlWithTag = `https://medium.com/@romamore/${tag}`;
+export const BlogLink = (): JSX.Element => {
+  // TODO: add ${tag} to link below, when medium blog is ready
+  const urlWithTag = `https://medium.com/@romamore/`;
   return (
     <Blog>
       <a href={urlWithTag} target="blank">

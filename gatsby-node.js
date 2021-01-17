@@ -10,11 +10,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const pageTemplate = require.resolve(`./src/templates/page.js`);
   const result = await graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        filter: { frontmatter: { isPublished: { eq: true } } }
+      ) {
         edges {
           node {
             frontmatter {
               slug
+              isPublished
             }
           }
         }

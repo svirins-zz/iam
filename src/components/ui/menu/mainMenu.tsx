@@ -1,4 +1,4 @@
-import closeSvg from "assets/close.svg";
+import closeSvg from "assets/close_yellow.svg";
 import { myContext } from "context";
 import { Link } from "gatsby";
 import { generateMenu } from "lib";
@@ -17,12 +17,11 @@ export const MainMenu = (): JSX.Element | null => {
     opacity: 0.98;
   `;
   const MenuItem = styled.li`
-    ${tw`hover:font-semibold hover:text-white hover:underline hover:-translate-y-1 hover:scale-125 flex-grow text-3xl leading-snug tracking-wide text-center text-gray-400 transition duration-500 ease-in-out transform`};
+    ${tw`hover:font-semibold hover:text-white hover:underline hover:-translate-y-1 hover:scale-125 flex-grow text-5xl leading-snug tracking-wide text-center text-gray-400 transition duration-500 ease-in-out transform`};
   `;
 
-
   const Img = styled.img`
-    ${tw`hover:opacity-100 opacity-75 cursor-pointer`}
+    ${tw`hover:opacity-100 opacity-90 absolute top-0 right-0 z-50 flex flex-col items-center mt-4 mr-4 text-sm text-white cursor-pointer`}
     width: 2rem;
     height: 2rem;
     text-align: center;

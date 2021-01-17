@@ -1,6 +1,7 @@
 ---
 price: 3500
 slug: idea
+isPublished: false
 title: idea
 seoTitle: Разработка дизайн-концепции
 isAtFooter: true

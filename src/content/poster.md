@@ -1,6 +1,7 @@
 ---
 price: 3500
 slug: poster
+isPublished: false
 title: poster
 seoTitle: Дизайн плаката
 isAtFooter: true
