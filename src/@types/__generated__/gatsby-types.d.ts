@@ -3503,12 +3503,12 @@ type WebPOptions = {
   readonly quality: Maybe<Scalars['Int']>;
 };
 
-type Unnamed_1_QueryVariables = Exact<{
+type homezvrzdeviamsrctemplatespageJs2269874368QueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
 
 
-type Unnamed_1_Query = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<(
+type homezvrzdeviamsrctemplatespageJs2269874368Query = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<(
           Pick<MarkdownRemarkFrontmatter, 'title' | 'slug' | 'price' | 'seoTitle' | 'seoDescription' | 'text'>
           & { readonly image: Maybe<Pick<File, 'publicURL'>> }
         )> } }> }, readonly allFile: { readonly edges: ReadonlyArray<{ readonly node: Pick<File, 'publicURL'> }> } };
@@ -3518,20 +3518,15 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
-type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
+type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type Unnamed_2_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
+type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'lang'>> }> };
 
 type MenuQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type MenuQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'slug' | 'isAtFooter'>> } }> } };
-
-type Unnamed_3_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type Unnamed_3_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'lang'>> }> };
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
