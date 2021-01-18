@@ -1,10 +1,13 @@
 ---
+isPublished: true
 price: 300
 slug: brand
 isPublished: true
 title: brand
 seoTitle: Брендинг, разработка фирменного стиля
+seoDescription: Необходимо добавить краткое описание
 isAtFooter: true
+image: /img/brand.svg
 text: >-
   
   # Heading
@@ -71,7 +74,5 @@ text: >-
 
   ![croco](/img/crocodile-svgrepo-com.svg "turbofucker")
 seotitle: Брендинг, разработка фирменного стиля
-seoDescription: Необходимо добавить краткое описание
-image: /img/brand.svg
 seodescription: Необходимо добавить краткое описание
 ---
