@@ -38,7 +38,7 @@ export const FooterMenu = (): JSX.Element => {
     ) : null;
   });
   return (
-    <MenuWrapper id="footer_menu" role="navigation">
+    <MenuWrapper id='footer_menu' role='navigation'>
       {displayMenu}
     </MenuWrapper>
   );

@@ -53,12 +53,12 @@ export const MainMenu = (): JSX.Element | null => {
       }}
     >
       <CloseWrapper onClick={context.closeMenu}>
-        <Img src={closeSvg} alt="close button" />
+        <Img src={closeSvg} alt='close button' />
       </CloseWrapper>
       <MenuWrapper>
-        <nav id="menu" role="fullscreen-menu">
-          <div className="inner">
-            <ul className="links pointer-events-auto">{displayMenu}</ul>
+        <nav id='menu' role='fullscreen-menu'>
+          <div className='inner'>
+            <ul className='links pointer-events-auto'>{displayMenu}</ul>
           </div>
         </nav>
       </MenuWrapper>

@@ -37,10 +37,36 @@ module.exports = {
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-typescript",
-    "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     "gatsby-plugin-resolve-src",
     "gatsby-plugin-offline",
+    {
+      resolve: "gatsby-plugin-typegen",
+      options: {
+        outputPath: `src/@types/__generated__/gatsby-types.d.ts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: "z6g21owr",
+        dataset: `production`,
+        token: process.env.SANITY_TOKEN,
+        watchMode: true,
+      },
+    },
+    // {
+    //   resolve: "gatsby-plugin-sanity-image",
+    //   options: {
+    //     // Sanity project info (required)
+    //     projectId: "z6g21owr",
+    //     dataset: "production",
+    //     fragmentName: "Image",
+    //     fragmentTypeName: "SanityImage",
+    //     includeFragments: true,
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
@@ -51,28 +77,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "pages",
-        path: `${__dirname}/src/content`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
         name: "images",
         path: `${__dirname}/src/assets`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "uploads",
-        path: `${__dirname}/static/img`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-catch-links`,
-      options: {
-        excludePattern: /(excluded-link|external)/,
       },
     },
     {
@@ -95,30 +101,15 @@ module.exports = {
               subsets: [`cyrillic-ext`],
               variants: [`400`, `500`, `700`, `800`],
             },
+            {
+              family: `Source Serif Pro`,
+              subsets: [`cyrillic-ext`],
+              variants: [`400`, `600`, `700`],
+            },
           ],
         },
       },
     },
-    {
-      resolve: "gatsby-plugin-typegen",
-      options: {
-        outputPath: `src/@types/__generated__/gatsby-types.d.ts`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-plugin-netlify-cms-paths`,
-            options: {
-              cmsConfig: `/static/admin/config.yml`,
-            },
-          },
-        ],
-      },
-    },
-    `gatsby-plugin-netlify-cms`,
     {
       resolve: "gatsby-plugin-manifest",
       options: {

@@ -3,30 +3,26 @@ import { graphql, useStaticQuery } from "gatsby";
 import { MenuItem } from "@types";
 
 export const generateMenu = (): MenuItem[] => {
-  const {
-    allMarkdownRemark,
-  } = useStaticQuery<GatsbyTypes.MenuQueryQuery>(graphql`
+  const { allSanityPage } = useStaticQuery<GatsbyTypes.MenuQueryQuery>(graphql`
     query MenuQuery {
-      allMarkdownRemark(
-        filter: { frontmatter: { isPublished: { eq: true } } }
-      ) {
+      allSanityPage(filter: { isPublished: { eq: true } }) {
         edges {
           node {
-            frontmatter {
-              slug
-              isAtFooter
+            isAtFooter
+            slug {
+              current
             }
           }
         }
       }
     }
   `);
-  const generatedArray: MenuItem[] = allMarkdownRemark.edges
+  const generatedArray: MenuItem[] = allSanityPage.edges
     .map((node) => {
       return {
-        name: node?.node?.frontmatter?.slug,
-        link: `/${node?.node?.frontmatter?.slug}`,
-        isAtFooter: node?.node?.frontmatter?.isAtFooter,
+        name: node?.node?.slug.current,
+        link: `/${node?.node?.slug.current}`,
+        isAtFooter: node?.node?.isAtFooter,
       };
     })
     .sort((a: MenuItem, b: MenuItem) => b.name.length - a.name.length);

@@ -10,23 +10,22 @@ import {
 import React from "react";
 
 export const Template = (data): JSX.Element => {
-  const { frontmatter } = data.pageData.allMarkdownRemark.edges[0].node;
-  const imageProps = {
-    url: frontmatter.image.publicURL,
-    alt: frontmatter.title,
-  };
+  const pageData = data.data.allSanityPage.edges[0].node;
   return (
     <Layout>
       <SEO
-        seoTitle={frontmatter.seoTitle}
-        seoDescription={frontmatter.seoDescription}
+        seoTitle={pageData.seoTitle}
+        seoDescription={pageData.seoDescription}
       />
-
       <Grid>
         <Left />
         <Header />
-        <Square {...imageProps} />
-        <Content frontmatter={frontmatter} />
+        <Square image={pageData.image.asset.fluid} />
+        <Content
+          portableText={pageData._rawText}
+          price={pageData.price}
+          title={pageData.title}
+        />
         <Footer />
         <Right />
       </Grid>

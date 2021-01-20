@@ -1,5 +1,12 @@
 import { Grid, Layout, SEO } from "components/layout";
-import { Bar, Footer, Header, Left, Right, Square } from "components/ui/grid";
+import {
+  Bar,
+  Footer,
+  Header,
+  Left,
+  Right,
+  SquareFront,
+} from "components/ui/grid";
 import { STATIC_TILES } from "const";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
@@ -25,7 +32,7 @@ const IndexPage = (): JSX.Element => {
       <Grid>
         <Left />
         <Header />
-        <Square {...STATIC_TILES.find((e) => e.alt === "brand")} />
+        <SquareFront {...STATIC_TILES.find((e) => e.alt === "brand")} />
         <Bar />
         <Footer />
         <Right />

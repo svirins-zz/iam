@@ -4,32 +4,29 @@ import React from "react";
 
 // eslint-disable-next-line react/display-name
 export default ({ data }) => {
-  return <Template pageData={data} />;
+  return <Template data={data} />;
 };
 
 export const query = graphql`
   query($slug: String!) {
-    allMarkdownRemark(filter: { frontmatter: { slug: { eq: $slug } } }) {
+    allSanityPage(filter: { slug: { current: { eq: $slug } } }) {
       edges {
         node {
-          frontmatter {
-            title
-            slug
-            price
-            seoTitle
-            seoDescription
-            image {
-              publicURL
-            }
-            text
+          title
+          price
+          seoTitle
+          seoDescription
+          slug {
+            current
           }
-        }
-      }
-    }
-    allFile(filter: { name: { eq: $slug }, extension: { eq: "svg" } }) {
-      edges {
-        node {
-          publicURL
+          image {
+            asset {
+              fluid(maxWidth: 2560) {
+                ...GatsbySanityImageFluid
+              }
+            }
+          }
+          _rawText(resolveReferences: { maxDepth: 10 })
         }
       }
     }

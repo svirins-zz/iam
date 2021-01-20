@@ -10,14 +10,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const pageTemplate = require.resolve(`./src/templates/page.js`);
   const result = await graphql(`
     {
-      allMarkdownRemark(
-        filter: { frontmatter: { isPublished: { eq: true } } }
-      ) {
+      allSanityPage(filter: { isPublished: { eq: true } }) {
         edges {
           node {
-            frontmatter {
-              slug
-              isPublished
+            slug {
+              current
             }
           }
         }
@@ -29,13 +26,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
     return;
   }
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allSanityPage.edges.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.slug,
+      path: node.slug.current,
       component: pageTemplate,
       context: {
         // additional data can be passed via context
-        slug: node.frontmatter.slug,
+        slug: node.slug.current,
       },
     });
   });

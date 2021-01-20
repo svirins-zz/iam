@@ -13,4 +13,3 @@ export const Grid = ({
 }: React.PropsWithChildren<Record<string, unknown>>): JSX.Element => {
   return <Element>{children}</Element>;
 };
-

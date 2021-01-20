@@ -6,4 +6,4 @@ module.exports = {
     debugPlugins: false,
     debug: false,
   },
-}
+};

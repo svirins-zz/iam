@@ -15,13 +15,13 @@ const SubGrid = styled.section`
   grid-template-rows: repeat(3, auto);
 `;
 
-export const Content = ({ frontmatter }): JSX.Element => {
+export const Content = ({ portableText, price, title }): JSX.Element => {
   return (
     <Element>
       <SubGrid>
-        <PriceBar title={frontmatter.title} price={frontmatter.price} />
-        <Description title={frontmatter.title} markdown={frontmatter.text} />
-        <BlogLink tag={frontmatter.slug} />
+        <PriceBar title={title} price={price} />
+        <Description title={title} portableText={portableText} />
+        <BlogLink />
       </SubGrid>
     </Element>
   );
